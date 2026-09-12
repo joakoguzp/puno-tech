@@ -1,195 +1,317 @@
 const steps = [
   {
     number: "01",
-    title: "Cuéntanos qué sucede",
+    title: "Cuéntanos el problema",
     description:
-      "Explícanos el problema que presenta tu computadora, laptop, impresora, red o sistema.",
+      "Explícanos qué está pasando con tu computadora, laptop, impresora, red o software.",
+    type: "message",
   },
   {
     number: "02",
-    title: "Analizamos el problema",
+    title: "Diagnosticamos",
     description:
-      "Evaluamos la situación para identificar la causa y determinar qué solución necesita.",
+      "Revisamos el problema para identificar su causa y determinar qué necesita realmente tu equipo.",
+    type: "search",
   },
   {
     number: "03",
-    title: "Te explicamos la solución",
+    title: "Proponemos la solución",
     description:
-      "Te orientamos de manera clara sobre el trabajo que debe realizarse antes de comenzar.",
+      "Te explicamos qué podemos hacer, qué incluye el servicio y, cuando corresponda, el costo.",
+    type: "solution",
   },
   {
     number: "04",
-    title: "Realizamos el servicio",
+    title: "Solucionamos y verificamos",
     description:
-      "Ejecutamos el trabajo con criterio técnico, cuidado y atención a cada detalle.",
-  },
-  {
-    number: "05",
-    title: "Verificamos el resultado",
-    description:
-      "Comprobamos que el equipo o sistema funcione correctamente antes de finalizar.",
+      "Realizamos el servicio, comprobamos que todo funcione correctamente y te damos seguimiento.",
+    type: "check",
   },
 ];
+
+function StepIcon({ type }: { type: string }) {
+  if (type === "message") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-8 w-8"
+        aria-hidden="true"
+      >
+        <path
+          d="M15 18.5C15 15.462 17.462 13 20.5 13h23C46.538 13 49 15.462 49 18.5v16C49 37.538 46.538 40 43.5 40H30l-9 8v-8h-.5C17.462 40 15 37.538 15 34.5v-16Z"
+          className="transition-all duration-500 group-hover:stroke-cyan-200"
+        />
+
+        <path
+          d="M23 23h18"
+          className="origin-left transition-all duration-500 group-hover:scale-x-110"
+        />
+
+        <path
+          d="M23 29h12"
+          className="origin-left transition-all duration-500 group-hover:scale-x-125"
+        />
+
+        <circle
+          cx="44"
+          cy="46"
+          r="4"
+          className="fill-current opacity-0 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "search") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-8 w-8"
+        aria-hidden="true"
+      >
+        <circle
+          cx="29"
+          cy="29"
+          r="13"
+          className="transition-all duration-500 group-hover:scale-105 group-hover:stroke-cyan-200"
+        />
+
+        <path
+          d="m39 39 11 11"
+          className="origin-left transition-all duration-500 group-hover:translate-x-1 group-hover:translate-y-1"
+        />
+
+        <path
+          d="M24 29h10"
+          className="origin-left opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-70"
+        />
+
+        <path
+          d="M29 24v10"
+          className="origin-center opacity-0 transition-all duration-500 group-hover:scale-y-100 group-hover:opacity-70"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "solution") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-8 w-8"
+        aria-hidden="true"
+      >
+        <path
+          d="M32 12a16 16 0 0 0-9.5 28.9c2.4 1.7 3.5 3.7 3.5 6.1h12c0-2.4 1.1-4.4 3.5-6.1A16 16 0 0 0 32 12Z"
+          className="transition-all duration-500 group-hover:stroke-cyan-200"
+        />
+
+        <path
+          d="M27 53h10"
+          className="transition-all duration-300 group-hover:translate-y-[-1px]"
+        />
+
+        <path
+          d="M28 47h8"
+          className="transition-all duration-300 group-hover:translate-y-[-1px]"
+        />
+
+        <path
+          d="M32 20v5"
+          className="origin-top transition-all duration-500 group-hover:scale-y-125"
+        />
+
+        <path
+          d="M25 27h14"
+          className="origin-center transition-all duration-500 group-hover:scale-x-110"
+        />
+
+        <path
+          d="M15 19l-3-3M49 19l3-3M32 8V4"
+          className="opacity-0 transition-all duration-500 group-hover:opacity-70"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-8 w-8"
+      aria-hidden="true"
+    >
+      <circle
+        cx="32"
+        cy="32"
+        r="20"
+        className="transition-all duration-500 group-hover:stroke-cyan-200"
+      />
+
+      <path
+        d="m22 32 7 7 14-15"
+        className="origin-center transition-all duration-700 group-hover:scale-110"
+      />
+
+      <path
+        d="M32 6v5M32 53v5M6 32h5M53 32h5"
+        className="opacity-0 transition-all duration-500 group-hover:opacity-70"
+      />
+    </svg>
+  );
+}
 
 export default function HowItWorks() {
   return (
     <section
-      id="proceso"
-      className="relative overflow-hidden bg-[#06152d] py-24 sm:py-28 lg:py-32"
+      id="como-trabajamos"
+      className="relative overflow-hidden bg-[#06152d] py-20 sm:py-24 lg:py-28"
     >
-      {/* =========================
-          FONDO
-      ========================== */}
-
+      {/* Fondos decorativos */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[15%] top-[-180px] h-[420px] w-[420px] rounded-full bg-cyan-500/[0.05] blur-[140px]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/[0.035] blur-[150px]" />
 
-        <div className="absolute right-[5%] bottom-[-180px] h-[420px] w-[420px] rounded-full bg-fuchsia-500/[0.05] blur-[140px]" />
+        <div className="absolute bottom-[-180px] left-[-180px] h-[400px] w-[400px] rounded-full bg-sky-500/[0.035] blur-[140px]" />
+
+        <div className="absolute right-[-180px] top-[25%] h-[400px] w-[400px] rounded-full bg-fuchsia-500/[0.025] blur-[140px]" />
+
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/15 to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        {/* =========================
-            ENCABEZADO
-        ========================== */}
-
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        {/* Encabezado */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/[0.05] px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(34,211,238,0.8)]" />
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/[0.045] px-4 py-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-cyan-300">
               Cómo trabajamos
             </span>
           </div>
 
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Un proceso claro.
+            Una atención clara,
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-              Una solución profesional.
+              de principio a fin.
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Desde el primer contacto hasta la entrega del servicio, buscamos que
-            sepas qué estamos haciendo y por qué.
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+            Trabajamos con un proceso ordenado para entender el problema,
+            encontrar la solución adecuada y comprobar que todo funcione
+            correctamente.
           </p>
         </div>
 
-        {/* =========================
-            PASOS
-        ========================== */}
+        {/* Proceso */}
+        <div className="relative mt-14 lg:mt-16">
+          {/* Línea horizontal desktop */}
+          <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[55px] hidden h-px bg-gradient-to-r from-cyan-400/10 via-cyan-400/25 to-fuchsia-400/10 lg:block" />
 
-        <div className="relative mt-16">
-          {/* Línea central */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+            {steps.map((step, index) => (
+              <article
+                key={step.number}
+                className="group relative rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-cyan-400/25 hover:bg-white/[0.045] hover:shadow-[0_24px_60px_rgba(0,0,0,0.22)] lg:min-h-[300px]"
+              >
+                {/* Línea móvil */}
+                {index < steps.length - 1 && (
+                  <div className="pointer-events-none absolute bottom-[-25px] left-1/2 z-0 h-6 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400/25 to-transparent sm:hidden" />
+                )}
 
-          <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400/30 via-cyan-400/10 to-transparent lg:block" />
+                {/* Línea tablet */}
+                {index === 0 || index === 1 ? (
+                  <div className="pointer-events-none absolute bottom-[-25px] left-1/2 z-0 h-6 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400/20 to-transparent sm:hidden" />
+                ) : null}
 
-          <div className="space-y-6 lg:space-y-8">
-            {steps.map((step, index) => {
-              const isEven = index % 2 === 1;
+                {/* Línea superior */}
+                <div className="absolute left-0 right-0 top-0 h-px origin-center scale-x-0 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-100" />
 
-              return (
-                <div
-                  key={step.number}
-                  className="relative grid gap-6 lg:grid-cols-2 lg:gap-16"
-                >
-                  {/* =========================
-                      CONTENIDO
-                  ========================== */}
+                {/* Número */}
+                <div className="flex items-center justify-between">
+                  <span className="text-[13px] font-bold uppercase tracking-[0.18em] text-cyan-300">
+                    Paso {step.number}
+                  </span>
 
-                  <div
-                    className={`${
-                      isEven ? "lg:col-start-2" : "lg:col-start-1"
-                    }`}
-                  >
-                    <article
-                      className="
-                        group
-                        relative
-                        overflow-hidden
-                        rounded-2xl
-                        border
-                        border-white/[0.08]
-                        bg-white/[0.025]
-                        p-6
-                        transition-all
-                        duration-500
-                        hover:-translate-y-1
-                        hover:border-cyan-400/25
-                        hover:bg-white/[0.04]
-                        sm:p-8
-                      "
-                    >
-                      <div className="absolute right-[-70px] top-[-70px] h-40 w-40 rounded-full bg-cyan-400/[0.05] blur-3xl transition-all duration-500 group-hover:bg-cyan-400/[0.10]" />
+                  <span className="text-sm font-medium text-slate-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-cyan-400">
+                    →
+                  </span>
+                </div>
 
-                      <div className="relative z-10 flex gap-5">
-                        {/* Número */}
+                {/* Icono */}
+                <div className="mt-7 flex justify-center">
+                  <div className="relative flex h-[72px] w-[72px] items-center justify-center rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/[0.10] via-sky-400/[0.06] to-fuchsia-400/[0.06] text-cyan-300 shadow-[0_10px_35px_rgba(34,211,238,0.06)] transition-all duration-500 group-hover:scale-105 group-hover:border-cyan-400/40 group-hover:text-cyan-200 group-hover:shadow-[0_12px_40px_rgba(34,211,238,0.16)]">
+                    <span className="pointer-events-none absolute inset-[-6px] rounded-[21px] border border-cyan-400/0 transition-all duration-700 group-hover:scale-110 group-hover:border-cyan-400/20" />
 
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.07]">
-                          <span className="text-sm font-extrabold tracking-wider text-cyan-300">
-                            {step.number}
-                          </span>
-                        </div>
-
-                        <div>
-                          <h3 className="text-lg font-bold text-white sm:text-xl">
-                            {step.title}
-                          </h3>
-
-                          <p className="mt-3 text-sm leading-6 text-slate-400 sm:text-base sm:leading-7">
-                            {step.description}
-                          </p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-
-                  {/* =========================
-                      PUNTO CENTRAL
-                  ========================== */}
-
-                  <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:flex">
-                    <div className="h-3 w-3 rounded-full border-2 border-cyan-300 bg-[#06152d] shadow-[0_0_16px_rgba(34,211,238,0.7)]" />
+                    <StepIcon type={step.type} />
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Contenido */}
+                <h3 className="mt-6 text-center text-lg font-bold leading-tight text-white transition-colors duration-300 group-hover:text-cyan-50 sm:text-xl">
+                  {step.title}
+                </h3>
+
+                <p className="mt-3 text-center text-sm leading-6 text-slate-400 transition-colors duration-300 group-hover:text-slate-300">
+                  {step.description}
+                </p>
+
+                {/* Indicador inferior */}
+                <div className="mt-5 flex justify-center">
+                  <span className="h-1 w-8 rounded-full bg-cyan-400/10 transition-all duration-500 group-hover:w-14 group-hover:bg-cyan-400/40" />
+                </div>
+              </article>
+            ))}
           </div>
         </div>
 
-        {/* =========================
-            CTA
-        ========================== */}
+        {/* CTA */}
+        <div className="relative mt-12 overflow-hidden rounded-2xl border border-cyan-400/10 bg-gradient-to-r from-cyan-400/[0.035] via-white/[0.015] to-fuchsia-400/[0.035] px-6 py-6 sm:mt-14 sm:px-8 sm:py-7">
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-cyan-400/[0.04] to-transparent" />
 
-        <div className="mx-auto mt-16 max-w-3xl text-center">
-          <p className="text-sm text-slate-500">
-            ¿Ya sabes qué problema tienes?
-          </p>
+          <div className="relative flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
+            <div>
+              <p className="text-base font-semibold text-white sm:text-lg">
+                ¿Tienes un problema con tu equipo?
+              </p>
 
-          <a
-            href="#contacto"
-            className="
-              mt-4
-              inline-flex
-              h-12
-              items-center
-              justify-center
-              rounded-xl
-              bg-gradient-to-r
-              from-cyan-400
-              to-sky-400
-              px-7
-              text-sm
-              font-bold
-              text-slate-950
-              shadow-[0_12px_35px_rgba(34,211,238,0.18)]
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:shadow-[0_18px_45px_rgba(34,211,238,0.28)]
-            "
-          >
-            Solicitar servicio
-          </a>
+              <p className="mt-1 text-sm leading-6 text-slate-400">
+                Cuéntanos qué está pasando y te orientaremos.
+              </p>
+            </div>
+
+            <a
+              href="https://wa.me/51915210525"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contactar a PUNO TECH por WhatsApp"
+              className="inline-flex h-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_8px_25px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_12px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
+            >
+              Cuéntanos tu problema
+              <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -6,73 +6,125 @@ export default function Hero() {
       id="inicio"
       className="relative isolate overflow-hidden bg-[#06152d]"
     >
-      {/* =========================
-          FONDO Y EFECTOS
-      ========================== */}
-
+      {/* =====================================================
+          FONDOS
+      ====================================================== */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        {/* Resplandor superior izquierdo */}
-        <div className="absolute left-[15%] top-[-180px] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[150px]" />
+        <div
+          className="
+            absolute
+            -left-40
+            -top-40
+            h-[500px]
+            w-[500px]
+            rounded-full
+            bg-cyan-500/[0.08]
+            blur-[150px]
+          "
+        />
 
-        {/* Resplandor principal */}
-        <div className="absolute right-[5%] top-[25%] h-[550px] w-[550px] rounded-full bg-cyan-400/10 blur-[150px]" />
+        <div
+          className="
+            absolute
+            right-[-150px]
+            top-[10%]
+            h-[650px]
+            w-[650px]
+            rounded-full
+            bg-fuchsia-500/[0.08]
+            blur-[170px]
+          "
+        />
 
-        {/* Resplandor inferior */}
-        <div className="absolute bottom-[-200px] right-[20%] h-[450px] w-[450px] rounded-full bg-fuchsia-500/10 blur-[150px]" />
+        <div
+          className="
+            absolute
+            bottom-[-250px]
+            left-[35%]
+            h-[600px]
+            w-[600px]
+            rounded-full
+            bg-cyan-500/[0.08]
+            blur-[160px]
+          "
+        />
       </div>
 
-      {/* =========================
-          CONTENEDOR PRINCIPAL
-      ========================== */}
-
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+      {/* =====================================================
+          CONTENEDOR
+      ====================================================== */}
+      <div className="mx-auto max-w-[1500px] px-6 sm:px-8 lg:px-10">
         <div
           className="
             grid
             min-h-[calc(100vh-104px)]
             items-center
-            gap-8
-            pt-16
-            pb-12
-            lg:grid-cols-2
-            lg:gap-4
-            lg:pt-20
-            lg:pb-14
+            py-12
+            sm:py-14
+            lg:grid-cols-[0.76fr_1.24fr]
+            lg:py-6
           "
         >
-          {/* =========================
-              COLUMNA IZQUIERDA
-          ========================== */}
+          {/* =================================================
+              TEXTO
+          ================================================== */}
+          <div className="relative z-30 flex flex-col justify-center">
+            {/* ETIQUETA */}
+            <div
+              className="
+                mb-6
+                flex
+                w-fit
+                items-center
+                gap-3
+                rounded-full
+                border
+                border-cyan-400/20
+                bg-cyan-400/[0.05]
+                px-4
+                py-2
+              "
+            >
+              <span
+                className="
+                  h-2
+                  w-2
+                  rounded-full
+                  bg-cyan-400
+                  shadow-[0_0_16px_rgba(34,211,238,0.9)]
+                "
+              />
 
-          <div className="relative z-20 flex flex-col justify-center">
-            {/* Etiqueta */}
-
-            <div className="mb-6 flex w-fit items-center gap-3 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2">
-              <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
-
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300 sm:text-sm">
+              <span
+                className="
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-cyan-300
+                "
+              >
                 Servicio técnico profesional
               </span>
             </div>
 
-            {/* =========================
-                TÍTULO
-            ========================== */}
-
+            {/* TITULAR */}
             <h1
               className="
                 max-w-[650px]
-                text-[3.5rem]
-                font-extrabold
-                leading-[0.98]
-                tracking-[-0.035em]
+                text-[3.3rem]
+                font-black
+                leading-[0.92]
+                tracking-[-0.05em]
                 text-white
-                sm:text-[4.2rem]
-                lg:text-[4.5rem]
-                xl:text-[5rem]
+                sm:text-[4.4rem]
+                lg:text-[4.6rem]
+                xl:text-[5.1rem]
               "
             >
-              Soporte Técnico
+              Soporte
+              <br />
+              Técnico
               <span
                 className="
                   mt-2
@@ -89,14 +141,11 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* =========================
-                DESCRIPCIÓN
-            ========================== */}
-
+            {/* DESCRIPCIÓN */}
             <p
               className="
                 mt-7
-                max-w-[570px]
+                max-w-[580px]
                 text-base
                 leading-7
                 text-slate-300
@@ -109,10 +158,7 @@ export default function Hero() {
               profesional para hogares y empresas en Puno.
             </p>
 
-            {/* =========================
-                BOTONES
-            ========================== */}
-
+            {/* BOTONES */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#servicios"
@@ -129,11 +175,11 @@ export default function Hero() {
                   text-sm
                   font-bold
                   text-slate-950
-                  shadow-[0_12px_35px_rgba(34,211,238,0.20)]
+                  shadow-[0_12px_35px_rgba(34,211,238,0.22)]
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:shadow-[0_18px_45px_rgba(34,211,238,0.30)]
+                  hover:shadow-[0_18px_45px_rgba(34,211,238,0.35)]
                 "
               >
                 Solicitar servicio
@@ -151,10 +197,10 @@ export default function Hero() {
                   rounded-xl
                   border
                   border-fuchsia-400/50
-                  bg-white/[0.03]
+                  bg-fuchsia-400/[0.04]
                   px-7
                   text-sm
-                  font-semibold
+                  font-bold
                   text-fuchsia-300
                   transition-all
                   duration-300
@@ -168,26 +214,21 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* =========================
-                INDICADORES DE CONFIANZA
-            ========================== */}
-
+            {/* CONFIANZA */}
             <div
               className="
-                mt-9
+                mt-8
                 grid
-                max-w-[600px]
+                max-w-[620px]
                 grid-cols-1
-                gap-5
+                gap-4
                 border-t
-                border-white/10
+                border-white/[0.08]
                 pt-6
-                sm:grid-cols-2
+                sm:grid-cols-3
               "
             >
-              {/* Atención */}
-
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <div
                   className="
                     flex
@@ -207,19 +248,17 @@ export default function Hero() {
                 </div>
 
                 <div>
-                  <p className="text-sm font-semibold text-white">
+                  <p className="text-xs font-bold text-white sm:text-sm">
                     Atención profesional
                   </p>
 
-                  <p className="mt-1 text-xs leading-5 text-slate-400">
+                  <p className="mt-1 text-[10px] text-slate-400 sm:text-xs">
                     Hogares y empresas
                   </p>
                 </div>
               </div>
 
-              {/* Garantía */}
-
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <div
                   className="
                     flex
@@ -235,106 +274,195 @@ export default function Hero() {
                     text-fuchsia-300
                   "
                 >
-                  ✓
+                  ◆
                 </div>
 
                 <div>
-                  <p className="text-sm font-semibold text-white">
+                  <p className="text-xs font-bold text-white sm:text-sm">
                     Garantía de servicio
                   </p>
 
-                  <p className="mt-1 text-xs leading-5 text-slate-400">
+                  <p className="mt-1 text-[10px] text-slate-400 sm:text-xs">
                     Soluciones duraderas
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div
+                  className="
+                    flex
+                    h-9
+                    w-9
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-lg
+                    border
+                    border-sky-400/20
+                    bg-sky-400/10
+                    text-sky-300
+                  "
+                >
+                  ⚡
+                </div>
+
+                <div>
+                  <p className="text-xs font-bold text-white sm:text-sm">
+                    Respuesta rápida
+                  </p>
+
+                  <p className="mt-1 text-[10px] text-slate-400 sm:text-xs">
+                    Soluciones eficientes
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* =========================
-              COLUMNA DERECHA
-          ========================== */}
-
+          {/* =================================================
+              IMAGEN
+          ================================================== */}
           <div
             className="
               relative
               flex
-              min-h-[430px]
+              min-h-[480px]
               items-center
               justify-center
-              lg:min-h-[560px]
+              lg:min-h-[680px]
             "
           >
-            {/* Resplandor */}
-
+            {/* RESPLANDOR CYAN */}
             <div
               className="
                 absolute
-                left-1/2
+                left-[55%]
                 top-1/2
-                h-[320px]
-                w-[320px]
+                h-[420px]
+                w-[420px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
-                bg-cyan-400/20
-                blur-[110px]
-                sm:h-[440px]
-                sm:w-[440px]
+                bg-cyan-400/[0.16]
+                blur-[120px]
+                sm:h-[550px]
+                sm:w-[550px]
               "
             />
 
-            {/* Anillo tecnológico */}
-
+            {/* RESPLANDOR MAGENTA */}
             <div
               className="
                 absolute
-                left-1/2
-                top-1/2
+                left-[68%]
+                top-[45%]
                 h-[350px]
                 w-[350px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
-                border
-                border-cyan-400/10
-                sm:h-[480px]
-                sm:w-[480px]
+                bg-fuchsia-500/[0.10]
+                blur-[120px]
+                sm:h-[500px]
+                sm:w-[500px]
               "
             />
 
-            {/* =========================
-                IMAGEN HERO — AUMENTADA
-            ========================== */}
+            {/* CÍRCULO CYAN */}
+            <div
+              className="
+                absolute
+                left-[58%]
+                top-1/2
+                h-[390px]
+                w-[390px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-cyan-400/[0.10]
+                sm:h-[540px]
+                sm:w-[540px]
+              "
+            />
 
+            {/* CÍRCULO MAGENTA */}
+            <div
+              className="
+                absolute
+                left-[58%]
+                top-1/2
+                h-[500px]
+                w-[500px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-fuchsia-400/[0.05]
+                sm:h-[650px]
+                sm:w-[650px]
+              "
+            />
+
+            {/* =================================================
+                IMAGEN
+
+                AQUÍ ESTÁ EL CAMBIO IMPORTANTE:
+                SCALE AUMENTA EL CONTENIDO VISIBLE.
+            ================================================== */}
             <div
               className="
                 relative
                 z-10
-                w-full
-                max-w-[760px]
-                lg:scale-110
-                xl:scale-115
+                ml-10
+                w-[110%]
+                sm:ml-12
+                sm:w-[115%]
+                lg:ml-16
+                lg:w-[120%]
+                xl:ml-20
+                xl:w-[125%]
               "
             >
               <Image
                 src="/images/hero.png"
                 alt="PUNO TECH - Servicio técnico profesional"
-                width={980}
-                height={820}
+                width={1536}
+                height={1024}
                 priority
-                sizes="(max-width: 1024px) 95vw, 55vw"
+                sizes="(max-width: 1024px) 100vw, 65vw"
                 className="
                   h-auto
                   w-full
+                  scale-[1.18]
                   object-contain
-                  drop-shadow-[0_25px_80px_rgba(0,210,255,0.28)]
+                  drop-shadow-[0_30px_90px_rgba(0,210,255,0.30)]
+                  sm:scale-[1.25]
+                  lg:scale-[1.38]
+                  xl:scale-[1.45]
                 "
               />
             </div>
           </div>
         </div>
       </div>
+
+      {/* LÍNEA INFERIOR */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-0
+          right-0
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-cyan-400/30
+          to-transparent
+        "
+      />
     </section>
   );
 }

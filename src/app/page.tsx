@@ -1,10 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/sections/Services";
+import HowItWorks from "@/components/sections/HowItWorks";
 import About from "@/components/sections/About";
 import WhyUs from "@/components/sections/WhyUs";
 import Solutions from "@/components/sections/Solutions";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import FinalCTA from "@/components/sections/FinalCTA";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -14,11 +19,17 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <HowItWorks />
         <About />
         <WhyUs />
         <Solutions />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
         <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
