@@ -386,7 +386,7 @@ export default function Services() {
                 group
                 relative
                 flex
-                min-h-[410px]
+                min-h-[430px]
                 flex-col
                 overflow-hidden
                 rounded-2xl
@@ -480,53 +480,101 @@ export default function Services() {
                   ICONO ANIMADO
               ==================================== */}
 
-              <div className="flex justify-center">
+              <div
+                className="
+                  relative
+                  mt-8
+                  h-40
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-white/[0.07]
+                  bg-gradient-to-br
+                  from-cyan-400/[0.07]
+                  via-sky-400/[0.025]
+                  to-fuchsia-400/[0.06]
+                  transition-all
+                  duration-500
+                  group-hover:border-cyan-400/20
+                  group-hover:shadow-[0_18px_45px_rgba(34,211,238,0.08)]
+                "
+              >
+                {/* Escenario visual preparado para futuras imágenes */}
+
                 <div
                   className="
-                    relative
-                    mt-8
-                    flex
-                    h-16
-                    w-16
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    border
-                    border-cyan-400/20
-                    bg-gradient-to-br
-                    from-cyan-400/[0.10]
-                    via-sky-400/[0.06]
-                    to-fuchsia-400/[0.06]
-                    text-cyan-300
-                    shadow-[0_10px_35px_rgba(34,211,238,0.07)]
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    opacity-40
+                    [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)]
+                    [background-size:22px_22px]
+                    transition-transform
+                    duration-700
+                    group-hover:scale-105
+                  "
+                />
+
+                <div
+                  className="
+                    absolute
+                    -right-12
+                    -top-12
+                    h-32
+                    w-32
+                    rounded-full
+                    bg-cyan-400/[0.10]
+                    blur-3xl
                     transition-all
                     duration-500
-                    group-hover:scale-105
-                    group-hover:border-cyan-400/40
-                    group-hover:text-cyan-200
-                    group-hover:shadow-[0_12px_40px_rgba(34,211,238,0.18)]
+                    group-hover:bg-cyan-400/[0.16]
                   "
-                >
-                  {/* Anillo luminoso */}
+                />
 
-                  <span
+                <div className="relative flex h-full items-center justify-center">
+                  <div
                     className="
-                      pointer-events-none
-                      absolute
-                      inset-[-5px]
-                      rounded-[20px]
+                      relative
+                      flex
+                      h-20
+                      w-20
+                      items-center
+                      justify-center
+                      rounded-2xl
                       border
-                      border-cyan-400/0
+                      border-cyan-400/20
+                      bg-[#071a33]/80
+                      text-cyan-300
+                      shadow-[0_12px_35px_rgba(0,0,0,0.25)]
+                      backdrop-blur-sm
                       transition-all
-                      duration-700
+                      duration-500
                       group-hover:scale-110
-                      group-hover:border-cyan-400/20
-                      group-hover:opacity-100
+                      group-hover:border-cyan-400/40
+                      group-hover:text-cyan-200
                     "
-                  />
-
-                  <ServiceIcon type={service.type} />
+                  >
+                    <span
+                      className="
+                        pointer-events-none
+                        absolute
+                        inset-[-6px]
+                        rounded-[22px]
+                        border
+                        border-cyan-400/0
+                        transition-all
+                        duration-700
+                        group-hover:scale-110
+                        group-hover:border-cyan-400/20
+                      "
+                    />
+                    <ServiceIcon type={service.type} />
+                  </div>
                 </div>
+
+                <span className="absolute bottom-3 left-3 rounded-full border border-white/[0.08] bg-[#06152d]/70 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-500 backdrop-blur-sm">
+                  PUNO TECH
+                </span>
               </div>
 
               {/* ====================================
