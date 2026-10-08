@@ -70,7 +70,12 @@ function ServiceVisual({ type }: { type: string }) {
         <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10 animate-ping" />
         <div className="absolute h-14 w-14 rounded-full border border-cyan-300/15 animate-pulse" />
         <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.15)]">
-          <span className="text-3xl text-cyan-300">⌁</span>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" className="h-8 w-8 text-cyan-300" aria-hidden="true">
+            <path d="M5 12.5a16 16 0 0 1 22 0" />
+            <path d="M9.5 17a9.5 9.5 0 0 1 13 0" />
+            <path d="M13.5 21.5a4 4 0 0 1 5 0" />
+            <circle cx="16" cy="26" r="1.2" fill="currentColor" stroke="none" />
+          </svg>
           <span className="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,1)]" />
         </div>
         <span className="absolute left-4 top-7 h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />
@@ -83,7 +88,10 @@ function ServiceVisual({ type }: { type: string }) {
     <div className="relative flex h-28 w-44 items-center justify-center animate-[float_4.5s_ease-in-out_infinite]">
       <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10" />
       <div className="relative flex h-16 w-16 rotate-12 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.12)]">
-        <span className="text-3xl text-cyan-300">⚙</span>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-cyan-300" aria-hidden="true">
+          <path d="M13 3h6l1 4.1a9.5 9.5 0 0 1 2.1 1.2l4-1.1 3 5.2-3 2.9a9.8 9.8 0 0 1 0 2.4l3 2.9-3 5.2-4-1.1a9.5 9.5 0 0 1-2.1 1.2L19 30h-6l-1-4.1a9.5 9.5 0 0 1-2.1-1.2l-4 1.1-3-5.2 3-2.9a9.8 9.8 0 0 1 0-2.4l-3-2.9 3-5.2 4 1.1A9.5 9.5 0 0 1 12 7.1L13 3Z" transform="translate(1 0) scale(.92)" />
+          <circle cx="16" cy="16" r="4" />
+        </svg>
       </div>
       <span className="absolute left-8 top-4 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.9)] animate-pulse" />
       <span className="absolute right-8 bottom-4 h-2 w-2 rounded-full bg-fuchsia-300 shadow-[0_0_12px_rgba(217,70,239,0.8)] animate-pulse" />
@@ -808,12 +816,6 @@ export default function Services() {
         </div>
       </div>
 
-        <style jsx global>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-7px); }
-          }
-        `}</style>
     </section>
   );
 }
