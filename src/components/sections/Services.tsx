@@ -202,10 +202,11 @@ export default function Services() {
             lg:grid-cols-4
           "
         >
-          {services.map((service) => (
+          {services.map((service, index) => (
             <article
               key={service.number}
-              className="
+              style={{ animationDelay: `${index * 110}ms` }}
+              className="animate-[service-reveal_650ms_cubic-bezier(0.2,0.75,0.25,1)_both] 
                 group
                 relative
                 flex
