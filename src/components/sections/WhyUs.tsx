@@ -1,30 +1,30 @@
 const reasons = [
   {
     number: "01",
-    title: "Diagnóstico responsable",
+    title: "Revisión antes de intervenir",
     description:
-      "Primero entendemos qué está ocurriendo con tu equipo para identificar la causa y evitar intervenciones innecesarias.",
+      "Revisamos el equipo antes de intervenir para determinar qué necesita realmente y evitar trabajos innecesarios.",
     accent: "cyan",
   },
   {
     number: "02",
-    title: "Comunicación clara",
+    title: "Explicación sin vueltas",
     description:
-      "Te explicamos el problema y las alternativas de solución de forma sencilla, sin tecnicismos que compliquen la decisión.",
+      "Te contamos qué encontramos, qué alternativas existen y qué implica el servicio, de forma sencilla y transparente.",
     accent: "sky",
   },
   {
     number: "03",
-    title: "Solución eficiente",
+    title: "Trabajo bien definido",
     description:
-      "Buscamos resolver el problema de forma adecuada, reduciendo tiempos innecesarios y devolviendo tu equipo a funcionamiento.",
+      "Definimos el trabajo necesario y nos enfocamos en resolver el problema sin agregar servicios que no necesitas.",
     accent: "fuchsia",
   },
   {
     number: "04",
-    title: "Confianza y seguimiento",
+    title: "Verificación final",
     description:
-      "Trabajamos con responsabilidad y transparencia, procurando que recibas una atención profesional antes, durante y después del servicio.",
+      "Comprobamos el funcionamiento al terminar y te explicamos lo realizado para que recibas el equipo con mayor tranquilidad.",
     accent: "violet",
   },
 ];
@@ -187,16 +187,14 @@ export default function WhyUs() {
           </div>
 
           <h2 className="text-4xl font-extrabold leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
-            Tecnología con criterio.
+            Un servicio pensado para
             <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-              Servicio con confianza.
+              hacer las cosas bien.
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            No se trata solamente de reparar un equipo. Se trata de entender el
-            problema, encontrar una solución adecuada y darte la confianza de
-            estar en buenas manos.
+            Cuando buscas soporte técnico, necesitas saber qué se encontró, qué se hará y qué puedes esperar del resultado.
           </p>
         </div>
 
@@ -324,7 +322,7 @@ export default function WhyUs() {
 
                   <div>
                     <p className="text-base font-extrabold leading-6 text-white sm:text-lg">
-                      Una buena solución comienza con un buen diagnóstico.
+                      Queremos que sepas exactamente qué estamos haciendo con tu equipo.
                     </p>
 
                     <p className="mt-2 text-sm leading-6 text-slate-400">
@@ -366,7 +364,7 @@ export default function WhyUs() {
                   active:translate-y-0
                 "
               >
-                Hablar con PUNO TECH
+                Consultar con PUNO TECH
                 <span className="ml-2 transition-transform duration-300 group-hover/cta:translate-x-1">
                   →
                 </span>
