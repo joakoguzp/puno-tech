@@ -206,9 +206,16 @@ export default function Footer() {
                 Atención en Puno
               </p>
 
-              <p className="mt-2 text-sm text-slate-400">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Jr.+Revoluci%C3%B3n+359%2C+Puno%2C+Per%C3%BA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
+                aria-label="Ver dirección de PUNO TECH en Google Maps"
+              >
                 Jr. Revolución N° 359, Puno, Perú, 21002
-              </p>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
 
             <a
