@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     number: "01",
@@ -323,12 +325,12 @@ export default function Services() {
                   group-hover:shadow-[0_18px_45px_rgba(34,211,238,0.08)]
                 "
               >
-                <img
+                <Image
                   src={service.image}
                   alt={service.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/90 via-[#06152d]/10 to-[#06152d]/20 transition-opacity duration-500 group-hover:opacity-80" />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
