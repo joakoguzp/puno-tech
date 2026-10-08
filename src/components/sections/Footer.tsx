@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const navigation = [
-  { name: "Inicio", href: "#" },
+  { name: "Inicio", href: "#inicio" },
   { name: "Servicios", href: "#servicios" },
   { name: "Cómo trabajamos", href: "#como-trabajamos" },
   { name: "Nosotros", href: "#nosotros" },
@@ -39,7 +39,7 @@ export default function Footer() {
           ======================================================= */}
           <div>
             <a
-              href="#"
+              href="#inicio"
               aria-label="PUNO TECH - Inicio"
               className="group inline-flex items-center"
             >
