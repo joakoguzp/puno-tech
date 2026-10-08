@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://puno-tech.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "PUNO TECH | Soporte técnico y soluciones tecnológicas en Puno",
     template: "%s | PUNO TECH",
