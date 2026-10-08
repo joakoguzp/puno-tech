@@ -53,9 +53,15 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <a
+        href="#contenido"
+        className="sr-only z-[100] rounded-lg bg-cyan-300 px-4 py-3 font-bold text-slate-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      >
+        Saltar al contenido
+      </a>
       <Navbar />
 
-      <main>
+      <main id="contenido">
         <Hero />
         <Services />
         <HowItWorks />
