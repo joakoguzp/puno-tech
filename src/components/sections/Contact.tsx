@@ -470,9 +470,19 @@ export default function Contact() {
 
               <p className="mt-2 text-lg font-bold text-white">Puno, Perú</p>
 
-              <p className="mt-2 text-sm leading-6 text-slate-400">
-                Jr. Revolución N° 359, Puno, Perú, 21002
-              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Jr.+Revoluci%C3%B3n+359%2C+Puno%2C+Per%C3%BA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-start gap-2 text-sm leading-6 text-slate-400 transition-colors hover:text-cyan-300"
+                aria-label="Ver ubicación de PUNO TECH en Google Maps"
+              >
+                <span>Jr. Revolución N° 359, Puno, Perú, 21002</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className="mt-1 h-4 w-4 shrink-0" aria-hidden="true">
+                  <path d="M11 3h6v6M17 3l-8 8" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M15 11v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
             </div>
 
             {/* Atención */}
