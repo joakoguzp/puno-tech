@@ -5,7 +5,6 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import About from "@/components/sections/About";
 import WhyUs from "@/components/sections/WhyUs";
 import Solutions from "@/components/sections/Solutions";
-import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Contact from "@/components/sections/Contact";
@@ -23,7 +22,6 @@ export default function Home() {
         <About />
         <WhyUs />
         <Solutions />
-        <Testimonials />
         <FAQ />
         <FinalCTA />
         <Contact />
