@@ -2,6 +2,8 @@ const services = [
   {
     number: "01",
     type: "computer",
+    image: "/images/services/computadoras-laptops.svg",
+    imageAlt: "Ilustración tecnológica de una laptop abierta en mantenimiento con herramienta de precisión",
     title: "Computadoras y Laptops",
     description:
       "Diagnóstico, mantenimiento, reparación, optimización y solución de problemas de hardware y software.",
@@ -10,6 +12,8 @@ const services = [
   {
     number: "02",
     type: "printer",
+    image: "/images/services/impresoras.svg",
+    imageAlt: "Ilustración de una impresora y hojas, representando mantenimiento y configuración",
     title: "Impresoras",
     description:
       "Mantenimiento, configuración y solución de problemas de impresión, conectividad y funcionamiento.",
@@ -18,6 +22,8 @@ const services = [
   {
     number: "03",
     type: "wifi",
+    image: "/images/services/redes-wifi.svg",
+    imageAlt: "Ilustración de un router con señal inalámbrica y dispositivos conectados",
     title: "Redes y WiFi",
     description:
       "Configuración y optimización de routers, redes WiFi y conectividad para hogares, negocios y empresas.",
@@ -26,263 +32,14 @@ const services = [
   {
     number: "04",
     type: "support",
+    image: "/images/services/soporte-tecnico.svg",
+    imageAlt: "Ilustración de una pantalla de diagnóstico y una herramienta técnica",
     title: "Soporte Técnico",
     description:
       "Asistencia técnica para resolver problemas informáticos, configurar programas y mantener tus equipos funcionando correctamente.",
     tags: ["Soporte", "Software", "Asistencia"],
   },
 ];
-
-function ServiceVisual({ type }: { type: string }) {
-  if (type === "computer") {
-    return (
-      <div className="relative h-28 w-44">
-        <div className="absolute left-3 top-2 h-20 w-36 rounded-lg border-2 border-cyan-300/40 bg-slate-950/70 shadow-[0_0_30px_rgba(34,211,238,0.12)] animate-[float_4s_ease-in-out_infinite]">
-          <div className="absolute inset-2 rounded-md bg-gradient-to-br from-cyan-400/10 via-sky-400/5 to-fuchsia-400/10" />
-          <div className="absolute left-5 top-6 h-1 w-16 rounded-full bg-cyan-300/40" />
-          <div className="absolute left-5 top-10 h-1 w-24 rounded-full bg-slate-600" />
-          <div className="absolute left-5 top-14 h-1 w-12 rounded-full bg-slate-700" />
-          <span className="absolute right-4 top-5 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
-        </div>
-        <div className="absolute left-16 top-[82px] h-2 w-20 rounded-full bg-cyan-300/20 blur-sm" />
-        <div className="absolute left-20 top-[79px] h-3 w-12 rounded-b-lg bg-slate-500/60" />
-      </div>
-    );
-  }
-
-  if (type === "printer") {
-    return (
-      <div className="relative h-28 w-44 animate-[float_5s_ease-in-out_infinite]">
-        <div className="absolute left-7 top-10 h-14 w-32 rounded-xl border border-fuchsia-300/30 bg-slate-950/75 shadow-[0_0_32px_rgba(217,70,239,0.10)]">
-          <div className="absolute left-5 top-4 h-2 w-12 rounded-full bg-fuchsia-300/30" />
-          <span className="absolute right-5 top-4 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
-        </div>
-        <div className="absolute left-12 top-2 h-12 w-24 rounded-t-lg border border-white/10 bg-slate-800/80" />
-        <div className="absolute left-16 top-19 h-14 w-16 rounded-b-md border-x border-b border-cyan-300/20 bg-white/[0.04]" />
-        <div className="absolute left-[72px] top-24 h-1 w-7 rounded-full bg-cyan-300/30" />
-      </div>
-    );
-  }
-
-  if (type === "wifi") {
-    return (
-      <div className="relative flex h-28 w-44 items-center justify-center">
-        <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10 animate-ping" />
-        <div className="absolute h-14 w-14 rounded-full border border-cyan-300/15 animate-pulse" />
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.15)]">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" className="h-8 w-8 text-cyan-300" aria-hidden="true">
-            <path d="M5 12.5a16 16 0 0 1 22 0" />
-            <path d="M9.5 17a9.5 9.5 0 0 1 13 0" />
-            <path d="M13.5 21.5a4 4 0 0 1 5 0" />
-            <circle cx="16" cy="26" r="1.2" fill="currentColor" stroke="none" />
-          </svg>
-          <span className="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,1)]" />
-        </div>
-        <span className="absolute left-4 top-7 h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />
-        <span className="absolute right-5 bottom-7 h-1.5 w-1.5 rounded-full bg-fuchsia-300 animate-pulse" />
-      </div>
-    );
-  }
-
-  return (
-    <div className="relative flex h-28 w-44 items-center justify-center animate-[float_4.5s_ease-in-out_infinite]">
-      <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10" />
-      <div className="relative flex h-16 w-16 rotate-12 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.12)]">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-cyan-300" aria-hidden="true">
-          <path d="M13 3h6l1 4.1a9.5 9.5 0 0 1 2.1 1.2l4-1.1 3 5.2-3 2.9a9.8 9.8 0 0 1 0 2.4l3 2.9-3 5.2-4-1.1a9.5 9.5 0 0 1-2.1 1.2L19 30h-6l-1-4.1a9.5 9.5 0 0 1-2.1-1.2l-4 1.1-3-5.2 3-2.9a9.8 9.8 0 0 1 0-2.4l-3-2.9 3-5.2 4 1.1A9.5 9.5 0 0 1 12 7.1L13 3Z" transform="translate(1 0) scale(.92)" />
-          <circle cx="16" cy="16" r="4" />
-        </svg>
-      </div>
-      <span className="absolute left-8 top-4 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.9)] animate-pulse" />
-      <span className="absolute right-8 bottom-4 h-2 w-2 rounded-full bg-fuchsia-300 shadow-[0_0_12px_rgba(217,70,239,0.8)] animate-pulse" />
-    </div>
-  );
-}
-
-function ServiceIcon({ type }: { type: string }) {
-  if (type === "computer") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="h-9 w-9"
-        aria-hidden="true"
-      >
-        <rect
-          x="12"
-          y="10"
-          width="40"
-          height="30"
-          rx="4"
-          className="transition-all duration-500 group-hover:stroke-cyan-200"
-        />
-
-        <path d="M24 52h16" />
-
-        <path d="M32 40v12" />
-
-        <path
-          d="M20 18h24"
-          className="origin-center transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-40"
-        />
-
-        <path
-          d="M20 24h13"
-          className="origin-left transition-all duration-500 group-hover:scale-x-125"
-        />
-
-        <path
-          d="M20 30h8"
-          className="origin-left transition-all duration-500 group-hover:scale-x-150"
-        />
-
-        <circle
-          cx="45"
-          cy="18"
-          r="2"
-          className="fill-current opacity-50 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100"
-        />
-      </svg>
-    );
-  }
-
-  if (type === "printer") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="h-9 w-9"
-        aria-hidden="true"
-      >
-        <rect
-          x="17"
-          y="24"
-          width="30"
-          height="21"
-          rx="4"
-          className="transition-all duration-500 group-hover:stroke-cyan-200"
-        />
-
-        <path d="M22 24V13h20v11" />
-
-        <path
-          d="M23 13h18"
-          className="transition-all duration-500 group-hover:opacity-50"
-        />
-
-        <rect
-          x="22"
-          y="38"
-          width="20"
-          height="15"
-          rx="2"
-          className="origin-top transition-all duration-500 group-hover:-translate-y-2"
-        />
-
-        <path
-          d="M27 43h10"
-          className="transition-all duration-300 group-hover:translate-x-1"
-        />
-
-        <path
-          d="M27 47h7"
-          className="transition-all duration-500 group-hover:translate-x-2"
-        />
-
-        <circle
-          cx="42"
-          cy="31"
-          r="1.8"
-          className="fill-current opacity-40 transition-all duration-300 group-hover:scale-150 group-hover:opacity-100"
-        />
-      </svg>
-    );
-  }
-
-  if (type === "wifi") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        aria-hidden="true"
-        className="h-9 w-9"
-      >
-        <path
-          d="M13 25a28 28 0 0 1 38 0"
-          className="origin-center transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
-        />
-
-        <path
-          d="M20 32a18 18 0 0 1 24 0"
-          className="origin-center transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
-        />
-
-        <path
-          d="M27 39a8 8 0 0 1 10 0"
-          className="origin-center transition-all duration-500 group-hover:scale-125 group-hover:opacity-100"
-        />
-
-        <circle
-          cx="32"
-          cy="47"
-          r="2.5"
-          className="fill-current transition-all duration-500 group-hover:scale-150"
-        />
-
-        <circle
-          cx="32"
-          cy="47"
-          r="7"
-          className="origin-center opacity-0 transition-all duration-700 group-hover:scale-100 group-hover:opacity-20"
-        />
-      </svg>
-    );
-  }
-
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-9 w-9"
-      aria-hidden="true"
-    >
-      <path
-        d="M39 14a12 12 0 0 0-15 15L12 41l11 11 12-12a12 12 0 0 0 15-15l-7 7-7-2-2-7 7-7Z"
-        className="origin-center transition-transform duration-700 group-hover:rotate-[12deg]"
-      />
-
-      <path
-        d="m38 38 13 13"
-        className="origin-left transition-all duration-500 group-hover:translate-x-1"
-      />
-
-      <path
-        d="M14 14 8 8"
-        className="opacity-0 transition-all duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:opacity-70"
-      />
-
-      <path
-        d="M50 14l6-6"
-        className="opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-70"
-      />
-    </svg>
-  );
-}
 
 export default function Services() {
   return (
@@ -565,81 +322,17 @@ export default function Services() {
                   group-hover:shadow-[0_18px_45px_rgba(34,211,238,0.08)]
                 "
               >
-                {/* Escenario visual preparado para futuras imágenes */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    inset-0
-                    opacity-40
-                    [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)]
-                    [background-size:22px_22px]
-                    transition-transform
-                    duration-700
-                    group-hover:scale-105
-                  "
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
-
-                <div
-                  className="
-                    absolute
-                    -right-12
-                    -top-12
-                    h-32
-                    w-32
-                    rounded-full
-                    bg-cyan-400/[0.10]
-                    blur-3xl
-                    transition-all
-                    duration-500
-                    group-hover:bg-cyan-400/[0.16]
-                  "
-                />
-
-                <div className="relative flex h-full items-center justify-center">
-                  <ServiceVisual type={service.type} />
-                  <div
-                    className="
-                      relative
-                      flex
-                      h-20
-                      w-20
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      border
-                      border-cyan-400/20
-                      bg-[#071a33]/80
-                      text-cyan-300
-                      shadow-[0_12px_35px_rgba(0,0,0,0.25)]
-                      backdrop-blur-sm
-                      transition-all
-                      duration-500
-                      group-hover:scale-110
-                      group-hover:border-cyan-400/40
-                      group-hover:text-cyan-200
-                    "
-                  >
-                    <span
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-[-6px]
-                        rounded-[22px]
-                        border
-                        border-cyan-400/0
-                        transition-all
-                        duration-700
-                        group-hover:scale-110
-                        group-hover:border-cyan-400/20
-                      "
-                    />
-                    <ServiceIcon type={service.type} />
-                  </div>
-                </div>
-
-                <span className="absolute bottom-3 left-3 rounded-full border border-white/[0.08] bg-[#06152d]/70 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-500 backdrop-blur-sm">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/90 via-[#06152d]/10 to-[#06152d]/20 transition-opacity duration-500 group-hover:opacity-80" />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/75 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
                   PUNO TECH
                 </span>
               </div>
