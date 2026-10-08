@@ -88,3 +88,13 @@ main > section:not(#inicio) [class*="min-h-screen"] {
     transition-duration: 0.01ms !important;
   }
 }
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
