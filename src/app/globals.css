@@ -63,3 +63,28 @@ main > section + section {
 main > section:not(#inicio) [class*="min-h-screen"] {
   min-height: auto !important;
 }
+
+/* =========================================================
+   ACCESIBILIDAD Y ACABADOS GLOBALES
+   ========================================================= */
+
+::selection {
+  color: #06152d;
+  background: rgba(103, 232, 249, 0.8);
+}
+
+:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
