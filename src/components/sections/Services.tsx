@@ -33,6 +33,64 @@ const services = [
   },
 ];
 
+function ServiceVisual({ type }: { type: string }) {
+  if (type === "computer") {
+    return (
+      <div className="relative h-28 w-44">
+        <div className="absolute left-3 top-2 h-20 w-36 rounded-lg border-2 border-cyan-300/40 bg-slate-950/70 shadow-[0_0_30px_rgba(34,211,238,0.12)] animate-[float_4s_ease-in-out_infinite]">
+          <div className="absolute inset-2 rounded-md bg-gradient-to-br from-cyan-400/10 via-sky-400/5 to-fuchsia-400/10" />
+          <div className="absolute left-5 top-6 h-1 w-16 rounded-full bg-cyan-300/40" />
+          <div className="absolute left-5 top-10 h-1 w-24 rounded-full bg-slate-600" />
+          <div className="absolute left-5 top-14 h-1 w-12 rounded-full bg-slate-700" />
+          <span className="absolute right-4 top-5 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
+        </div>
+        <div className="absolute left-16 top-[82px] h-2 w-20 rounded-full bg-cyan-300/20 blur-sm" />
+        <div className="absolute left-20 top-[79px] h-3 w-12 rounded-b-lg bg-slate-500/60" />
+      </div>
+    );
+  }
+
+  if (type === "printer") {
+    return (
+      <div className="relative h-28 w-44 animate-[float_5s_ease-in-out_infinite]">
+        <div className="absolute left-7 top-10 h-14 w-32 rounded-xl border border-fuchsia-300/30 bg-slate-950/75 shadow-[0_0_32px_rgba(217,70,239,0.10)]">
+          <div className="absolute left-5 top-4 h-2 w-12 rounded-full bg-fuchsia-300/30" />
+          <span className="absolute right-5 top-4 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+        </div>
+        <div className="absolute left-12 top-2 h-12 w-24 rounded-t-lg border border-white/10 bg-slate-800/80" />
+        <div className="absolute left-16 top-19 h-14 w-16 rounded-b-md border-x border-b border-cyan-300/20 bg-white/[0.04]" />
+        <div className="absolute left-[72px] top-24 h-1 w-7 rounded-full bg-cyan-300/30" />
+      </div>
+    );
+  }
+
+  if (type === "wifi") {
+    return (
+      <div className="relative flex h-28 w-44 items-center justify-center">
+        <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10 animate-ping" />
+        <div className="absolute h-14 w-14 rounded-full border border-cyan-300/15 animate-pulse" />
+        <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.15)]">
+          <span className="text-3xl text-cyan-300">⌁</span>
+          <span className="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,1)]" />
+        </div>
+        <span className="absolute left-4 top-7 h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />
+        <span className="absolute right-5 bottom-7 h-1.5 w-1.5 rounded-full bg-fuchsia-300 animate-pulse" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative flex h-28 w-44 items-center justify-center animate-[float_4.5s_ease-in-out_infinite]">
+      <div className="absolute h-20 w-20 rounded-full border border-cyan-300/10" />
+      <div className="relative flex h-16 w-16 rotate-12 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950/80 shadow-[0_0_35px_rgba(34,211,238,0.12)]">
+        <span className="text-3xl text-cyan-300">⚙</span>
+      </div>
+      <span className="absolute left-8 top-4 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.9)] animate-pulse" />
+      <span className="absolute right-8 bottom-4 h-2 w-2 rounded-full bg-fuchsia-300 shadow-[0_0_12px_rgba(217,70,239,0.8)] animate-pulse" />
+    </div>
+  );
+}
+
 function ServiceIcon({ type }: { type: string }) {
   if (type === "computer") {
     return (
@@ -532,6 +590,7 @@ export default function Services() {
                 />
 
                 <div className="relative flex h-full items-center justify-center">
+                  <ServiceVisual type={service.type} />
                   <div
                     className="
                       relative
@@ -748,6 +807,13 @@ export default function Services() {
           </div>
         </div>
       </div>
+
+        <style jsx global>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+          }
+        `}</style>
     </section>
   );
 }
