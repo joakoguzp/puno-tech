@@ -238,11 +238,6 @@ export default function HowItWorks() {
                   <div className="pointer-events-none absolute bottom-[-25px] left-1/2 z-0 h-6 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400/25 to-transparent sm:hidden" />
                 )}
 
-                {/* Línea tablet */}
-                {index === 0 || index === 1 ? (
-                  <div className="pointer-events-none absolute bottom-[-25px] left-1/2 z-0 h-6 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-400/20 to-transparent sm:hidden" />
-                ) : null}
-
                 {/* Línea superior */}
                 <div className="absolute left-0 right-0 top-0 h-px origin-center scale-x-0 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-100" />
 
@@ -304,7 +299,7 @@ export default function HowItWorks() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contactar a PUNO TECH por WhatsApp"
-              className="inline-flex h-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_8px_25px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_12px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
+              className="group inline-flex h-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_8px_25px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_12px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
             >
               Cuéntanos tu problema
               <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
