@@ -66,24 +66,23 @@ export default function Navbar() {
               </span>
             </button>
 
-            {isMenuOpen && (
-              <nav
-                id="navegacion-movil"
-                aria-label="Navegación móvil"
-                className="absolute right-0 top-[calc(100%+10px)] w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#071a33]/95 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-              >
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-cyan-400/[0.08] hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-300"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </nav>
-            )}
+            <nav
+              id="navegacion-movil"
+              aria-label="Navegación móvil"
+              hidden={!isMenuOpen}
+              className="absolute right-0 top-[calc(100%+10px)] w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#071a33]/95 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            >
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-cyan-400/[0.08] hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-300"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </nav>
           </div>
         </div>
       </div>
