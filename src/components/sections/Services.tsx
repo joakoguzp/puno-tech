@@ -8,8 +8,8 @@ const services = [
     imageAlt: "Ilustración tecnológica de una laptop abierta en mantenimiento con herramienta de precisión",
     title: "Computadoras y Laptops",
     description:
-      "Diagnóstico, mantenimiento, reparación, optimización y solución de problemas de hardware y software.",
-    tags: ["Diagnóstico", "Mantenimiento", "Reparación"],
+      "Diagnóstico, mantenimiento, reparación, optimización y solución de problemas de hardware y software, además de recuperación de archivos cuando sea técnicamente posible.",
+    tags: ["Diagnóstico", "Mantenimiento", "Reparación", "Recuperación de archivos"],
   },
   {
     number: "02",
