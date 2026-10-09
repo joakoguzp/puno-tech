@@ -19,7 +19,7 @@ const jsonLd = {
   image: "https://puno-tech.vercel.app/images/hero.png",
   logo: "https://puno-tech.vercel.app/images/logo.png",
   description:
-    "Servicio técnico, reparación y mantenimiento de computadoras y laptops, impresoras, redes WiFi y soporte tecnológico en Puno, Perú.",
+    "Servicio técnico, reparación y mantenimiento de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, impresoras, redes WiFi y soporte tecnológico en Puno, Perú.",
   telephone: "+51915210525",
   email: "solucionespc804@gmail.com",
   address: {
@@ -39,6 +39,7 @@ const jsonLd = {
     name: "Servicios tecnológicos",
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reparación y mantenimiento de computadoras y laptops" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Recuperación de archivos cuando sea técnicamente posible" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mantenimiento y configuración de impresoras" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Configuración de redes y WiFi" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Soporte técnico informático" } },
