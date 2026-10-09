@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 const navigation = [
@@ -8,6 +11,8 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#06152d]/90 backdrop-blur-xl">
       <div className="mx-auto flex h-[82px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:h-[88px] lg:px-10">
@@ -45,33 +50,41 @@ export default function Navbar() {
             WhatsApp
           </a>
 
-          <details className="relative md:hidden">
-            <summary
-              aria-label="Abrir menú"
-              className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/30 hover:text-cyan-300 [&::-webkit-details-marker]:hidden"
+          <div className="relative md:hidden">
+            <button
+              type="button"
+              aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={isMenuOpen}
+              aria-controls="navegacion-movil"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/30 hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
             >
-              <span className="flex flex-col gap-1.5">
+              <span className="flex flex-col gap-1.5" aria-hidden="true">
                 <span className="h-0.5 w-5 rounded-full bg-current" />
                 <span className="h-0.5 w-5 rounded-full bg-current" />
                 <span className="h-0.5 w-5 rounded-full bg-current" />
               </span>
-            </summary>
+            </button>
 
-            <nav
-              aria-label="Navegación móvil"
-              className="absolute right-0 top-[calc(100%+10px)] w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#071a33]/95 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-            >
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-cyan-400/[0.08] hover:text-cyan-300"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-          </details>
+            {isMenuOpen && (
+              <nav
+                id="navegacion-movil"
+                aria-label="Navegación móvil"
+                className="absolute right-0 top-[calc(100%+10px)] w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#071a33]/95 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+              >
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-cyan-400/[0.08] hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-cyan-300"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </nav>
+            )}
+          </div></details>
         </div>
       </div>
     </header>
