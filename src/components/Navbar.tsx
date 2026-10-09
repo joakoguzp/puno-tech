@@ -84,7 +84,7 @@ export default function Navbar() {
                 ))}
               </nav>
             )}
-          </div></details>
+          </div>
         </div>
       </div>
     </header>
