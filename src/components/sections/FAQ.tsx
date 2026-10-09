@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "¿Qué servicios ofrece PUNO TECH?",
     answer:
-      "Ofrecemos mantenimiento, diagnóstico y reparación de computadoras y laptops, soporte para impresoras, configuración de redes y WiFi, instalación y configuración de software y otras soluciones tecnológicas según las necesidades de cada cliente.",
+      "Ofrecemos mantenimiento, diagnóstico y reparación de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, soporte para impresoras, configuración de redes y WiFi, instalación y configuración de software y otras soluciones tecnológicas según las necesidades de cada cliente.",
   },
   {
     question: "¿Realizan primero un diagnóstico?",
