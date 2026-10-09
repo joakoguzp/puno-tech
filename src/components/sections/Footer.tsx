@@ -13,6 +13,7 @@ const navigation = [
 
 const services = [
   "Computadoras y laptops",
+  "Recuperación de archivos",
   "Impresoras",
   "Redes y WiFi",
   "Soporte técnico",
