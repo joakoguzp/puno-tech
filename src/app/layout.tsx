@@ -31,13 +31,14 @@ export const metadata: Metadata = {
   },
 
   description:
-    "PUNO TECH brinda soporte técnico, reparación y mantenimiento de computadoras y laptops, impresoras, redes WiFi y soluciones tecnológicas para hogares y empresas en Puno.",
+    "PUNO TECH brinda soporte técnico, reparación y mantenimiento de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, impresoras, redes WiFi y soluciones tecnológicas para hogares y empresas en Puno.",
 
   keywords: [
     "PUNO TECH",
     "servicio técnico Puno",
     "reparación de computadoras Puno",
     "reparación de laptops Puno",
+    "recuperación de archivos Puno",
     "soporte técnico Puno",
     "mantenimiento de computadoras",
     "reparación de impresoras",
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "PUNO TECH",
     title: "PUNO TECH | Soporte técnico y soluciones tecnológicas en Puno",
     description:
-      "Servicio técnico profesional para computadoras, laptops, impresoras, redes WiFi y soporte tecnológico en Puno.",
+      "Servicio técnico profesional para computadoras, laptops, recuperación de archivos, impresoras, redes WiFi y soporte tecnológico en Puno.",
     images: [
       {
         url: "/images/hero.png",
