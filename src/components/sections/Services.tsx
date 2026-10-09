@@ -212,7 +212,7 @@ export default function Services() {
                 group
                 relative
                 flex
-                min-h-[430px]
+                min-h-[470px]
                 flex-col
                 overflow-hidden
                 rounded-2xl
@@ -310,7 +310,7 @@ export default function Services() {
                 className="
                   relative
                   mt-8
-                  h-40
+                  h-44
                   overflow-hidden
                   rounded-2xl
                   border
@@ -323,6 +323,7 @@ export default function Services() {
                   duration-500
                   group-hover:border-cyan-400/20
                   group-hover:shadow-[0_18px_45px_rgba(34,211,238,0.08)]
+                  sm:h-48
                 "
               >
                 <Image
@@ -415,6 +416,17 @@ export default function Services() {
                   </span>
                 ))}
               </div>
+
+              <a
+                href={`https://wa.me/51915210525?text=${encodeURIComponent(`Hola, PUNO TECH. Quisiera consultar por el servicio de ${service.title}.`) }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Consultar por WhatsApp el servicio de ${service.title}`}
+                className="relative mt-5 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-cyan-300/20 bg-cyan-300/[0.045] px-4 py-2 text-xs font-bold text-cyan-100 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-white focus-visible:outline-cyan-300"
+              >
+                Consultar servicio
+                <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
             </article>
           ))}
         </div>
