@@ -185,6 +185,7 @@ export default function FAQ() {
 
                 <div
                   id={`faq-answer-${index}`}
+                  aria-hidden={!isOpen}
                   className={`
                     grid transition-all duration-300 ease-out
                     ${
