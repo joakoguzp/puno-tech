@@ -60,9 +60,15 @@ export default function Navbar() {
               className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/30 hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
             >
               <span className="flex flex-col gap-1.5" aria-hidden="true">
-                <span className="h-0.5 w-5 rounded-full bg-current" />
-                <span className="h-0.5 w-5 rounded-full bg-current" />
-                <span className="h-0.5 w-5 rounded-full bg-current" />
+                <span
+                  className={`h-0.5 w-5 rounded-full bg-current transition-all duration-300 ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`}
+                />
+                <span
+                  className={`h-0.5 w-5 rounded-full bg-current transition-all duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`h-0.5 w-5 rounded-full bg-current transition-all duration-300 ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+                />
               </span>
             </button>
 
