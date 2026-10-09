@@ -9,6 +9,11 @@ const faqs = [
       "Ofrecemos mantenimiento, diagnóstico y reparación de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, soporte para impresoras, configuración de redes y WiFi, instalación y configuración de software y otras soluciones tecnológicas según las necesidades de cada cliente.",
   },
   {
+    question: "¿Pueden recuperar archivos borrados?",
+    answer:
+      "Podemos revisar si es posible recuperar archivos según el dispositivo y el estado del almacenamiento. No se puede garantizar la recuperación en todos los casos. Si perdiste archivos importantes, evita guardar nuevos datos o instalar programas en esa unidad y contáctanos para evaluar el caso.",
+  },
+  {
     question: "¿Realizan primero un diagnóstico?",
     answer:
       "Sí. Antes de realizar un trabajo buscamos identificar qué está ocurriendo y determinar qué solución necesita el equipo. Esto nos permite orientarte de manera más clara y evitar intervenciones innecesarias.",
