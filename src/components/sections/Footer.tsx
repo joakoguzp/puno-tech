@@ -54,7 +54,7 @@ export default function Footer() {
 
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">
               Soluciones tecnológicas profesionales para computadoras, laptops,
-              impresoras, redes y soporte técnico en Puno.
+              recuperación de archivos, impresoras, redes y soporte técnico en Puno.
             </p>
 
             <p className="mt-5 max-w-sm text-sm font-semibold leading-6 text-slate-300">
