@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 const services = [
@@ -44,6 +47,8 @@ const services = [
 ];
 
 export default function Services() {
+  const [highlightedService, setHighlightedService] = useState<string | null>(null);
+
   return (
     <section
       id="servicios"
@@ -204,11 +209,14 @@ export default function Services() {
             lg:grid-cols-4
           "
         >
-          {services.map((service, index) => (
+          {services.map((service, index) => {
+            const isHighlighted = highlightedService === service.type;
+
+            return (
             <article
               key={service.number}
               style={{ animationDelay: `${index * 110}ms` }}
-              className="animate-[service-reveal_650ms_cubic-bezier(0.2,0.75,0.25,1)_both] 
+              className={`animate-[service-reveal_650ms_cubic-bezier(0.2,0.75,0.25,1)_both] 
                 group
                 relative
                 flex
@@ -227,7 +235,8 @@ export default function Services() {
                 hover:border-cyan-400/25
                 hover:bg-white/[0.045]
                 hover:shadow-[0_24px_70px_rgba(0,0,0,0.25)]
-              "
+                ${isHighlighted ? "border-cyan-300/40 bg-white/[0.055] shadow-[0_20px_65px_rgba(34,211,238,0.13)]" : ""}
+              `}
             >
               {/* Línea superior */}
 
@@ -306,40 +315,32 @@ export default function Services() {
                   ICONO ANIMADO
               ==================================== */}
 
-              <div
-                className="
-                  relative
-                  mt-8
-                  h-44
-                  overflow-hidden
-                  rounded-2xl
-                  border
-                  border-white/[0.07]
-                  bg-gradient-to-br
-                  from-cyan-400/[0.07]
-                  via-sky-400/[0.025]
-                  to-fuchsia-400/[0.06]
-                  transition-all
-                  duration-500
-                  group-hover:border-cyan-400/20
-                  group-hover:shadow-[0_18px_45px_rgba(34,211,238,0.08)]
-                  sm:h-48
-                "
+              <button
+                type="button"
+                aria-label={`${isHighlighted ? "Reducir" : "Destacar"} imagen de ${service.title}`}
+                aria-expanded={isHighlighted}
+                onClick={() => setHighlightedService(isHighlighted ? null : service.type)}
+                className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-64 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-72" : "h-44 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-48"}`}
               >
                 <Image
                   src={service.image}
                   alt={service.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                  className={`object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0.75,0.25,1)] ${isHighlighted ? "scale-[1.16]" : "group-hover/image:scale-[1.08]"}`}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/90 via-[#06152d]/10 to-[#06152d]/20 transition-opacity duration-500 group-hover:opacity-80" />
-                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
-                <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/75 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
-                  PUNO TECH
+                <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/95 via-[#06152d]/15 to-[#06152d]/10 transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
+                <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
+                  <span aria-hidden="true">{isHighlighted ? "−" : "+"}</span>
+                  {isHighlighted ? "Reducir imagen" : "Ver imagen"}
                 </span>
-              </div>
+                <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/80 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
+                  {isHighlighted ? "Vista destacada" : "PUNO TECH"}
+                </span>
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 transition-transform duration-700 group-hover/image:scale-x-100" />
+              </button>
 
               {/* ====================================
                   CONTENIDO
@@ -428,7 +429,8 @@ export default function Services() {
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         {/* ========================================
