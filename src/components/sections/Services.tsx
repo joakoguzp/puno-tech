@@ -11,8 +11,8 @@ const services = [
     imageAlt: "Ilustración tecnológica de una laptop abierta en mantenimiento con herramienta de precisión",
     title: "Computadoras y Laptops",
     description:
-      "Diagnóstico, mantenimiento, reparación, optimización y solución de problemas de hardware y software, además de recuperación de archivos cuando sea técnicamente posible.",
-    tags: ["Diagnóstico", "Mantenimiento", "Reparación", "Recuperación de archivos"],
+      "Reparación, mantenimiento, optimización y recuperación de archivos cuando sea posible.",
+    tags: [],
   },
   {
     number: "02",
@@ -21,8 +21,8 @@ const services = [
     imageAlt: "Ilustración de una impresora y hojas, representando mantenimiento y configuración",
     title: "Impresoras",
     description:
-      "Mantenimiento, configuración y solución de problemas de impresión, conectividad y funcionamiento.",
-    tags: ["Mantenimiento", "Configuración", "Soporte"],
+      "Limpieza, mantenimiento y configuración de impresoras.",
+    tags: [],
   },
   {
     number: "03",
@@ -31,8 +31,8 @@ const services = [
     imageAlt: "Ilustración de un router con señal inalámbrica y dispositivos conectados",
     title: "Redes y WiFi",
     description:
-      "Configuración y optimización de routers, redes WiFi y conectividad para hogares, negocios y empresas.",
-    tags: ["WiFi", "Routers", "Redes"],
+      "Configuración de routers, redes WiFi y conexiones.",
+    tags: [],
   },
   {
     number: "04",
@@ -41,8 +41,8 @@ const services = [
     imageAlt: "Ilustración de una pantalla de diagnóstico y una herramienta técnica",
     title: "Soporte Técnico",
     description:
-      "Asistencia técnica para resolver problemas informáticos, configurar programas y mantener tus equipos funcionando correctamente.",
-    tags: ["Soporte", "Software", "Asistencia"],
+      "Diagnóstico y solución de problemas de hardware y software.",
+    tags: [],
   },
 ];
 
@@ -190,8 +190,7 @@ export default function Services() {
               sm:text-base
             "
           >
-            Diagnóstico, reparación y soporte especializado para que tu
-            tecnología funcione correctamente, sin complicaciones.
+            Reparación y soporte para tus equipos, en Puno.
           </p>
         </div>
 
@@ -201,7 +200,7 @@ export default function Services() {
 
         <div
           className="
-            mt-12
+            mt-10
             grid
             gap-5
             sm:grid-cols-2
@@ -220,7 +219,7 @@ export default function Services() {
                 group
                 relative
                 flex
-                min-h-[470px]
+                min-h-[390px]
                 flex-col
                 overflow-hidden
                 rounded-2xl
@@ -425,7 +424,7 @@ export default function Services() {
                 aria-label={`Consultar por WhatsApp el servicio de ${service.title}`}
                 className="relative mt-5 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-cyan-300/20 bg-cyan-300/[0.045] px-4 py-2 text-xs font-bold text-cyan-100 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-white focus-visible:outline-cyan-300"
               >
-                Consultar servicio
+                Consultar por WhatsApp
                 <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             </article>
