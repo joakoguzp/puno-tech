@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid min-h-[calc(100vh-88px)] items-center gap-12 py-12 sm:py-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:py-10">
+        <div className="grid min-h-[min(700px,calc(100svh-88px))] items-center gap-10 py-10 sm:py-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:py-8">
           {/* Contenido */}
           <div className="relative z-20 max-w-[650px]">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
@@ -51,7 +51,23 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-9 grid max-w-[600px] grid-cols-1 gap-4 border-t border-white/[0.08] pt-6 sm:grid-cols-3">
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-400 sm:text-sm">
+              <a
+                href="tel:+51915210525"
+                className="transition-colors hover:text-cyan-300"
+              >
+                Tel. 915 210 525
+              </a>
+              <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-slate-600 sm:block" />
+              <a
+                href="mailto:solucionespc804@gmail.com"
+                className="break-all transition-colors hover:text-cyan-300"
+              >
+                solucionespc804@gmail.com
+              </a>
+            </div>
+
+            <div className="mt-7 grid max-w-[600px] grid-cols-1 gap-4 border-t border-white/[0.08] pt-6 sm:grid-cols-3">
               <div>
                 <p className="text-sm font-bold text-white">Diagnóstico</p>
                 <p className="mt-1 text-xs leading-5 text-slate-400">
