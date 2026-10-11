@@ -29,10 +29,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 max-w-[590px] text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Reparación y soporte especializado para computadoras, laptops,
-              impresoras, redes y WiFi. Diagnosticamos el problema, te
-              explicamos la solución y hacemos que tu tecnología vuelva a
-              funcionar correctamente.
+              Reparamos y damos mantenimiento a computadoras, laptops, impresoras y redes. Atención técnica en Puno.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -58,21 +55,21 @@ export default function Hero() {
               <div>
                 <p className="text-sm font-bold text-white">Diagnóstico</p>
                 <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Entendemos la causa
+                  Revisamos el problema
                 </p>
               </div>
 
               <div>
                 <p className="text-sm font-bold text-white">Solución</p>
                 <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Explicamos el trabajo
+                  Te explicamos la solución
                 </p>
               </div>
 
               <div>
                 <p className="text-sm font-bold text-white">Seguimiento</p>
                 <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Verificamos el resultado
+                  Comprobamos el equipo
                 </p>
               </div>
             </div>
