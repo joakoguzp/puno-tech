@@ -30,7 +30,7 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -49,8 +49,9 @@ img {
    ========================================================= */
 
 main > section:not(#inicio) {
-  padding-top: clamp(4rem, 6vw, 6rem) !important;
-  padding-bottom: clamp(4rem, 6vw, 6rem) !important;
+  /* Separación más compacta para evitar grandes franjas vacías entre secciones. */
+  padding-top: clamp(2.75rem, 4vw, 4rem) !important;
+  padding-bottom: clamp(2.75rem, 4vw, 4rem) !important;
   min-height: auto !important;
 }
 
