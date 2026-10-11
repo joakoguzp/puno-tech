@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Usa la tipografía Geist que Next.js ya carga para mantener una identidad visual coherente. */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 :root {
   --background: #06152d;
   --foreground: #f8fafc;
