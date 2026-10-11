@@ -86,7 +86,7 @@ export default function Hero() {
                   alt="Técnico de PUNO TECH realizando mantenimiento a una laptop"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 62vw"
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 760px"
                   className="object-cover object-center"
                 />
 
