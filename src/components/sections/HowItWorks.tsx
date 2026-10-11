@@ -3,28 +3,28 @@ const steps = [
     number: "01",
     title: "Cuéntanos el problema",
     description:
-      "Explícanos qué está pasando con tu computadora, laptop, impresora, red o software.",
+      "Cuéntanos qué falla y en qué equipo.",
     type: "message",
   },
   {
     number: "02",
     title: "Diagnosticamos",
     description:
-      "Revisamos el problema para identificar su causa y determinar qué necesita realmente tu equipo.",
+      "Revisamos el equipo para identificar la causa.",
     type: "search",
   },
   {
     number: "03",
     title: "Proponemos la solución",
     description:
-      "Te explicamos qué podemos hacer, qué incluye el servicio y, cuando corresponda, el costo.",
+      "Te explicamos la solución y el costo antes de realizar el trabajo, cuando corresponda.",
     type: "solution",
   },
   {
     number: "04",
     title: "Solucionamos y verificamos",
     description:
-      "Realizamos el servicio, comprobamos que todo funcione correctamente y te damos seguimiento.",
+      "Realizamos el trabajo y comprobamos su funcionamiento.",
     type: "check",
   },
 ];
@@ -216,9 +216,7 @@ export default function HowItWorks() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-            Trabajamos con un proceso ordenado para entender el problema,
-            encontrar la solución adecuada y comprobar que todo funcione
-            correctamente.
+            Así de sencillo: revisamos, te explicamos y solucionamos.
           </p>
         </div>
 
