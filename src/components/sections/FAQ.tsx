@@ -51,7 +51,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex((current) => (current === index ? null : index));
@@ -212,72 +212,6 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* =========================
-            CTA
-        ========================== */}
-
-        <div className="mt-14 text-center">
-          <p className="text-sm text-slate-500">¿Tu duda no está aquí?</p>
-
-          <p className="mt-2 text-base font-medium text-slate-300">
-            Cuéntanos qué está ocurriendo y te orientamos.
-          </p>
-
-          <a
-            href="https://wa.me/51915210525"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              mt-6
-              inline-flex
-              h-12
-              items-center
-              justify-center
-              gap-2
-              rounded-xl
-              border
-              border-cyan-400/25
-              bg-gradient-to-r
-              from-cyan-500/[0.12]
-              to-sky-500/[0.08]
-              px-7
-              text-sm
-              font-bold
-              text-cyan-300
-              shadow-[0_8px_30px_rgba(6,182,212,0.08)]
-              transition-all
-              duration-300
-              hover:-translate-y-0.5
-              hover:border-cyan-400/40
-              hover:bg-cyan-400/[0.12]
-              hover:text-white
-              hover:shadow-[0_12px_35px_rgba(6,182,212,0.16)]
-              active:translate-y-0
-            "
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              className="h-4 w-4"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M20 11.5a8.2 8.2 0 0 1-8.3 8.2 8.3 8.3 0 0 1-4.1-1.1L4 19.7l1.1-3.4A8.1 8.1 0 0 1 3.5 12 8.2 8.2 0 1 1 20 11.5Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.5 9.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c.5 1 1.3 1.8 2.4 2.3l.7-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.4.3-1 .4-1.5.3-2.8-.5-5.4-3.1-5.9-5.9-.1-.5 0-1.1.4-1.5Z"
-              />
-            </svg>
-            Consultar mi caso
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
       </div>
     </section>
   );
