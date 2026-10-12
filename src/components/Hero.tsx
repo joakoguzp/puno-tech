@@ -14,14 +14,14 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid min-h-[min(700px,calc(100svh-88px))] items-center gap-10 py-10 sm:py-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8 lg:py-8 xl:gap-10">
+        <div className="grid items-center gap-8 py-8 sm:gap-10 sm:py-10 lg:min-h-[min(680px,calc(100svh-88px))] lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 lg:py-8 xl:gap-10">
           {/* Contenido */}
           <div className="relative z-20 max-w-[650px]">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
               PUNO TECH · Puno, Perú
             </p>
 
-            <h1 className="text-[clamp(2.45rem,8.8vw,3.35rem)] font-black leading-[0.98] tracking-[-0.055em] sm:text-[4rem] md:text-[4.25rem] lg:text-[clamp(3rem,4.2vw,4rem)] xl:text-[4.35rem]">
+            <h1 className="text-[clamp(2.35rem,8.5vw,3.25rem)] font-black leading-[0.98] tracking-[-0.05em] sm:text-[3.75rem] md:text-[4rem] lg:text-[clamp(2.85rem,3.6vw,3.7rem)] xl:text-[4rem]">
               Soporte técnico
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
                 que sí resuelve.
@@ -66,8 +66,6 @@ export default function Hero() {
                 solucionespc804@gmail.com
               </a>
             </div>
-
-
           </div>
 
           {/* Imagen principal */}
@@ -75,14 +73,14 @@ export default function Hero() {
             <div aria-hidden="true" className="absolute left-[50%] top-[50%] h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.12] blur-[110px] sm:h-[560px] sm:w-[560px]" />
 
             <div className="relative mx-auto w-full max-w-[760px] overflow-hidden rounded-[30px] border border-white/[0.10] bg-white/[0.02] shadow-[0_35px_100px_rgba(0,0,0,0.38)]">
-              <div className="relative aspect-[3/2]">
+              <div className="relative aspect-[4/3] sm:aspect-[3/2]">
                 <Image
                   src="/images/hero.png"
                   alt="Técnico de PUNO TECH realizando mantenimiento a una laptop"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 760px"
-                  className="object-contain object-center"
+                  className="object-contain object-center p-1 sm:p-2"
                 />
 
                 <div
@@ -90,12 +88,12 @@ export default function Hero() {
                   className="absolute inset-0 bg-gradient-to-r from-[#06152d]/15 via-transparent to-[#06152d]/20"
                 />
 
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 sm:bottom-6 sm:left-6 sm:right-6">
-                  <div className="rounded-2xl border border-white/10 bg-[#06152d]/75 px-4 py-3 backdrop-blur-md">
+                <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-2 sm:bottom-6 sm:left-6 sm:right-6">
+                  <div className="max-w-full rounded-2xl border border-white/10 bg-[#06152d]/85 px-3 py-2.5 backdrop-blur-md sm:px-4 sm:py-3">
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-300">
                       Atención profesional
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-white">
+                    <p className="mt-1 text-xs font-semibold text-white sm:text-sm">
                       Computación · Redes · Impresoras
                     </p>
                   </div>
