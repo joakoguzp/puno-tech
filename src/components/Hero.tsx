@@ -67,28 +67,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-7 grid max-w-[600px] grid-cols-1 gap-4 border-t border-white/[0.08] pt-6 sm:grid-cols-3">
-              <div>
-                <p className="text-sm font-bold text-white">Diagnóstico</p>
-                <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Revisamos el problema
-                </p>
-              </div>
 
-              <div>
-                <p className="text-sm font-bold text-white">Solución</p>
-                <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Te explicamos la solución
-                </p>
-              </div>
-
-              <div>
-                <p className="text-sm font-bold text-white">Seguimiento</p>
-                <p className="mt-1 text-xs leading-5 text-slate-400">
-                  Comprobamos el equipo
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Imagen principal */}
