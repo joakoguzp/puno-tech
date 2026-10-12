@@ -14,14 +14,14 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid min-h-[min(700px,calc(100svh-88px))] items-center gap-10 py-10 sm:py-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:py-8">
+        <div className="grid min-h-[min(700px,calc(100svh-88px))] items-center gap-10 py-10 sm:py-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8 lg:py-8 xl:gap-10">
           {/* Contenido */}
           <div className="relative z-20 max-w-[650px]">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
               PUNO TECH · Puno, Perú
             </p>
 
-            <h1 className="text-[clamp(2.45rem,8.8vw,3.35rem)] font-black leading-[0.98] tracking-[-0.055em] sm:text-[4.5rem] lg:text-[4.7rem] xl:text-[5.2rem]">
+            <h1 className="text-[clamp(2.45rem,8.8vw,3.35rem)] font-black leading-[0.98] tracking-[-0.055em] sm:text-[4rem] md:text-[4.25rem] lg:text-[clamp(3rem,4.2vw,4rem)] xl:text-[4.35rem]">
               Soporte técnico
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
                 que sí resuelve.
@@ -71,10 +71,10 @@ export default function Hero() {
           </div>
 
           {/* Imagen principal */}
-          <div className="relative z-10 lg:-mr-20 xl:-mr-28">
+          <div className="relative z-10 min-w-0 w-full">
             <div aria-hidden="true" className="absolute left-[50%] top-[50%] h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.12] blur-[110px] sm:h-[560px] sm:w-[560px]" />
 
-            <div className="relative mx-auto max-w-[760px] overflow-hidden rounded-[30px] border border-white/[0.10] bg-white/[0.02] shadow-[0_35px_100px_rgba(0,0,0,0.38)]">
+            <div className="relative mx-auto w-full max-w-[760px] overflow-hidden rounded-[30px] border border-white/[0.10] bg-white/[0.02] shadow-[0_35px_100px_rgba(0,0,0,0.38)]">
               <div className="relative aspect-[3/2]">
                 <Image
                   src="/images/hero.png"
