@@ -277,35 +277,6 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="relative mt-12 overflow-hidden rounded-2xl border border-cyan-400/10 bg-gradient-to-r from-cyan-400/[0.035] via-white/[0.015] to-fuchsia-400/[0.035] px-6 py-6 sm:mt-14 sm:px-8 sm:py-7">
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-cyan-400/[0.04] to-transparent" />
-
-          <div className="relative flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
-            <div>
-              <p className="text-base font-semibold text-white sm:text-lg">
-                ¿Tienes un problema con tu equipo?
-              </p>
-
-              <p className="mt-1 text-sm leading-6 text-slate-400">
-                Cuéntanos qué está pasando y te orientaremos.
-              </p>
-            </div>
-
-            <a
-              href="https://wa.me/51915210525"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Contactar a PUNO TECH por WhatsApp"
-              className="group inline-flex h-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_8px_25px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_12px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
-            >
-              Cuéntanos tu problema
-              <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
