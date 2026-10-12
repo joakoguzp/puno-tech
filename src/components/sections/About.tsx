@@ -34,17 +34,15 @@ export default function About() {
 
             {/* Título */}
             <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
-              Tecnología que funciona.
+              Soporte técnico en Puno.
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-                Soluciones que generan confianza.
+                Atención transparente de principio a fin.
               </span>
             </h2>
 
             {/* Texto principal */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              En PUNO TECH ayudamos a personas, hogares, negocios y empresas a
-              resolver sus problemas tecnológicos con atención clara,
-              diagnóstico responsable y soluciones pensadas para funcionar.
+              Atendemos a hogares, personas y negocios de Puno con explicaciones claras y soluciones acordes a cada equipo.
             </p>
 
             {/* =================================================
@@ -60,11 +58,11 @@ export default function About() {
                 <div className="mt-4 h-px w-8 bg-cyan-400/40 transition-all duration-300 group-hover:w-12 group-hover:bg-cyan-400" />
 
                 <h3 className="mt-4 text-sm font-bold text-white">
-                  Diagnóstico
+                  Claridad
                 </h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Entender antes de actuar.
+                  Te explicamos antes de empezar.
                 </p>
               </div>
 
@@ -76,10 +74,10 @@ export default function About() {
 
                 <div className="mt-4 h-px w-8 bg-sky-400/40 transition-all duration-300 group-hover:w-12 group-hover:bg-sky-400" />
 
-                <h3 className="mt-4 text-sm font-bold text-white">Calidad</h3>
+                <h3 className="mt-4 text-sm font-bold text-white">Cuidado</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Soluciones pensadas para funcionar.
+                  Trabajo cuidadoso en cada equipo.
                 </p>
               </div>
 
@@ -91,7 +89,7 @@ export default function About() {
 
                 <div className="mt-4 h-px w-8 bg-fuchsia-400/40 transition-all duration-300 group-hover:w-12 group-hover:bg-fuchsia-400" />
 
-                <h3 className="mt-4 text-sm font-bold text-white">Confianza</h3>
+                <h3 className="mt-4 text-sm font-bold text-white">Responsabilidad</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
                   Atención clara y responsable.
@@ -151,7 +149,7 @@ export default function About() {
                       </p>
 
                       <p className="mt-1 text-sm font-bold text-white">
-                        Atención disponible
+                        Atención en Puno
                       </p>
                     </div>
 
@@ -196,11 +194,11 @@ export default function About() {
 
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-bold text-white">
-                        Diagnóstico técnico
+                        Atención técnica
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Identificamos la causa antes de intervenir.
+                        Revisamos cada caso antes de proponer un trabajo.
                       </p>
                     </div>
 
@@ -227,11 +225,11 @@ export default function About() {
 
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-bold text-white">
-                        Soluciones con calidad
+                        Trabajo responsable
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Buscamos soluciones adecuadas y duraderas.
+                        Priorizamos el trabajo que el equipo necesita.
                       </p>
                     </div>
 
@@ -264,11 +262,11 @@ export default function About() {
 
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-bold text-white">
-                        Soluciones para Puno
+                        Servicio local
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Hogares, negocios y empresas.
+                        Para hogares y negocios de Puno.
                       </p>
                     </div>
 
