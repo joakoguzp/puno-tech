@@ -5,7 +5,6 @@ const navigation = [
   { name: "Servicios", href: "#servicios" },
   { name: "Cómo trabajamos", href: "#como-trabajamos" },
   { name: "Nosotros", href: "#nosotros" },
-  { name: "Por qué PUNO TECH", href: "#porque" },
   { name: "Soluciones", href: "#soluciones" },
   { name: "Preguntas frecuentes", href: "#faq" },
   { name: "Contacto", href: "#contacto" },
