@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "¿Qué servicios ofrece PUNO TECH?",
     answer:
-      "Ofrecemos mantenimiento, diagnóstico y reparación de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, soporte para impresoras, configuración de redes y WiFi, instalación y configuración de software y otras soluciones tecnológicas según las necesidades de cada cliente.",
+      "Reparamos y damos mantenimiento a computadoras y laptops; también atendemos impresoras, redes, WiFi y configuración de software. La recuperación de archivos depende del estado del dispositivo.",
   },
   {
     question: "¿Pueden recuperar archivos borrados?",
@@ -16,37 +16,37 @@ const faqs = [
   {
     question: "¿Realizan primero un diagnóstico?",
     answer:
-      "Sí. Antes de realizar un trabajo buscamos identificar qué está ocurriendo y determinar qué solución necesita el equipo. Esto nos permite orientarte de manera más clara y evitar intervenciones innecesarias.",
+      "Sí. Revisamos el caso para identificar qué necesita el equipo y explicarte los siguientes pasos antes de intervenir.",
   },
   {
     question: "¿Puedo conocer el costo antes de realizar el servicio?",
     answer:
-      "El costo depende del problema y del trabajo que sea necesario realizar. Después de revisar el caso podremos orientarte sobre el servicio y, cuando corresponda, informarte el costo antes de realizar el trabajo.",
+      "Depende de la falla y del trabajo necesario. Te informaremos el costo antes de realizar el servicio, cuando corresponda.",
   },
   {
     question: "¿Atienden a hogares y empresas?",
     answer:
-      "Sí. Atendemos a usuarios particulares, hogares, pequeños negocios y empresas que necesitan mantenimiento, reparación, configuración o soporte para sus equipos y soluciones tecnológicas.",
+      "Sí, atendemos a usuarios particulares, hogares, pequeños negocios y empresas.",
   },
   {
     question: "¿Atienden en Puno?",
     answer:
-      "Sí. PUNO TECH brinda atención en Puno para servicios tecnológicos según el tipo de necesidad. Puedes comunicarte con nosotros para explicarnos tu caso y conocer la mejor forma de atención.",
+      "Sí, brindamos atención en Puno. Escríbenos para coordinar según el servicio que necesitas.",
   },
   {
     question: "¿Cuánto demora una reparación?",
     answer:
-      "El tiempo depende del tipo de problema, del estado del equipo y del trabajo que sea necesario realizar. Una vez identificado el problema podremos orientarte mejor sobre el tiempo estimado del servicio.",
+      "Depende de la falla, el estado del equipo y las piezas o trabajos necesarios. Te daremos una estimación al revisar el caso.",
   },
   {
     question: "¿Los servicios tienen garantía?",
     answer:
-      "Los servicios que correspondan cuentan con las condiciones de garantía que se indiquen al momento de realizar el trabajo. La cobertura depende del servicio realizado y de sus condiciones específicas.",
+      "Si el servicio incluye garantía, te explicaremos sus condiciones y cobertura antes de finalizar el trabajo.",
   },
   {
     question: "¿Qué hago si no sé cuál es el problema?",
     answer:
-      "No necesitas conocer el diagnóstico técnico. Puedes explicarnos qué comportamiento presenta tu equipo, qué ocurrió antes de que apareciera el problema o qué mensaje aparece en pantalla. Nosotros te ayudaremos a orientar el caso y determinar los siguientes pasos.",
+      "Cuéntanos qué ocurre, cuándo empezó y si aparece algún mensaje de error. No necesitas saber la causa técnica.",
   },
 ];
 
@@ -96,8 +96,7 @@ export default function FAQ() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Encuentra respuestas a algunas de las preguntas más comunes antes de
-            solicitar un servicio tecnológico.
+            Respuestas breves sobre servicios, costos y atención.
           </p>
         </div>
 
