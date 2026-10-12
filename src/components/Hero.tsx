@@ -73,14 +73,14 @@ export default function Hero() {
             <div aria-hidden="true" className="absolute left-[50%] top-[50%] h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.12] blur-[110px] sm:h-[560px] sm:w-[560px]" />
 
             <div className="relative mx-auto w-full max-w-[760px] overflow-hidden rounded-[30px] border border-white/[0.10] bg-white/[0.02] shadow-[0_35px_100px_rgba(0,0,0,0.38)]">
-              <div className="relative aspect-[4/3] sm:aspect-[3/2]">
+              <div className="relative aspect-[4/3] bg-[#06152d] sm:aspect-[3/2]">
                 <Image
                   src="/images/hero.png"
                   alt="Técnico de PUNO TECH realizando mantenimiento a una laptop"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 760px"
-                  className="object-contain object-center p-1 sm:p-2"
+                  className="object-contain object-center p-0 sm:p-1"
                 />
 
                 <div
