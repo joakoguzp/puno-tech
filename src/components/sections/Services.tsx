@@ -483,12 +483,11 @@ export default function Services() {
           >
             <div>
               <p className="text-base font-semibold text-white sm:text-lg">
-                ¿No sabes qué necesita tu equipo?
+                ¿No sabes qué servicio elegir?
               </p>
 
               <p className="mt-1 text-sm leading-6 text-slate-400">
-                Podemos comenzar con un diagnóstico y orientarte hacia la mejor
-                solución.
+                Escríbenos y te ayudamos a identificar el servicio adecuado.
               </p>
             </div>
 
@@ -496,7 +495,7 @@ export default function Services() {
               href="https://wa.me/51915210525"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Solicitar diagnóstico por WhatsApp"
+              aria-label="Consultar qué servicio necesitas por WhatsApp"
               className="
                 inline-flex
                 h-11
@@ -518,7 +517,7 @@ export default function Services() {
                 active:translate-y-0
               "
             >
-              Solicitar diagnóstico
+              Elegir servicio por WhatsApp
               <span className="ml-2">→</span>
             </a>
           </div>
