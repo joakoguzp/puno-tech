@@ -21,7 +21,7 @@ export default function Hero() {
               PUNO TECH · Puno, Perú
             </p>
 
-            <h1 className="text-[3.35rem] font-black leading-[0.92] tracking-[-0.055em] sm:text-[4.5rem] lg:text-[4.7rem] xl:text-[5.2rem]">
+            <h1 className="text-[clamp(2.45rem,8.8vw,3.35rem)] font-black leading-[0.98] tracking-[-0.055em] sm:text-[4.5rem] lg:text-[4.7rem] xl:text-[5.2rem]">
               Soporte técnico
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
                 que sí resuelve.
@@ -82,7 +82,7 @@ export default function Hero() {
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 760px"
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                 />
 
                 <div
