@@ -32,10 +32,6 @@ export default function Contact() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Cuéntanos qué está ocurriendo con tu equipo o servicio tecnológico y
-            te orientaremos sobre el siguiente paso.
-          </p>
         </div>
 
         {/* Contenido principal */}
@@ -96,9 +92,7 @@ export default function Contact() {
               </div>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-                No necesitas conocer exactamente qué está fallando. Cuéntanos
-                qué sucede con tu computadora, impresora, red, WiFi o software y
-                te ayudaremos a orientar el caso.
+                Cuéntanos qué necesitas para que podamos orientarte.
               </p>
 
               {/* Áreas de atención */}
@@ -383,7 +377,7 @@ export default function Contact() {
               <p className="mt-2 text-xl font-bold text-white">915 210 525</p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Escríbenos para contarnos qué necesitas.
+                Contacto directo para consultas.
               </p>
             </a>
 
@@ -432,7 +426,7 @@ export default function Contact() {
               </p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Para consultas y solicitudes de servicio.
+                También puedes escribirnos por correo.
               </p>
             </a>
 
@@ -518,8 +512,7 @@ export default function Contact() {
               </p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Primero entendemos el problema. Después buscamos la solución
-                adecuada para tu caso.
+                Atención técnica en Puno.
               </p>
             </div>
           </div>
