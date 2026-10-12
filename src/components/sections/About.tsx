@@ -47,27 +47,6 @@ export default function About() {
               diagnóstico responsable y soluciones pensadas para funcionar.
             </p>
 
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-              No se trata solamente de reparar un equipo. Primero entendemos el
-              problema, encontramos su causa y buscamos la alternativa adecuada
-              para que puedas volver a trabajar, estudiar o disfrutar de tu
-              tecnología con tranquilidad.
-            </p>
-
-            {/* =================================================
-                FILOSOFÍA
-            ================================================== */}
-            <div className="mt-9 border-l-2 border-cyan-400/40 pl-5">
-              <p className="text-sm font-semibold leading-6 text-slate-200 sm:text-base">
-                “Entender el problema es el primer paso para encontrar una
-                solución que realmente funcione.”
-              </p>
-
-              <p className="mt-2 text-xs font-medium uppercase tracking-[0.16em] text-cyan-400/80">
-                Filosofía PUNO TECH
-              </p>
-            </div>
-
             {/* =================================================
                 PILARES
             ================================================== */}
