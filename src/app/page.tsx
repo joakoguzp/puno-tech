@@ -6,7 +6,6 @@ import About from "@/components/sections/About";
 import WhyUs from "@/components/sections/WhyUs";
 import Solutions from "@/components/sections/Solutions";
 import FAQ from "@/components/sections/FAQ";
-import FinalCTA from "@/components/sections/FinalCTA";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
@@ -70,7 +69,6 @@ export default function Home() {
         <WhyUs />
         <Solutions />
         <FAQ />
-        <FinalCTA />
         <Contact />
       </main>
 
