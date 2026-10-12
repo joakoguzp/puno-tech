@@ -3,7 +3,7 @@ const solutions = [
     number: "01",
     title: "Tu equipo presenta fallas",
     description:
-      "Si tu computadora o laptop está lenta, se apaga, presenta errores o dejó de funcionar correctamente, empezamos identificando qué está ocurriendo.",
+      "Lentitud, apagados, errores o fallas de funcionamiento en computadoras y laptops.",
     label: "Computadoras",
     accent: "cyan",
   },
@@ -11,7 +11,7 @@ const solutions = [
     number: "02",
     title: "Necesitas poner todo a funcionar",
     description:
-      "Configuramos sistemas, programas, impresoras, routers y conexiones para que puedas utilizar tu tecnología de manera correcta.",
+      "Instalación y configuración de software, impresoras, routers y conexiones.",
     label: "Configuración",
     accent: "sky",
   },
@@ -19,7 +19,7 @@ const solutions = [
     number: "03",
     title: "Tu negocio necesita soporte",
     description:
-      "Ayudamos a mantener funcionando la tecnología que utilizas diariamente en tu negocio, desde equipos hasta conectividad.",
+      "Soporte para los equipos y la conectividad que tu negocio utiliza a diario.",
     label: "Negocios",
     accent: "fuchsia",
   },
@@ -27,7 +27,7 @@ const solutions = [
     number: "04",
     title: "No sabes qué está fallando",
     description:
-      "No necesitas conocer la causa del problema. Cuéntanos qué sucede y te orientaremos sobre el siguiente paso.",
+      "Describe lo que ocurre; te orientaremos sobre cómo continuar.",
     label: "Orientación",
     accent: "violet",
   },
@@ -218,8 +218,7 @@ export default function Solutions() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            No necesitas saber exactamente qué está fallando. Cuéntanos qué
-            ocurre y PUNO TECH te ayuda a encontrar el camino adecuado.
+            Reparación, configuración y soporte para equipos y conectividad en Puno.
           </p>
         </div>
 
