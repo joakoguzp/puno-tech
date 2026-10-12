@@ -245,10 +245,6 @@ export default function Footer() {
             reservados.
           </p>
 
-          <p>
-            Tecnología al instante,
-            <span className="text-slate-500"> soluciones con calidad.</span>
-          </p>
         </div>
       </div>
     </footer>
