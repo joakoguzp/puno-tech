@@ -3,28 +3,28 @@ const steps = [
     number: "01",
     title: "Cuéntanos el problema",
     description:
-      "Cuéntanos qué falla y en qué equipo.",
+      "Dinos qué equipo tienes y qué ocurre.",
     type: "message",
   },
   {
     number: "02",
     title: "Diagnosticamos",
     description:
-      "Revisamos el equipo para identificar la causa.",
+      "Revisamos el caso para identificar la causa.",
     type: "search",
   },
   {
     number: "03",
     title: "Proponemos la solución",
     description:
-      "Te explicamos la solución y el costo antes de realizar el trabajo, cuando corresponda.",
+      "Te explicamos el trabajo recomendado y su costo antes de empezar, cuando corresponda.",
     type: "solution",
   },
   {
     number: "04",
     title: "Solucionamos y verificamos",
     description:
-      "Realizamos el trabajo y comprobamos su funcionamiento.",
+      "Realizamos el trabajo y verificamos el funcionamiento.",
     type: "check",
   },
 ];
