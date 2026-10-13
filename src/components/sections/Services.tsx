@@ -163,7 +163,7 @@ export default function Services() {
               lg:text-5xl
             "
           >
-            Soluciones tecnológicas
+            Servicios técnicos
             <span
               className="
                 block
@@ -175,7 +175,7 @@ export default function Services() {
                 text-transparent
               "
             >
-              para tus necesidades.
+en Puno.
             </span>
           </h2>
 
@@ -190,7 +190,7 @@ export default function Services() {
               sm:text-base
             "
           >
-            Reparación y soporte para tus equipos, en Puno.
+            Computadoras, impresoras, redes y soporte especializado.
           </p>
         </div>
 
