@@ -219,7 +219,7 @@ en Puno.
                 group
                 relative
                 flex
-                min-h-[390px]
+                min-h-[420px]
                 flex-col
                 overflow-hidden
                 rounded-2xl
@@ -319,7 +319,7 @@ en Puno.
                 aria-label={`${isHighlighted ? "Reducir" : "Destacar"} imagen de ${service.title}`}
                 aria-expanded={isHighlighted}
                 onClick={() => setHighlightedService(isHighlighted ? null : service.type)}
-                className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-64 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-72" : "h-44 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-48"}`}
+                className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-64 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-72" : "h-52 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-56"}`}
               >
                 <Image
                   src={service.image}
