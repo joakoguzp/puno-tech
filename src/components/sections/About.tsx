@@ -36,13 +36,13 @@ export default function About() {
             <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
               Soporte técnico en Puno.
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-                Atención transparente de principio a fin.
+                Tecnología atendida con cuidado.
               </span>
             </h2>
 
             {/* Texto principal */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Atendemos a hogares, personas y negocios de Puno con explicaciones claras y soluciones acordes a cada equipo.
+              Atendemos a hogares y negocios de Puno con explicaciones claras y trabajo responsable.
             </p>
 
             {/* =================================================
@@ -92,7 +92,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Responsabilidad</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Atención clara y responsable.
+                  Cuidamos cada equipo durante el servicio.
                 </p>
               </div>
             </div>
