@@ -68,14 +68,14 @@ export default function FAQ() {
           </div>
 
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Antes de comenzar,
+            
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-              aclaremos tus dudas.
+Resolvemos tus dudas.
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            Respuestas breves sobre servicios, costos y atención.
+            Información útil antes de solicitar atención.
           </p>
         </div>
 
