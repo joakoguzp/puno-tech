@@ -5,7 +5,6 @@ const navigation = [
   { name: "Servicios", href: "#servicios" },
   { name: "Cómo trabajamos", href: "#como-trabajamos" },
   { name: "Nosotros", href: "#nosotros" },
-  { name: "Soluciones", href: "#soluciones" },
   { name: "Preguntas frecuentes", href: "#faq" },
   { name: "Contacto", href: "#contacto" },
 ];
@@ -53,13 +52,11 @@ export default function Footer() {
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">
-              Soluciones tecnológicas profesionales para computadoras, laptops,
-              recuperación de archivos, impresoras, redes y soporte técnico en Puno.
+              Reparación y soporte para computadoras, laptops, impresoras y redes en Puno.
             </p>
 
             <p className="mt-5 max-w-sm text-sm font-semibold leading-6 text-slate-300">
-              Tecnología al instante,
-              <span className="text-cyan-300"> soluciones con calidad.</span>
+              Tecnología al instante, <span className="text-cyan-300">soluciones con calidad.</span>
             </p>
 
             {/* Línea decorativa */}
