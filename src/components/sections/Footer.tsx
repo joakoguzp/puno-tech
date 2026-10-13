@@ -221,7 +221,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="group inline-flex h-11 w-fit items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_10px_30px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_14px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
             >
-              Contactar ahora
+              Escribir por WhatsApp
               <span
                 aria-hidden="true"
                 className="transition-transform duration-300 group-hover:translate-x-0.5"
