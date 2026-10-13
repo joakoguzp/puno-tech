@@ -86,13 +86,13 @@ export default function Contact() {
                   </p>
 
                   <h3 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">
-                    Hablemos de tu problema.
+                    ¿Cómo podemos ayudarte?
                   </h3>
                 </div>
               </div>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-                Cuéntanos qué necesitas para que podamos orientarte.
+                Escríbenos por WhatsApp o correo y cuéntanos qué necesitas.
               </p>
 
               {/* Los servicios ya se explican en la sección anterior. */}
