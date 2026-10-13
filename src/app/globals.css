@@ -117,3 +117,53 @@ main > section:not(#inicio) [class*="min-h-screen"] {
     transform: translateY(0) scale(1);
   }
 }
+
+
+/* Botón flotante de WhatsApp: rebote suave, visible mientras se desplaza la página. */
+.whatsapp-ball {
+  animation: whatsapp-ball-bounce 2.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.whatsapp-message {
+  animation: whatsapp-message-in 450ms ease-out both;
+}
+
+@keyframes whatsapp-ball-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  8% {
+    transform: translateY(-10px);
+  }
+  16% {
+    transform: translateY(0);
+  }
+  23% {
+    transform: translateY(-5px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  36%, 92% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes whatsapp-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-ball,
+  .whatsapp-message {
+    animation: none;
+  }
+}
