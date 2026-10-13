@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,6 +105,7 @@ export default function RootLayout({
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="min-h-screen bg-[#06152d] font-sans text-white antialiased">
         {children}
+        <WhatsAppFloat />
         <Script id="meta-pixel" strategy="afterInteractive">
   {`
     !function(f,b,e,v,n,t,s)
