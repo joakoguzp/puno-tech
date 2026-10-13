@@ -4,52 +4,31 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "¿Qué servicios ofrece PUNO TECH?",
-    answer:
-      "Reparamos y damos mantenimiento a computadoras y laptops; también atendemos impresoras, redes, WiFi y configuración de software. La recuperación de archivos depende del estado del dispositivo.",
-  },
-  {
     question: "¿Pueden recuperar archivos borrados?",
     answer:
-      "Podemos revisar si es posible recuperar archivos según el dispositivo y el estado del almacenamiento. No se puede garantizar la recuperación en todos los casos. Si perdiste archivos importantes, evita guardar nuevos datos o instalar programas en esa unidad y contáctanos para evaluar el caso.",
+      "Podemos evaluar si es posible según el dispositivo y el estado del almacenamiento; no se puede garantizar la recuperación. Si los archivos son importantes, evita guardar datos nuevos o instalar programas en esa unidad y contáctanos.",
   },
   {
-    question: "¿Realizan primero un diagnóstico?",
+    question: "¿Conoceré el costo antes del trabajo?",
     answer:
-      "Sí. Revisamos el caso para identificar qué necesita el equipo y explicarte los siguientes pasos antes de intervenir.",
-  },
-  {
-    question: "¿Puedo conocer el costo antes de realizar el servicio?",
-    answer:
-      "Depende de la falla y del trabajo necesario. Te informaremos el costo antes de realizar el servicio, cuando corresponda.",
-  },
-  {
-    question: "¿Atienden a hogares y empresas?",
-    answer:
-      "Sí, atendemos a usuarios particulares, hogares, pequeños negocios y empresas.",
-  },
-  {
-    question: "¿Atienden en Puno?",
-    answer:
-      "Sí, brindamos atención en Puno. Escríbenos para coordinar según el servicio que necesitas.",
+      "El costo depende de la falla y del trabajo necesario. Te explicaremos el alcance y el costo antes de intervenir, cuando corresponda.",
   },
   {
     question: "¿Cuánto demora una reparación?",
     answer:
-      "Depende de la falla, el estado del equipo y las piezas o trabajos necesarios. Te daremos una estimación al revisar el caso.",
+      "Depende de la falla, el estado del equipo y los trabajos necesarios. Te daremos una estimación al evaluar el caso.",
   },
   {
     question: "¿Los servicios tienen garantía?",
     answer:
-      "Si el servicio incluye garantía, te explicaremos sus condiciones y cobertura antes de finalizar el trabajo.",
+      "Cuando un servicio incluya garantía, te explicaremos sus condiciones y cobertura antes de finalizar el trabajo.",
   },
   {
-    question: "¿Qué hago si no sé cuál es el problema?",
+    question: "¿Y si no sé qué le pasa a mi equipo?",
     answer:
-      "Cuéntanos qué ocurre, cuándo empezó y si aparece algún mensaje de error. No necesitas saber la causa técnica.",
+      "No necesitas conocer la causa técnica. Cuéntanos qué ocurre, cuándo empezó y si aparece algún mensaje de error.",
   },
 ];
-
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
