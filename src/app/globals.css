@@ -19,6 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Evita que la barra fija tape los títulos al navegar por anclas. */
+main > section[id] {
+  scroll-margin-top: 6rem;
+}
+
 html,
 body {
   margin: 0;
