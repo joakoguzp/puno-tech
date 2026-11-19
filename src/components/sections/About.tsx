@@ -145,22 +145,22 @@ export default function About() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Estado
+                        Modalidad de atención
                       </p>
 
                       <p className="mt-1 text-sm font-bold text-white">
-                        Atención en Puno
+                        Previa coordinación
                       </p>
                     </div>
 
                     <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">
-                      Activo
+                      Puno, Perú
                     </span>
                   </div>
 
-                  <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-                    <div className="h-full w-[92%] rounded-full bg-gradient-to-r from-cyan-400 to-sky-400 shadow-[0_0_14px_rgba(34,211,238,0.35)]" />
-                  </div>
+                  <p className="mt-3 text-xs leading-5 text-slate-400">
+                    Escríbenos para coordinar la atención según tu necesidad.
+                  </p>
                 </div>
 
                 {/* =================================================
