@@ -53,6 +53,8 @@ function loadMetaPixel() {
   script.src = "https://connect.facebook.net/en_US/fbevents.js";
   document.head.appendChild(script);
 
+  // Concedemos el consentimiento antes de inicializar y medir la visita.
+  fbq("consent", "grant");
   fbq("init", META_PIXEL_ID);
   fbq("track", "PageView");
 }
