@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 type ConsentChoice = "accepted" | "rejected";
 type FbqFunction = ((...args: (string | number)[]) => void) & {
@@ -18,23 +18,44 @@ type WindowWithFbq = Window & {
 
 const STORAGE_KEY = "puno-tech-cookie-consent-v1";
 const META_PIXEL_ID = "1636781328117851";
+const CONSENT_EVENT = "puno-tech-consent-change";
+let volatileConsent: ConsentChoice | null = null;
 
 function readConsent(): ConsentChoice | null {
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    return saved === "accepted" || saved === "rejected" ? saved : null;
+    if (saved === "accepted" || saved === "rejected") return saved;
   } catch {
-    return null;
+    // Se utiliza el estado temporal de esta visita si el almacenamiento está bloqueado.
   }
+  return volatileConsent;
+}
+
+function subscribeConsent(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener(CONSENT_EVENT, onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener(CONSENT_EVENT, onStoreChange);
+  };
+}
+
+function getConsentSnapshot(): ConsentChoice | null {
+  return readConsent();
+}
+
+function getServerConsentSnapshot(): ConsentChoice | null {
+  return null;
 }
 
 function persistConsent(choice: ConsentChoice) {
+  volatileConsent = choice;
   try {
     window.localStorage.setItem(STORAGE_KEY, choice);
   } catch {
-    // Si el navegador bloquea el almacenamiento, la elección se mantiene
-    // durante esta visita y el seguimiento sigue dependiendo del consentimiento.
+    // La elección se mantiene durante esta visita aunque el navegador bloquee el almacenamiento.
   }
+  window.dispatchEvent(new Event(CONSENT_EVENT));
 }
 
 function loadMetaPixel() {
@@ -78,29 +99,23 @@ function loadMetaPixel() {
 }
 
 export default function CookieConsent() {
-  const [ready, setReady] = useState(false);
-  const [showPanel, setShowPanel] = useState(false);
+  const consent = useSyncExternalStore(
+    subscribeConsent,
+    getConsentSnapshot,
+    getServerConsentSnapshot,
+  );
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   useEffect(() => {
-    const saved = readConsent();
-
-    if (saved === "accepted") {
-      loadMetaPixel();
-    } else if (!saved) {
-      setShowPanel(true);
-    }
-
-    setReady(true);
-  }, []);
+    if (consent === "accepted") loadMetaPixel();
+  }, [consent]);
 
   function saveChoice(nextChoice: ConsentChoice) {
     persistConsent(nextChoice);
-    setShowPanel(false);
+    setSettingsOpen(false);
 
     const pixelWindow = window as WindowWithFbq;
-    if (nextChoice === "accepted") {
-      loadMetaPixel();
-    } else if (pixelWindow.fbq) {
+    if (nextChoice === "rejected" && pixelWindow.fbq) {
       pixelWindow.fbq("consent", "revoke");
       // Retira las cookies habituales de Meta que ya pudieran existir.
       for (const name of ["_fbp", "_fbc"]) {
@@ -111,10 +126,10 @@ export default function CookieConsent() {
 
   return (
     <>
-      {ready && !showPanel && (
+      {consent !== null && !settingsOpen && (
         <button
           type="button"
-          onClick={() => setShowPanel(true)}
+          onClick={() => setSettingsOpen(true)}
           className="fixed bottom-4 left-4 z-[90] rounded-full border border-cyan-300/30 bg-[#0b203d]/95 px-4 py-2 text-xs font-semibold text-cyan-100 shadow-lg backdrop-blur transition hover:border-cyan-300/60 hover:bg-[#10294b]"
           aria-label="Abrir preferencias de cookies"
         >
@@ -122,7 +137,7 @@ export default function CookieConsent() {
         </button>
       )}
 
-      {ready && showPanel && (
+      {(consent === null || settingsOpen) && (
         <div
           className="fixed inset-x-4 bottom-4 z-[100] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-cyan-300/20 bg-[#081a33]/[.98] p-5 text-white shadow-[0_20px_70px_rgba(0,0,0,.5)] backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:p-6"
           role="dialog"
