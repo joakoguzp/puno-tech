@@ -11,7 +11,7 @@ const services = [
     imageAlt: "Ilustración tecnológica de una laptop abierta en mantenimiento con herramienta de precisión",
     title: "Computadoras y Laptops",
     description:
-      "Reparación, mantenimiento, optimización y recuperación de archivos cuando sea posible.",
+      "Reparación, mantenimiento y recuperación de archivos (sujeta a evaluación).",
     tags: [],
   },
   {
@@ -21,7 +21,7 @@ const services = [
     imageAlt: "Ilustración de una impresora y hojas, representando mantenimiento y configuración",
     title: "Impresoras",
     description:
-      "Limpieza, mantenimiento y configuración de impresoras.",
+      "Limpieza de cabezales, mantenimiento y configuración.",
     tags: [],
   },
   {
@@ -31,7 +31,7 @@ const services = [
     imageAlt: "Ilustración de un router con señal inalámbrica y dispositivos conectados",
     title: "Redes y WiFi",
     description:
-      "Configuración de routers, redes WiFi y conexiones.",
+      "Instalación y configuración de routers y redes WiFi.",
     tags: [],
   },
   {
@@ -41,7 +41,7 @@ const services = [
     imageAlt: "Ilustración de una pantalla de diagnóstico y una herramienta técnica",
     title: "Soporte Técnico",
     description:
-      "Diagnóstico y solución de problemas de hardware y software.",
+      "Revisión y solución de fallas de hardware y software.",
     tags: [],
   },
 ];
