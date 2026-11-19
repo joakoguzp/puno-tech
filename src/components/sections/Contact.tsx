@@ -285,7 +285,7 @@ export default function Contact() {
               <p className="mt-2 text-lg font-bold text-white">Puno, Perú</p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Atención en Puno, Perú. Escríbenos para coordinar tu consulta.
+                Coordinamos la atención según tu necesidad.
               </p>
             </div>
 
@@ -322,7 +322,7 @@ export default function Contact() {
               </p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Atención técnica en Puno.
+                Escríbenos para organizar la revisión de tu equipo.
               </p>
             </div>
           </div>
