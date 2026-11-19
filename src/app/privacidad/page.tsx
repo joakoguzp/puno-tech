@@ -3,7 +3,17 @@ import Link from "next/link";
 export const metadata = {
   title: "Política de privacidad",
   description:
-    "Información sobre el tratamiento de datos personales y el uso de cookies en PUNO TECH.",
+    "Conoce cómo PUNO TECH trata los datos personales y gestiona las cookies de su sitio web en Puno, Perú.",
+  alternates: {
+    canonical: "/privacidad",
+  },
+  openGraph: {
+    title: "Política de privacidad | PUNO TECH",
+    description:
+      "Información sobre el tratamiento de datos personales y el uso de cookies en PUNO TECH.",
+    url: "/privacidad",
+    type: "article",
+  },
 };
 
 const sections = [
