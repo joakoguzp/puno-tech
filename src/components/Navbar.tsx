@@ -6,7 +6,9 @@ import Image from "next/image";
 const navigation = [
   { name: "Inicio", href: "#inicio" },
   { name: "Servicios", href: "#servicios" },
+  { name: "Cómo trabajamos", href: "#como-trabajamos" },
   { name: "Nosotros", href: "#nosotros" },
+  { name: "Preguntas frecuentes", href: "#faq" },
   { name: "Contacto", href: "#contacto" },
 ];
 
@@ -38,7 +40,7 @@ export default function Navbar() {
           />
         </a>
 
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Navegación principal">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -61,7 +63,7 @@ export default function Navbar() {
             WhatsApp
           </a>
 
-          <div className="relative md:hidden">
+          <div className="relative lg:hidden">
             <button
               type="button"
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
