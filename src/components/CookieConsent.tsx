@@ -55,7 +55,6 @@ function loadMetaPixel() {
 }
 
 export default function CookieConsent() {
-  const [choice, setChoice] = useState<ConsentChoice | null>(null);
   const [ready, setReady] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
 
@@ -63,7 +62,6 @@ export default function CookieConsent() {
     const saved = window.localStorage.getItem(STORAGE_KEY);
 
     if (saved === "accepted" || saved === "rejected") {
-      setChoice(saved);
       if (saved === "accepted") loadMetaPixel();
     } else {
       setShowPanel(true);
@@ -74,7 +72,6 @@ export default function CookieConsent() {
 
   function saveChoice(nextChoice: ConsentChoice) {
     window.localStorage.setItem(STORAGE_KEY, nextChoice);
-    setChoice(nextChoice);
     setShowPanel(false);
 
     const pixelWindow = window as WindowWithFbq;
