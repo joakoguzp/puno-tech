@@ -23,7 +23,10 @@ function loadMetaPixel() {
   const pixelWindow = window as WindowWithFbq;
 
   if (pixelWindow.fbq) {
+    // Si el visitante vuelve a aceptar después de rechazar, reactivamos
+    // el consentimiento y registramos la visita de esta página.
     pixelWindow.fbq("consent", "grant");
+    pixelWindow.fbq("track", "PageView");
     return;
   }
 
