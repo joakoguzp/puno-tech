@@ -39,6 +39,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
+      aria-labelledby="faq-heading"
       className="relative overflow-hidden bg-[#06152d] py-24 sm:py-28 lg:py-32"
     >
       {/* =========================
@@ -67,10 +68,9 @@ export default function FAQ() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            
-            <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
-Resolvemos tus dudas.
+          <h2 id="faq-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <span className="block bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
+              Resolvemos tus dudas.
             </span>
           </h2>
 
