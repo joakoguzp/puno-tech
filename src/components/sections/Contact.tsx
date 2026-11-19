@@ -2,6 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
+      aria-labelledby="contact-heading"
       className="
         relative overflow-hidden bg-[#071a33]
         py-20 sm:py-24 lg:py-28
@@ -25,13 +26,15 @@ export default function Contact() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 id="contact-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             ¿Necesitas ayuda con tu
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
               tecnología?
             </span>
           </h2>
-
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+            Cuéntanos qué ocurre con tu equipo. Te orientaremos sobre el siguiente paso.
+          </p>
         </div>
 
         {/* Contenido principal */}
