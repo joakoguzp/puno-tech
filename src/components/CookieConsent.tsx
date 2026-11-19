@@ -3,9 +3,17 @@
 import { useEffect, useState } from "react";
 
 type ConsentChoice = "accepted" | "rejected";
+type FbqFunction = ((...args: (string | number)[]) => void) & {
+  callMethod?: (...items: (string | number)[]) => void;
+  queue: (string | number)[][];
+  push: (...items: (string | number)[]) => void;
+  loaded?: boolean;
+  version?: string;
+};
+
 type WindowWithFbq = Window & {
-  fbq?: (...args: (string | number)[]) => void;
-  _fbq?: (...args: (string | number)[]) => void;
+  fbq?: FbqFunction;
+  _fbq?: FbqFunction;
 };
 
 const STORAGE_KEY = "puno-tech-cookie-consent-v1";
@@ -19,25 +27,12 @@ function loadMetaPixel() {
   }
 
   const fbq = function (...args: (string | number)[]) {
-    const callable = fbq as typeof fbq & {
-      callMethod?: (...items: (string | number)[]) => void;
-      queue: (string | number)[][];
-      push: (...items: (string | number)[]) => void;
-      loaded?: boolean;
-      version?: string;
-    };
-
-    if (callable.callMethod) {
-      callable.callMethod(...args);
+    if (fbq.callMethod) {
+      fbq.callMethod(...args);
     } else {
-      callable.queue.push(args);
+      fbq.queue.push(args);
     }
-  } as typeof pixelWindow.fbq & {
-    queue: (string | number)[][];
-    push: (...items: (string | number)[]) => void;
-    loaded?: boolean;
-    version?: string;
-  };
+  } as FbqFunction;
 
   fbq.queue = [];
   fbq.push = (...args) => fbq(...args);
