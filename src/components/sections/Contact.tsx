@@ -92,7 +92,7 @@ export default function Contact() {
               </div>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-                Escríbenos por WhatsApp o correo y cuéntanos qué necesitas.
+                Elige tu medio de contacto y conversemos.
               </p>
 
               {/* Los servicios ya se explican en la sección anterior. */}
@@ -197,7 +197,7 @@ export default function Contact() {
               <p className="mt-2 text-xl font-bold text-white">915 210 525</p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Contacto directo para consultas.
+                Escríbenos directamente.
               </p>
             </a>
 
