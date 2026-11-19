@@ -233,7 +233,12 @@ export default function Footer() {
             © {new Date().getFullYear()} PUNO TECH. Todos los derechos
             reservados.
           </p>
-
+          <a
+            href="/privacidad"
+            className="w-fit text-slate-500 underline decoration-slate-700 underline-offset-4 transition hover:text-cyan-300"
+          >
+            Política de privacidad
+          </a>
         </div>
       </div>
     </footer>
