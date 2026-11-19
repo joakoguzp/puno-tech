@@ -429,7 +429,7 @@ export default function Services() {
                   aria-label={`Consultar por WhatsApp el servicio de ${service.title}`}
                   className="relative mt-5 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-cyan-300/20 bg-cyan-300/[0.045] px-4 py-2 text-xs font-bold text-cyan-100 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-white focus-visible:outline-cyan-300"
                 >
-                  Consultar por WhatsApp
+                  Consultar este servicio
                   <span
                     aria-hidden="true"
                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -527,7 +527,7 @@ export default function Services() {
                 active:translate-y-0
               "
             >
-              Elegir servicio por WhatsApp
+              Pedir orientación
               <span className="ml-2">→</span>
             </a>
           </div>
