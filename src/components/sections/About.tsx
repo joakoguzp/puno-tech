@@ -42,7 +42,7 @@ export default function About() {
 
             {/* Texto principal */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Atendemos a hogares y negocios de Puno con explicaciones claras y trabajo responsable.
+              Cada equipo recibe una revisión cuidadosa y una explicación sencilla antes de cualquier intervención.
             </p>
 
             {/* =================================================
@@ -62,7 +62,7 @@ export default function About() {
                 </h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Te explicamos antes de empezar.
+                  Conoces el trabajo antes de autorizarlo.
                 </p>
               </div>
 
@@ -77,7 +77,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Cuidado</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Trabajo cuidadoso en cada equipo.
+                  Tratamos tu equipo con cuidado.
                 </p>
               </div>
 
@@ -92,7 +92,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Responsabilidad</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Cuidamos cada equipo durante el servicio.
+                  Actuamos con responsabilidad en cada reparación.
                 </p>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function About() {
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Revisamos cada caso antes de proponer un trabajo.
+                        Primero evaluamos; después recomendamos.
                       </p>
                     </div>
 
@@ -229,7 +229,7 @@ export default function About() {
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Priorizamos el trabajo que el equipo necesita.
+                        Evitamos intervenciones innecesarias.
                       </p>
                     </div>
 
@@ -266,7 +266,7 @@ export default function About() {
                       </p>
 
                       <p className="mt-1 text-xs text-slate-500">
-                        Para hogares y negocios de Puno.
+                        Atención cercana y directa.
                       </p>
                     </div>
 
