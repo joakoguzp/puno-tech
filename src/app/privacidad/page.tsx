@@ -10,7 +10,7 @@ const sections = [
   {
     title: "1. Responsable y contacto",
     body: [
-      "PUNO TECH es el nombre comercial del servicio de soporte y soluciones tecnológicas que opera en Puno, Perú. El responsable del tratamiento es la persona natural titular del negocio. La identificación legal completa del titular y el domicilio válido para notificaciones se incorporarán antes de publicar esta política como versión definitiva.",
+      "PUNO TECH es el nombre comercial de un servicio independiente de soporte y soluciones tecnológicas que opera en Puno, Perú. El responsable del tratamiento es la persona natural titular del servicio. Para cualquier consulta sobre el uso de datos personales o para ejercer tus derechos, puedes utilizar los canales de contacto indicados en esta política.",
       "Para consultas sobre privacidad o para ejercer tus derechos, puedes escribir a solucionespc804@gmail.com o comunicarte por WhatsApp Business al 915210525.",
     ],
   },
