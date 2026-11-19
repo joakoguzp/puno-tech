@@ -19,6 +19,24 @@ type WindowWithFbq = Window & {
 const STORAGE_KEY = "puno-tech-cookie-consent-v1";
 const META_PIXEL_ID = "1636781328117851";
 
+function readConsent(): ConsentChoice | null {
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    return saved === "accepted" || saved === "rejected" ? saved : null;
+  } catch {
+    return null;
+  }
+}
+
+function persistConsent(choice: ConsentChoice) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, choice);
+  } catch {
+    // Si el navegador bloquea el almacenamiento, la elección se mantiene
+    // durante esta visita y el seguimiento sigue dependiendo del consentimiento.
+  }
+}
+
 function loadMetaPixel() {
   const pixelWindow = window as WindowWithFbq;
 
@@ -64,11 +82,11 @@ export default function CookieConsent() {
   const [showPanel, setShowPanel] = useState(false);
 
   useEffect(() => {
-    const saved = window.localStorage.getItem(STORAGE_KEY);
+    const saved = readConsent();
 
-    if (saved === "accepted" || saved === "rejected") {
-      if (saved === "accepted") loadMetaPixel();
-    } else {
+    if (saved === "accepted") {
+      loadMetaPixel();
+    } else if (!saved) {
       setShowPanel(true);
     }
 
@@ -76,7 +94,7 @@ export default function CookieConsent() {
   }, []);
 
   function saveChoice(nextChoice: ConsentChoice) {
-    window.localStorage.setItem(STORAGE_KEY, nextChoice);
+    persistConsent(nextChoice);
     setShowPanel(false);
 
     const pixelWindow = window as WindowWithFbq;
