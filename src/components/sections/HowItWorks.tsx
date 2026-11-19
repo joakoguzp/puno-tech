@@ -216,7 +216,7 @@ export default function HowItWorks() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-            Un proceso claro, desde el primer mensaje hasta la verificación.
+            Así sabrás qué esperar en cada etapa.
           </p>
         </div>
 
