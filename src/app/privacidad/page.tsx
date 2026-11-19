@@ -10,55 +10,73 @@ const sections = [
   {
     title: "1. Responsable y contacto",
     body: [
-      "PUNO TECH es la marca que identifica los servicios de soporte y soluciones tecnológicas ofrecidos en Puno, Perú. Para consultas sobre privacidad o para ejercer tus derechos, puedes escribir a solucionespc804@gmail.com.",
-      "La identificación legal completa del titular del negocio y su domicilio para notificaciones deberán incorporarse a esta política antes de considerarla una versión legal definitiva.",
+      "PUNO TECH es el nombre comercial del servicio de soporte y soluciones tecnológicas que opera en Puno, Perú. El responsable del tratamiento es la persona natural titular del negocio. La identificación legal completa del titular y el domicilio válido para notificaciones se incorporarán antes de publicar esta política como versión definitiva.",
+      "Para consultas sobre privacidad o para ejercer tus derechos, puedes escribir a solucionespc804@gmail.com o comunicarte por WhatsApp Business al 915210525.",
     ],
   },
   {
-    title: "2. Información que podemos tratar",
+    title: "2. Datos personales que tratamos",
     body: [
-      "Si decides comunicarte con nosotros por WhatsApp o correo electrónico, podremos tratar los datos que incluyas voluntariamente en tu mensaje, como tu nombre, número de contacto, dirección de correo y la información necesaria para atender tu consulta o solicitud de servicio.",
-      "El sitio también puede recibir información técnica básica necesaria para su funcionamiento. No solicitamos datos de tarjetas bancarias ni información sensible mediante esta página.",
+      "Cuando solicitas atención por WhatsApp Business, podemos tratar tu nombre, número de teléfono, mensajes y comunicaciones, marca y modelo del equipo, descripción del problema técnico y la información necesaria para coordinar el diagnóstico, reparación, mantenimiento, entrega, garantía o reclamo.",
+      "PUNO TECH utiliza WhatsApp Business como canal de atención y, según la información operativa proporcionada por el titular, actualmente gestiona allí los datos de sus clientes. No mantiene una base adicional de clientes en Excel, CRM o carpetas externas como parte del proceso descrito en esta política.",
+      "Te pedimos que no envíes contraseñas, documentos personales ni archivos privados que no sean necesarios para el servicio. Si un trabajo requiere acceder a información o archivos del equipo, se coordinará previamente el alcance y la forma de protegerlos.",
     ],
   },
   {
-    title: "3. Para qué utilizamos la información",
+    title: "3. Finalidades del tratamiento",
     body: [
-      "Utilizamos los datos de contacto para responder consultas, coordinar diagnósticos y servicios técnicos, dar seguimiento a solicitudes y atender comunicaciones relacionadas con el servicio solicitado.",
-      "Con autorización para cookies de seguimiento, utilizamos Meta Pixel para medir visitas e interacciones generales con el sitio y evaluar nuestras campañas publicitarias. Si rechazas esta categoría, el píxel no se carga desde esta página.",
+      "Utilizamos los datos para responder consultas, evaluar problemas técnicos, preparar y comunicar presupuestos, coordinar servicios, informar avances, entregar equipos, atender garantías y reclamos y cumplir obligaciones legales aplicables.",
+      "No utilizamos los datos de atención para enviar publicidad o promociones no solicitadas. Cualquier finalidad adicional deberá contar con la base legal y, cuando corresponda, el consentimiento requerido.",
     ],
   },
   {
-    title: "4. Cookies y Meta Pixel",
+    title: "4. WhatsApp Business, proveedores y almacenamiento",
     body: [
-      "El sitio utiliza almacenamiento local del navegador para recordar tu elección sobre cookies. Esta preferencia se guarda en tu dispositivo y puedes modificarla en cualquier momento mediante el botón “Privacidad y cookies”.",
-      "Meta Pixel es una herramienta de Meta Platforms que, cuando autorizas las cookies de seguimiento, puede recopilar información sobre la navegación y el dispositivo para medición y publicidad. Meta puede tratar esa información conforme a sus propias políticas y condiciones.",
-      "Las cookies o tecnologías estrictamente necesarias para el funcionamiento del sitio se distinguen de las tecnologías de análisis y publicidad. Rechazar el seguimiento no impide navegar ni contactar con PUNO TECH.",
+      "El canal principal de atención es WhatsApp Business, un servicio de Meta. El tratamiento técnico que realicen WhatsApp y Meta se rige también por sus propias condiciones y políticas de privacidad. El uso del servicio puede implicar tratamiento o transferencia internacional de datos, según la infraestructura y los servicios involucrados.",
+      "Actualmente, PUNO TECH no tiene activadas copias de seguridad de las conversaciones de WhatsApp en Google Drive o iCloud, según lo informado por el titular. Esto no significa que WhatsApp o los dispositivos de los participantes no puedan conservar información conforme a sus propias funciones y políticas.",
+      "El sitio web está alojado en Vercel. Los proveedores tecnológicos pueden tratar datos técnicos necesarios para prestar sus servicios, de acuerdo con sus condiciones y políticas aplicables.",
     ],
   },
   {
-    title: "5. Proveedores y transferencias",
+    title: "5. Cookies y Meta Pixel",
     body: [
-      "El sitio se encuentra alojado en Vercel. Si autorizas Meta Pixel, la información asociada a esa herramienta puede ser tratada por Meta y sus proveedores, incluso fuera del Perú, de acuerdo con sus condiciones y políticas. Los servicios externos de WhatsApp y correo también se rigen por las políticas de sus respectivos proveedores.",
+      "El sitio utiliza almacenamiento local del navegador para recordar la elección del visitante sobre el seguimiento. Esta preferencia se guarda en el dispositivo y puede modificarse desde el control “Privacidad y cookies”.",
+      "Meta Pixel es una herramienta de Meta Platforms que se utiliza para medir visitas e interacciones y evaluar campañas publicitarias. En esta implementación, el píxel se carga únicamente después de que el visitante acepta el seguimiento. Si lo rechaza, el píxel no debe cargarse desde esta página. Rechazarlo no impide navegar ni contactar con PUNO TECH.",
+      "Las tecnologías estrictamente necesarias para recordar la preferencia se distinguen de las tecnologías de análisis y publicidad. Puedes consultar también la Política de privacidad de Meta en https://www.facebook.com/privacy/policy/.",
     ],
   },
   {
-    title: "6. Conservación y seguridad",
+    title: "6. Conservación de los datos",
     body: [
-      "Conservamos los mensajes y datos de contacto durante el tiempo necesario para atender la solicitud, prestar el servicio y cumplir obligaciones aplicables. Aplicamos medidas razonables para proteger la información; ningún sistema de transmisión o almacenamiento puede garantizar seguridad absoluta.",
-      "La preferencia de cookies permanece guardada en el navegador hasta que la cambies o borres los datos del sitio.",
+      "PUNO TECH conserva los datos durante el tiempo necesario para las finalidades informadas y las obligaciones legales aplicables. Como política interna, se han definido los siguientes plazos:",
+      "• Consultas que no generan un servicio: hasta 90 días desde el último contacto.\n• Historial de servicios concluidos: hasta 2 años desde la entrega del equipo.\n• Archivos temporales del cliente: hasta su entrega y confirmación de que ya no son necesarios.\n• Garantías, reclamos o controversias pendientes: durante su tramitación y el tiempo adicional justificable.\n• Documentación contable o tributaria: durante los plazos legales aplicables.",
+      "Los plazos podrán ampliarse cuando exista una obligación legal, garantía, reclamo o controversia que justifique conservar determinada información. Una vez que los datos dejan de ser necesarios, se eliminarán de los medios bajo control de PUNO TECH, salvo que exista una razón legal válida para conservarlos.",
     ],
   },
   {
-    title: "7. Tus derechos",
+    title: "7. Seguridad y confidencialidad",
     body: [
-      "Puedes solicitar información sobre tus datos personales y ejercer los derechos que reconoce la normativa peruana de protección de datos personales, incluidos los derechos de acceso, rectificación, cancelación y oposición, escribiendo a solucionespc804@gmail.com. También puedes retirar tu consentimiento para el seguimiento desde el panel de cookies.",
+      "PUNO TECH procura limitar el acceso a los datos a quien necesita utilizarlos para atender el servicio y aplicar medidas razonables de protección del dispositivo y de las cuentas utilizadas. Entre las medidas previstas se encuentran el bloqueo seguro del teléfono, la verificación en dos pasos, la revisión de dispositivos vinculados y la eliminación de información que ya no sea necesaria.",
+      "Actualmente no se encuentran activadas copias de seguridad de WhatsApp en Google Drive o iCloud. La eliminación desde el dispositivo de PUNO TECH no garantiza borrar copias que puedan permanecer en dispositivos de los participantes o en sistemas administrados por proveedores externos.",
     ],
   },
   {
-    title: "8. Cambios en esta política",
+    title: "8. Tus derechos",
     body: [
-      "Podemos actualizar esta política cuando cambien nuestros servicios, herramientas o las normas aplicables. La versión vigente estará disponible en esta página e indicará su fecha de actualización.",
+      "Puedes ejercer los derechos de acceso, rectificación, cancelación y oposición reconocidos por la normativa peruana de protección de datos personales, mediante una solicitud a solucionespc804@gmail.com o al WhatsApp Business 915210525. PUNO TECH podrá solicitar información razonable para verificar tu identidad y ubicar los datos correspondientes.",
+      "Las solicitudes serán atendidas dentro de los plazos y conforme a las condiciones establecidas por la normativa vigente. También puedes cambiar o retirar tu elección de seguimiento desde el control “Privacidad y cookies” del sitio.",
+    ],
+  },
+  {
+    title: "9. Cambios en esta política",
+    body: [
+      "Esta política podrá actualizarse cuando cambien los servicios, los canales de atención, las herramientas tecnológicas o las normas aplicables. La versión vigente estará disponible en esta página e indicará su fecha de actualización.",
+    ],
+  },
+  {
+    title: "10. Normativa aplicable",
+    body: [
+      "Esta política se interpreta conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, su Reglamento aprobado por Decreto Supremo N.º 016-2024-JUS y demás disposiciones aplicables en el Perú.",
     ],
   },
 ];
@@ -85,8 +103,8 @@ export default function PrivacyPage() {
         </p>
         <p className="mt-8 rounded-2xl border border-cyan-300/15 bg-cyan-300/[0.05] p-5 text-sm leading-7 text-slate-300">
           En PUNO TECH procuramos tratar la información personal con
-          responsabilidad y transparencia. Aquí explicamos qué información puede
-          tratarse cuando navegas por nuestra web o te comunicas con nosotros.
+          responsabilidad y transparencia. Aquí explicamos qué información
+          tratamos cuando solicitas nuestros servicios o navegas por esta web.
         </p>
 
         <div className="mt-10 space-y-9">
@@ -97,28 +115,9 @@ export default function PrivacyPage() {
                 {section.body.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="text-sm leading-7 text-slate-300"
+                    className="whitespace-pre-line text-sm leading-7 text-slate-300"
                   >
-                    {paragraph.startsWith("Meta Pixel es") ? (
-                      <>
-                        Meta Pixel es una herramienta de Meta Platforms que,
-                        cuando autorizas el seguimiento, puede recopilar información
-                        sobre la navegación y el dispositivo para medición y
-                        publicidad. Meta puede tratar esa información conforme a
-                        sus propias políticas y condiciones. Consulta la{" "}
-                        <a
-                          href="https://www.facebook.com/privacy/policy/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-cyan-300 underline underline-offset-4"
-                        >
-                          Política de privacidad de Meta
-                        </a>
-                        .
-                      </>
-                    ) : (
-                      paragraph
-                    )}
+                    {paragraph}
                   </p>
                 ))}
               </div>
