@@ -6,27 +6,27 @@ const faqs = [
   {
     question: "¿Pueden recuperar archivos borrados?",
     answer:
-      "Podemos evaluar si es posible según el dispositivo y el estado del almacenamiento; no se puede garantizar la recuperación. Si los archivos son importantes, evita guardar datos nuevos o instalar programas en esa unidad y contáctanos.",
+      "Depende del estado del dispositivo y del almacenamiento. No podemos garantizarla. Si los archivos son importantes, deja de usar esa unidad y consúltanos.",
   },
   {
     question: "¿Conoceré el costo antes del trabajo?",
     answer:
-      "El costo depende de la falla y del trabajo necesario. Te explicaremos el alcance y el costo antes de intervenir, cuando corresponda.",
+      "Te informaremos el trabajo y su costo antes de comenzar.",
   },
   {
     question: "¿Cuánto demora una reparación?",
     answer:
-      "Depende de la falla, el estado del equipo y los trabajos necesarios. Te daremos una estimación al evaluar el caso.",
+      "El tiempo se estima después de revisar el equipo y determinar el trabajo.",
   },
   {
     question: "¿Los servicios tienen garantía?",
     answer:
-      "Cuando un servicio incluya garantía, te explicaremos sus condiciones y cobertura antes de finalizar el trabajo.",
+      "Si el servicio incluye garantía, te indicaremos su cobertura y condiciones.",
   },
   {
     question: "¿Y si no sé qué le pasa a mi equipo?",
     answer:
-      "No necesitas conocer la causa técnica. Cuéntanos qué ocurre, cuándo empezó y si aparece algún mensaje de error.",
+      "No necesitas saber la causa. Cuéntanos qué ocurre y desde cuándo.",
   },
 ];
 export default function FAQ() {
