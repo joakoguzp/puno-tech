@@ -19,14 +19,6 @@ const jsonLd = {
     "Servicio técnico, reparación y mantenimiento de computadoras y laptops, recuperación de archivos cuando sea técnicamente posible, impresoras, redes WiFi y soporte tecnológico en Puno, Perú.",
   telephone: "+51915210525",
   email: "solucionespc804@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Jr. Revolución N° 359",
-    addressLocality: "Puno",
-    addressRegion: "Puno",
-    postalCode: "21002",
-    addressCountry: "PE",
-  },
   areaServed: {
     "@type": "City",
     name: "Puno",
