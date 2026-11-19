@@ -32,7 +32,7 @@ const sections = [
     title: "4. Cookies y Meta Pixel",
     body: [
       "El sitio utiliza almacenamiento local del navegador para recordar tu elección sobre cookies. Esta preferencia se guarda en tu dispositivo y puedes modificarla en cualquier momento mediante el botón “Privacidad y cookies”.",
-      "Meta Pixel es una herramienta de Meta Platforms que, cuando autorizas las cookies de seguimiento, puede recopilar información sobre la navegación y el dispositivo para medición y publicidad. Meta puede tratar esa información conforme a sus propias políticas y condiciones. Consulta la Política de privacidad de Meta en https://www.facebook.com/privacy/policy/.",
+      "Meta Pixel es una herramienta de Meta Platforms que, cuando autorizas las cookies de seguimiento, puede recopilar información sobre la navegación y el dispositivo para medición y publicidad. Meta puede tratar esa información conforme a sus propias políticas y condiciones.",
       "Las cookies o tecnologías estrictamente necesarias para el funcionamiento del sitio se distinguen de las tecnologías de análisis y publicidad. Rechazar el seguimiento no impide navegar ni contactar con PUNO TECH.",
     ],
   },
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
                     key={paragraph}
                     className="text-sm leading-7 text-slate-300"
                   >
-                    {paragraph.startsWith("Meta puede") ? (
+                    {paragraph.startsWith("Meta Pixel es") ? (
                       <>
                         Meta puede tratar esa información conforme a sus propias
                         políticas y condiciones. Consulta la{" "}
