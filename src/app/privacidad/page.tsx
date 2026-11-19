@@ -101,8 +101,11 @@ export default function PrivacyPage() {
                   >
                     {paragraph.startsWith("Meta Pixel es") ? (
                       <>
-                        Meta puede tratar esa información conforme a sus propias
-                        políticas y condiciones. Consulta la{" "}
+                        Meta Pixel es una herramienta de Meta Platforms que,
+                        cuando autorizas el seguimiento, puede recopilar información
+                        sobre la navegación y el dispositivo para medición y
+                        publicidad. Meta puede tratar esa información conforme a
+                        sus propias políticas y condiciones. Consulta la{" "}
                         <a
                           href="https://www.facebook.com/privacy/policy/"
                           target="_blank"
