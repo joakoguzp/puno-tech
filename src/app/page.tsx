@@ -21,10 +21,8 @@ const jsonLd = {
   email: "solucionespc804@gmail.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Jr. Revolución N° 359",
     addressLocality: "Puno",
     addressRegion: "Puno",
-    postalCode: "21002",
     addressCountry: "PE",
   },
   areaServed: {
