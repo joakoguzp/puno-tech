@@ -131,35 +131,12 @@ export default function About() {
                     </p>
                   </div>
 
-                  {/* Indicador */}
-                  <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.08]">
-                    <span className="absolute h-3 w-3 animate-ping rounded-full bg-cyan-400/40" />
-                    <span className="relative h-2.5 w-2.5 rounded-full bg-cyan-400 shadow-[0_0_16px_rgba(34,211,238,0.9)]" />
-                  </div>
-                </div>
-
-                {/* =================================================
-                    ESTADO
-                ================================================== */}
-                <div className="relative mt-6 rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.035] p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Estado
-                      </p>
-
-                      <p className="mt-1 text-sm font-bold text-white">
-                        Atención en Puno
-                      </p>
-                    </div>
-
-                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">
-                      Activo
-                    </span>
-                  </div>
-
-                  <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-                    <div className="h-full w-[92%] rounded-full bg-gradient-to-r from-cyan-400 to-sky-400 shadow-[0_0_14px_rgba(34,211,238,0.35)]" />
+                  {/* Acento visual de marca */}
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/15 to-fuchsia-400/10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-6 w-6 text-cyan-200" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5 19 6v5.2c0 4.4-2.8 7.4-7 9.3-4.2-1.9-7-4.9-7-9.3V6l7-2.5Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m9 12 2 2 4-4" />
+                    </svg>
                   </div>
                 </div>
 
