@@ -20,13 +20,16 @@ export default function Hero() {
         <div className="grid items-center gap-8 py-8 sm:gap-10 sm:py-10 lg:min-h-[min(680px,calc(100svh-88px))] lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 lg:py-8 xl:gap-10">
           {/* Contenido */}
           <div className="relative z-20 max-w-[650px]">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
-              PUNO TECH · Puno, Perú
-            </p>
+            <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-cyan-300/20 bg-white/[0.035] px-4 py-2 shadow-[0_8px_30px_rgba(34,211,238,0.06)] backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-cyan-300 to-fuchsia-400 shadow-[0_0_14px_rgba(34,211,238,0.65)]" aria-hidden="true" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-100">
+                PUNO TECH <span className="text-slate-500">·</span> Puno, Perú
+              </span>
+            </div>
 
             <h1 className="text-[clamp(2.35rem,8.5vw,3.25rem)] font-black leading-[0.98] tracking-[-0.05em] sm:text-[3.75rem] md:text-[4rem] lg:text-[clamp(2.85rem,3.6vw,3.7rem)] xl:text-[4rem]">
               Soporte técnico
-              <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
                 que sí resuelve.
               </span>
             </h1>
