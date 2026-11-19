@@ -9,7 +9,7 @@ const services = [
     type: "computer",
     image: "/images/services/computadoras-laptops.png",
     imageAlt:
-      "Ilustración tecnológica de una laptop abierta en mantenimiento con herramienta de precisión",
+      "Mantenimiento técnico de computadoras y laptops.",
     title: "Computadoras y Laptops",
     description:
       "Reparación, mantenimiento y recuperación de archivos (sujeta a evaluación).",
@@ -20,7 +20,7 @@ const services = [
     type: "printer",
     image: "/images/services/impresoras.png",
     imageAlt:
-      "Ilustración de una impresora y hojas, representando mantenimiento y configuración",
+      "Limpieza y mantenimiento de impresoras.",
     title: "Impresoras",
     description: "Limpieza de cabezales, mantenimiento y configuración.",
     tags: [],
@@ -30,7 +30,7 @@ const services = [
     type: "wifi",
     image: "/images/services/redes-wifi.png",
     imageAlt:
-      "Ilustración de un router con señal inalámbrica y dispositivos conectados",
+      "Configuración de routers y redes WiFi.",
     title: "Redes y WiFi",
     description: "Instalación y configuración de routers y redes WiFi.",
     tags: [],
@@ -40,7 +40,7 @@ const services = [
     type: "support",
     image: "/images/services/soporte-tecnico.png",
     imageAlt:
-      "Ilustración de una pantalla de diagnóstico y una herramienta técnica",
+      "Diagnóstico y soporte técnico de equipos informáticos.",
     title: "Soporte Técnico",
     description: "Revisión y solución de fallas de hardware y software.",
     tags: [],
@@ -319,7 +319,7 @@ export default function Services() {
 
                 <button
                   type="button"
-                  aria-label={`${isHighlighted ? "Reducir" : "Destacar"} imagen de ${service.title}`}
+                  aria-label={`${isHighlighted ? "Reducir" : "Ampliar"} imagen de ${service.title}`}
                   aria-expanded={isHighlighted}
                   onClick={() =>
                     setHighlightedService(isHighlighted ? null : service.type)
@@ -337,7 +337,7 @@ export default function Services() {
                   <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
                   <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
                     <span aria-hidden="true">{isHighlighted ? "−" : "+"}</span>
-                    {isHighlighted ? "Reducir imagen" : "Ver imagen"}
+                    {isHighlighted ? "Reducir imagen" : "Ampliar imagen"}
                   </span>
                   <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/80 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
