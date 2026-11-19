@@ -22,9 +22,12 @@ const META_PIXEL_ID = "1636781328117851";
 function loadMetaPixel() {
   const pixelWindow = window as WindowWithFbq;
 
-  if (pixelWindow.fbq || document.getElementById("meta-pixel-script")) {
+  if (pixelWindow.fbq) {
+    pixelWindow.fbq("consent", "grant");
     return;
   }
+
+  if (document.getElementById("meta-pixel-script")) return;
 
   const fbq = function (...args: (string | number)[]) {
     if (fbq.callMethod) {
@@ -74,8 +77,15 @@ export default function CookieConsent() {
     setChoice(nextChoice);
     setShowPanel(false);
 
+    const pixelWindow = window as WindowWithFbq;
     if (nextChoice === "accepted") {
       loadMetaPixel();
+    } else if (pixelWindow.fbq) {
+      pixelWindow.fbq("consent", "revoke");
+      // Retira las cookies habituales de Meta que ya pudieran existir.
+      for (const name of ["_fbp", "_fbc"]) {
+        document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+      }
     }
   }
 
