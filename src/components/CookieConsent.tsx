@@ -155,9 +155,9 @@ export default function CookieConsent() {
             </div>
             <button
               type="button"
-              onClick={() => setShowPanel(false)}
+              onClick={() => saveChoice("rejected")}
               className="self-end rounded-lg p-2 text-slate-400 transition hover:bg-white/10 hover:text-white sm:order-last"
-              aria-label="Cerrar preferencias"
+              aria-label="Cerrar preferencias y rechazar seguimiento"
             >
               <span aria-hidden="true">✕</span>
             </button>
