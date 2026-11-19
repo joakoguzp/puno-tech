@@ -36,7 +36,7 @@ export default function Navbar() {
             width={250}
             height={90}
             priority
-            className="h-[56px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:h-[62px]"
+            className="h-[44px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:h-[62px]"
           />
         </a>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contactar a PUNO TECH por WhatsApp"
-            className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 px-5 text-sm font-bold text-white shadow-[0_8px_30px_rgba(6,182,212,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(6,182,212,0.30)] sm:px-6"
+            className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 px-3 text-sm font-bold text-white shadow-[0_8px_30px_rgba(6,182,212,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(6,182,212,0.30)] sm:px-6"
           >
             WhatsApp
           </a>
