@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#06152d]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-[82px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:h-[88px] lg:px-10">
+      <div className="mx-auto flex h-[100px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-8 lg:h-[112px] lg:px-10">
         <a href="#inicio" aria-label="PUNO TECH - Inicio" className="group shrink-0">
           <Image
             src="/images/logo.png"
@@ -40,7 +40,7 @@ export default function Navbar() {
             width={250}
             height={90}
             priority
-            className="h-[52px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:h-[70px] lg:h-[76px]"
+            className="h-[64px] w-auto max-w-[168px] object-contain transition-transform duration-300 group-hover:scale-[1.04] sm:h-[82px] sm:max-w-[230px] lg:h-[90px] lg:max-w-[260px]"
           />
         </a>
 
