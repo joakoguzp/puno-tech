@@ -105,6 +105,7 @@ export default function FAQ() {
                 `}
               >
                 <button
+                  id={`faq-question-${index}`}
                   type="button"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
@@ -168,6 +169,8 @@ export default function FAQ() {
 
                 <div
                   id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
                   aria-hidden={!isOpen}
                   className={`
                     grid transition-all duration-300 ease-out
