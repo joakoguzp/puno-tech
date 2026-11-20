@@ -62,7 +62,7 @@ export default function About() {
                 </h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Conoces el trabajo antes de autorizarlo.
+                  Recibes una explicación antes de autorizar cualquier trabajo.
                 </p>
               </div>
 
@@ -77,7 +77,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Cuidado</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Tratamos tu equipo con cuidado.
+                  Manipulamos cada equipo con atención durante la revisión.
                 </p>
               </div>
 
@@ -92,7 +92,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Responsabilidad</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Actuamos con responsabilidad en cada reparación.
+                  Te explicamos cuándo conviene reparar y cuándo no.
                 </p>
               </div>
             </div>
@@ -258,15 +258,15 @@ export default function About() {
                   <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 to-fuchsia-400" />
 
                   <p className="pl-3 text-sm font-bold leading-6 text-slate-200">
-                    Tecnología al instante,
+                    Atención directa, con criterio técnico,
                     <span className="text-cyan-300">
                       {" "}
-                      soluciones con calidad.
+                      sin intervenciones innecesarias.
                     </span>
                   </p>
 
                   <p className="mt-2 pl-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-                    PUNO TECH • PUNO, PERÚ
+                    PUNO TECH · PUNO, PERÚ
                   </p>
                 </div>
               </div>
