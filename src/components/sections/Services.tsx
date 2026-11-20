@@ -208,7 +208,8 @@ export default function Services() {
             gap-5
             sm:grid-cols-2
             lg:mt-14
-            xl:grid-cols-4
+            xl:grid-cols-2
+            2xl:grid-cols-4
           "
         >
           {services.map((service, index) => {
@@ -222,7 +223,7 @@ export default function Services() {
                 group
                 relative
                 flex
-                min-h-[420px]
+                min-h-[460px]
                 flex-col
                 overflow-hidden
                 rounded-2xl
@@ -324,7 +325,7 @@ export default function Services() {
                   onClick={() =>
                     setHighlightedService(isHighlighted ? null : service.type)
                   }
-                  className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-64 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-72" : "h-52 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-56"}`}
+                  className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-72 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-80" : "h-60 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-64"}`}
                 >
                   <Image
                     src={service.image}
