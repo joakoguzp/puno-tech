@@ -7,6 +7,8 @@ const services = [
   {
     number: "01",
     type: "computer",
+    accent: "#01DAFD",
+    glow: "rgba(1,218,253,0.28)",
     image: "/images/services/computadoras-laptops.png",
     imageAlt:
       "Mantenimiento técnico de computadoras y laptops.",
@@ -18,6 +20,8 @@ const services = [
   {
     number: "02",
     type: "printer",
+    accent: "#F808F8",
+    glow: "rgba(248,8,248,0.25)",
     image: "/images/services/impresoras.png",
     imageAlt:
       "Impresora Epson de sistema continuo abierta para mantenimiento y limpieza de cabezales.",
@@ -28,6 +32,8 @@ const services = [
   {
     number: "03",
     type: "wifi",
+    accent: "#0095FD",
+    glow: "rgba(0,149,253,0.28)",
     image: "/images/services/redes-wifi.png",
     imageAlt:
       "Configuración de routers y redes WiFi.",
@@ -38,6 +44,8 @@ const services = [
   {
     number: "04",
     type: "support",
+    accent: "#9808F8",
+    glow: "rgba(152,8,248,0.28)",
     image: "/images/services/soporte-tecnico.png",
     imageAlt:
       "Diagnóstico y soporte técnico de equipos informáticos.",
@@ -322,8 +330,8 @@ export default function Services() {
                       className="object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] scale-[1.04]"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-cyan-200 transition-transform duration-500 group-hover/image:scale-[1.04]">
-                      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 drop-shadow-[0_0_18px_rgba(103,232,249,0.2)]" aria-hidden="true">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 transition-transform duration-500 group-hover/image:scale-[1.04]" style={{ color: service.accent }}>
+                      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-20 w-20 drop-shadow-[0_0_20px_rgba(1,218,253,0.24)] transition-all duration-500 group-hover/image:scale-110" style={{ color: service.accent, filter: `drop-shadow(0 0 16px ${service.glow})` }} aria-hidden="true">
                         {service.type === "computer" && (
                           <>
                             <rect x="6" y="8" width="36" height="25" rx="3" />
@@ -350,7 +358,7 @@ export default function Services() {
                           </>
                         )}
                       </svg>
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-slate-300">Ver imagen del servicio</span>
+                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-slate-200">Ver imagen del servicio</span>
                     </div>
                   )}
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/95 via-[#06152d]/15 to-[#06152d]/10 transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
