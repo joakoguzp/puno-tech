@@ -194,7 +194,7 @@ export default function CookieConsent() {
               Aceptar cookies de análisis
             </button>
           </div>
-          <p className="mt-3 text-xs leading-5 text-slate-500">
+          <p className="mt-3 text-xs leading-5 text-slate-400">
             El almacenamiento necesario para recordar tu elección no se puede desactivar desde este panel.
             Puedes cambiar tu decisión en cualquier momento desde “Privacidad y cookies”.
           </p>
