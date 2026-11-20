@@ -40,7 +40,7 @@ export default function Navbar() {
             width={250}
             height={90}
             priority
-            className="h-[44px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:h-[62px]"
+            className="h-[52px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:h-[70px] lg:h-[76px]"
           />
         </a>
 
