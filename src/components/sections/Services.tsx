@@ -46,6 +46,53 @@ const services = [
   },
 ];
 
+function ServiceNeonIcon({ type }: { type: string }) {
+  const common = {
+    fill: "none",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    strokeWidth: 2.2,
+  };
+
+  if (type === "computer") {
+    return (
+      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+        <rect x="7" y="9" width="34" height="24" rx="3" stroke="#22d3ee" {...common} />
+        <path d="M18 39h12M24 33v6M13 28h22" stroke="#38bdf8" {...common} />
+        <path d="M15 15h18v12H15z" stroke="#60a5fa" strokeOpacity=".75" {...common} />
+      </svg>
+    );
+  }
+
+  if (type === "printer") {
+    return (
+      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+        <path d="M15 17V8h18v9M15 34H9V20a3 3 0 0 1 3-3h24a3 3 0 0 1 3 3v14h-6" stroke="#e879f9" {...common} />
+        <path d="M15 29h18v11H15zM19 34h10M19 37h7" stroke="#a78bfa" {...common} />
+        <path d="M34 23h.01" {...common} stroke="#f0abfc" strokeWidth="3.5" />
+      </svg>
+    );
+  }
+
+  if (type === "wifi") {
+    return (
+      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+        <path d="M6 17a27 27 0 0 1 36 0M12 23a18 18 0 0 1 24 0M18 29a9 9 0 0 1 12 0" stroke="#22d3ee" {...common} />
+        <circle cx="24" cy="35" r="2.5" fill="#38bdf8" stroke="#38bdf8" />
+        <path d="M9 39h30" stroke="#3b82f6" strokeOpacity=".9" {...common} />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+      <path d="M8 25v-4a16 16 0 0 1 32 0v4M8 24h5a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3zM40 24h-5a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3z" stroke="#a78bfa" {...common} />
+      <path d="M32 38c-2 3-5 4-10 4h-3M18 42h-3" stroke="#67e8f9" {...common} />
+      <path d="m20 25 3-4 3 7 3-4" stroke="#c4b5fd" {...common} />
+    </svg>
+  );
+}
+
 export default function Services() {
   const [highlightedService, setHighlightedService] = useState<string | null>(null);
 
@@ -297,16 +344,10 @@ en Puno.
                 </span>
 
                 <span
-                  className="
-                    text-base
-                    text-slate-600
-                    transition-all
-                    duration-300
-                    group-hover:translate-x-1
-                    group-hover:text-cyan-400
-                  "
+                  aria-hidden="true"
+                  className={`flex h-12 w-12 items-center justify-center rounded-xl border bg-[#071a33]/80 transition-all duration-300 group-hover:scale-105 ${service.type === "printer" ? "border-fuchsia-400/30 shadow-[0_0_22px_rgba(217,70,239,0.22)]" : service.type === "support" ? "border-violet-400/30 shadow-[0_0_22px_rgba(167,139,250,0.22)]" : "border-cyan-400/30 shadow-[0_0_22px_rgba(34,211,238,0.22)]"}`}
                 >
-                  →
+                  <ServiceNeonIcon type={service.type} />
                 </span>
               </div>
 
