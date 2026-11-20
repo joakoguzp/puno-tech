@@ -2,6 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
+      aria-labelledby="contact-heading"
       className="
         relative overflow-hidden bg-[#071a33]
         py-20 sm:py-24 lg:py-28
@@ -25,17 +26,19 @@ export default function Contact() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 id="contact-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             ¿Necesitas ayuda con tu
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
               tecnología?
             </span>
           </h2>
-
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+            Cuéntanos qué ocurre con tu equipo. Te orientaremos sobre el siguiente paso.
+          </p>
         </div>
 
         {/* Contenido principal */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Tarjeta principal */}
           <div
             className="
@@ -92,7 +95,7 @@ export default function Contact() {
               </div>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-                Escríbenos por WhatsApp o correo y cuéntanos qué necesitas.
+                Elige tu medio de contacto y conversemos.
               </p>
 
               {/* Los servicios ya se explican en la sección anterior. */}
@@ -147,12 +150,11 @@ export default function Contact() {
           </div>
 
           {/* Información de contacto */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            {/* WhatsApp */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+            {/* Llamada telefónica */}
             <a
-              href="https://wa.me/51915210525"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+51915210525"
+              aria-label="Llamar a PUNO TECH al 915 210 525"
               className="
                 group rounded-2xl border border-white/[0.08]
                 bg-white/[0.025] p-6
@@ -164,40 +166,19 @@ export default function Contact() {
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    className="h-5 w-5"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M20.5 11.4a8.3 8.3 0 0 1-8.4 8.3 8.4 8.4 0 0 1-4.1-1.1L4 19.7l1.1-3.5a8.2 8.2 0 1 1 15.4-4.8Z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.5 9.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.6.7c.5 1 1.3 1.8 2.4 2.3l.7-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.4.3-1 .4-1.5.3-2.8-.5-5.4-3.1-5.9-5.9-.1-.5 0-1.1.4-1.5Z"
-                    />
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.5 3.8h3.2l1.6 4.1-2 1.5a15.1 15.1 0 0 0 6.3 6.3l1.5-2 4.1 1.6v3.2a1.7 1.7 0 0 1-1.8 1.7A16.7 16.7 0 0 1 3.8 5.6a1.7 1.7 0 0 1 1.7-1.8Z" />
                   </svg>
                 </div>
-
-                <span className="text-xs text-slate-600 transition-colors group-hover:text-cyan-400">
-                  →
-                </span>
+                <span className="text-xs text-slate-600 transition-colors group-hover:text-cyan-400">→</span>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
-                WhatsApp
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+                Teléfono
               </p>
-
               <p className="mt-2 text-xl font-bold text-white">915 210 525</p>
-
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Contacto directo para consultas.
+                Llámanos directamente.
               </p>
             </a>
 
@@ -237,7 +218,7 @@ export default function Contact() {
                 </span>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Correo electrónico
               </p>
 
@@ -278,14 +259,14 @@ export default function Contact() {
                 </svg>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Ubicación
               </p>
 
               <p className="mt-2 text-lg font-bold text-white">Puno, Perú</p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Atención coordinada en Puno, previa comunicación.
+                Coordinamos la atención según tu necesidad.
               </p>
             </div>
 
@@ -313,7 +294,7 @@ export default function Contact() {
                 </svg>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Atención
               </p>
 
@@ -322,7 +303,7 @@ export default function Contact() {
               </p>
 
               <p className="mt-2 text-sm leading-6 text-slate-400">
-                Atención técnica en Puno.
+                Escríbenos para organizar la revisión de tu equipo.
               </p>
             </div>
           </div>

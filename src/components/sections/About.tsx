@@ -2,6 +2,7 @@ export default function About() {
   return (
     <section
       id="nosotros"
+      aria-labelledby="about-heading"
       className="relative overflow-hidden bg-[#06152d] py-20 sm:py-24 lg:py-28"
     >
       {/* =========================================================
@@ -33,7 +34,7 @@ export default function About() {
             </div>
 
             {/* Título */}
-            <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
+            <h2 id="about-heading" className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
               Soporte técnico en Puno.
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
                 Tecnología atendida con cuidado.
@@ -42,7 +43,7 @@ export default function About() {
 
             {/* Texto principal */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              Atendemos a hogares y negocios de Puno con explicaciones claras y trabajo responsable.
+              Cada equipo recibe una revisión cuidadosa y una explicación sencilla antes de cualquier intervención.
             </p>
 
             {/* =================================================
@@ -62,7 +63,7 @@ export default function About() {
                 </h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Te explicamos antes de empezar.
+                  Recibes una explicación antes de autorizar cualquier trabajo.
                 </p>
               </div>
 
@@ -77,7 +78,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Cuidado</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Trabajo cuidadoso en cada equipo.
+                  Manipulamos cada equipo con atención durante la revisión.
                 </p>
               </div>
 
@@ -92,7 +93,7 @@ export default function About() {
                 <h3 className="mt-4 text-sm font-bold text-white">Responsabilidad</h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-400">
-                  Cuidamos cada equipo durante el servicio.
+                  Te explicamos cuándo conviene reparar y cuándo no.
                 </p>
               </div>
             </div>
@@ -126,41 +127,18 @@ export default function About() {
                       Soluciones tecnológicas
                     </h3>
 
-                    <p className="mt-1 text-xs text-slate-500">
+                    <p className="mt-1 text-xs text-slate-400">
                       Atención profesional en Puno
                     </p>
                   </div>
 
-                  {/* Indicador */}
-                  <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.08]">
-                    <span className="absolute h-3 w-3 animate-ping rounded-full bg-cyan-400/40" />
-                    <span className="relative h-2.5 w-2.5 rounded-full bg-cyan-400 shadow-[0_0_16px_rgba(34,211,238,0.9)]" />
+                  {/* Acento visual de marca */}
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/15 to-fuchsia-400/10">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-6 w-6 text-cyan-200" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5 19 6v5.2c0 4.4-2.8 7.4-7 9.3-4.2-1.9-7-4.9-7-9.3V6l7-2.5Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m9 12 2 2 4-4" />
+                    </svg>
                   </div>
-                </div>
-
-                {/* =================================================
-                    ESTADO
-                ================================================== */}
-                <div className="relative mt-6 rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.035] p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Modalidad de atención
-                      </p>
-
-                      <p className="mt-1 text-sm font-bold text-white">
-                        Previa coordinación
-                      </p>
-                    </div>
-
-                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cyan-300">
-                      Puno, Perú
-                    </span>
-                  </div>
-
-                  <p className="mt-3 text-xs leading-5 text-slate-400">
-                    Escríbenos para coordinar la atención según tu necesidad.
-                  </p>
                 </div>
 
                 {/* =================================================
@@ -197,8 +175,8 @@ export default function About() {
                         Atención técnica
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
-                        Revisamos cada caso antes de proponer un trabajo.
+                      <p className="mt-1 text-xs text-slate-400">
+                        Primero evaluamos; después recomendamos.
                       </p>
                     </div>
 
@@ -228,8 +206,8 @@ export default function About() {
                         Trabajo responsable
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
-                        Priorizamos el trabajo que el equipo necesita.
+                      <p className="mt-1 text-xs text-slate-400">
+                        Evitamos intervenciones innecesarias.
                       </p>
                     </div>
 
@@ -265,8 +243,8 @@ export default function About() {
                         Servicio local
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
-                        Para hogares y negocios de Puno.
+                      <p className="mt-1 text-xs text-slate-400">
+                        Atención cercana y directa.
                       </p>
                     </div>
 
@@ -281,15 +259,15 @@ export default function About() {
                   <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 to-fuchsia-400" />
 
                   <p className="pl-3 text-sm font-bold leading-6 text-slate-200">
-                    Tecnología al instante,
+                    Atención directa, con criterio técnico,
                     <span className="text-cyan-300">
                       {" "}
-                      soluciones con calidad.
+                      con transparencia en cada etapa.
                     </span>
                   </p>
 
-                  <p className="mt-2 pl-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-                    PUNO TECH • PUNO, PERÚ
+                  <p className="mt-2 pl-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
+                    PUNO TECH · PUNO, PERÚ
                   </p>
                 </div>
               </div>

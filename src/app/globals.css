@@ -19,6 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Evita que la barra fija tape los títulos al navegar por anclas. */
+main > section[id] {
+  scroll-margin-top: 6rem;
+}
+
 html,
 body {
   margin: 0;
@@ -39,9 +45,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* No imponer height:auto: las imágenes Next/Image usan alturas Tailwind
+   explícitas para conservar proporciones y evitar desbordes en el encabezado. */
 img {
   max-width: 100%;
-  height: auto;
 }
 /* =========================================================
    PUNO TECH

@@ -14,6 +14,12 @@ export const metadata = {
     url: "/privacidad",
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Política de privacidad | PUNO TECH",
+    description:
+      "Información sobre el tratamiento de datos personales y el uso de cookies en PUNO TECH.",
+  },
 };
 
 const sections = [

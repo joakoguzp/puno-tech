@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const whatsappUrl =
   "https://wa.me/51915210525?text=Hola%20PUNO%20TECH%2C%20necesito%20ayuda%20con%20mi%20equipo.";
@@ -8,10 +8,21 @@ const whatsappUrl =
 export default function WhatsAppFloat() {
   const [showMessage, setShowMessage] = useState(true);
 
+  useEffect(() => {
+    const hideMessageOnScroll = () => {
+      if (window.scrollY > 120) setShowMessage(false);
+    };
+
+    window.addEventListener("scroll", hideMessageOnScroll, { passive: true });
+    hideMessageOnScroll();
+
+    return () => window.removeEventListener("scroll", hideMessageOnScroll);
+  }, []);
+
   return (
-    <div className="fixed bottom-5 right-4 z-[60] flex max-w-[calc(100vw-2rem)] flex-col items-end gap-3 sm:bottom-7 sm:right-7">
+    <div className="fixed bottom-5 right-4 z-[60] flex max-w-[calc(100vw-2rem)] flex-col items-end gap-3 sm:bottom-7 sm:right-7 sm:flex-row sm:items-center sm:gap-3">
       {showMessage && (
-        <div className="whatsapp-message relative max-w-[275px] rounded-2xl border border-emerald-300/20 bg-[#09251f] px-4 py-3 pr-9 text-white shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
+        <div className="whatsapp-message relative max-w-[min(275px,calc(100vw-2rem))] rounded-2xl border border-emerald-300/20 bg-[#09251f] px-4 py-3 pr-9 text-white shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:max-w-[230px]">
           <button
             type="button"
             onClick={() => setShowMessage(false)}

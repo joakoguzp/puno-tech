@@ -39,7 +39,7 @@ export default function NotFound() {
             Contactar por WhatsApp
           </a>
         </div>
-        <p className="mt-12 text-xs text-slate-500">
+        <p className="mt-12 text-xs text-slate-400">
           Tecnología al instante, soluciones con calidad.
         </p>
       </section>

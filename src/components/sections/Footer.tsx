@@ -62,7 +62,7 @@ export default function Footer() {
             {/* Línea decorativa */}
             <div className="mt-7 h-px w-24 bg-gradient-to-r from-cyan-400/60 to-transparent" />
 
-            <p className="mt-5 text-xs uppercase tracking-[0.16em] text-slate-600">
+            <p className="mt-5 text-xs uppercase tracking-[0.16em] text-slate-400">
               Atención tecnológica en Puno, Perú
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function Footer() {
 
             {/* Contacto rápido */}
             <div className="mt-7 border-t border-white/[0.07] pt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Contacto
               </p>
 
@@ -199,22 +199,20 @@ export default function Footer() {
         <div className="border-t border-white/[0.07] py-7">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Atención en Puno
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-slate-400">
-                Atención coordinada en Puno, previa comunicación.
+              <p className="mt-2 text-sm text-slate-400">
+                Puno, Perú · Consultas y coordinación por WhatsApp.
               </p>
             </div>
 
             <a
-              href="https://wa.me/51915210525"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex h-11 w-fit items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 shadow-[0_10px_30px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_14px_35px_rgba(34,211,238,0.22)] active:translate-y-0"
+              href="#contacto"
+              className="group inline-flex h-11 w-fit items-center justify-center gap-2 rounded-xl border border-cyan-300/25 bg-cyan-300/[0.07] px-6 text-sm font-bold text-cyan-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/45 hover:bg-cyan-300/[0.12] active:translate-y-0"
             >
-              Escribir por WhatsApp
+              Ver opciones de contacto
               <span
                 aria-hidden="true"
                 className="transition-transform duration-300 group-hover:translate-x-0.5"
@@ -228,17 +226,18 @@ export default function Footer() {
         {/* =========================================================
             LÍNEA INFERIOR
         ========================================================= */}
-        <div className="flex flex-col gap-3 border-t border-white/[0.07] py-6 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-t border-white/[0.07] py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} PUNO TECH. Todos los derechos
             reservados.
           </p>
           <a
             href="/privacidad"
-            className="w-fit text-slate-500 underline decoration-slate-700 underline-offset-4 transition hover:text-cyan-300"
+            className="w-fit text-slate-400 underline decoration-slate-700 underline-offset-4 transition hover:text-cyan-300"
           >
             Política de privacidad
           </a>
+
         </div>
       </div>
     </footer>

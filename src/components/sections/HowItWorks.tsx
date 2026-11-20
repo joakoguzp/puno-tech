@@ -3,28 +3,28 @@ const steps = [
     number: "01",
     title: "Cuéntanos el problema",
     description:
-      "Dinos qué equipo tienes y qué ocurre.",
+      "Cuéntanos qué equipo falla y qué sucede.",
     type: "message",
   },
   {
     number: "02",
     title: "Diagnosticamos",
     description:
-      "Revisamos el caso para identificar la causa.",
+      "Identificamos la posible causa de la falla.",
     type: "search",
   },
   {
     number: "03",
     title: "Proponemos la solución",
     description:
-      "Te explicamos el trabajo recomendado y su costo antes de empezar, cuando corresponda.",
+      "Te presentamos el trabajo recomendado y su costo antes de iniciar.",
     type: "solution",
   },
   {
     number: "04",
-    title: "Solucionamos y verificamos",
+    title: "Realizamos y verificamos",
     description:
-      "Realizamos el trabajo y verificamos el funcionamiento.",
+      "Ejecutamos el trabajo autorizado y comprobamos su funcionamiento.",
     type: "check",
   },
 ];
@@ -184,6 +184,7 @@ export default function HowItWorks() {
   return (
     <section
       id="como-trabajamos"
+      aria-labelledby="how-it-works-heading"
       className="relative overflow-hidden bg-[#06152d] py-20 sm:py-24 lg:py-28"
     >
       {/* Fondos decorativos */}
@@ -208,7 +209,7 @@ export default function HowItWorks() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 id="how-it-works-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Una atención clara,
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
               de principio a fin.
@@ -216,7 +217,7 @@ export default function HowItWorks() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-            Un proceso claro, desde el primer mensaje hasta la verificación.
+            Así sabrás qué esperar en cada etapa.
           </p>
         </div>
 
