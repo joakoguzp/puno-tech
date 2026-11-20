@@ -326,9 +326,9 @@ en Puno.
                   alt={service.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className={`object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] ${isHighlighted ? "scale-[1.04]" : "group-hover/image:scale-[1.02]"}`}
+                  className={`object-contain p-1 brightness-125 contrast-125 saturate-150 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] ${isHighlighted ? "scale-[1.12]" : "scale-[1.06] group-hover/image:scale-[1.1]"} ${service.type === "printer" ? "drop-shadow-[0_0_12px_rgba(232,121,249,0.32)]" : service.type === "support" ? "drop-shadow-[0_0_12px_rgba(192,132,252,0.32)]" : "drop-shadow-[0_0_12px_rgba(103,232,249,0.32)]"}`}
                 />
-                <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/95 via-[#06152d]/15 to-[#06152d]/10 transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
+                <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/15 via-transparent to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/5" />
                 <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
                 <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
                   <span aria-hidden="true">{isHighlighted ? "−" : "+"}</span>
