@@ -2,6 +2,7 @@ export default function About() {
   return (
     <section
       id="nosotros"
+      aria-labelledby="about-heading"
       className="relative overflow-hidden bg-[#06152d] py-20 sm:py-24 lg:py-28"
     >
       {/* =========================================================
@@ -33,7 +34,7 @@ export default function About() {
             </div>
 
             {/* Título */}
-            <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
+            <h2 id="about-heading" className="max-w-3xl text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
               Soporte técnico en Puno.
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
                 Tecnología atendida con cuidado.
