@@ -173,7 +173,7 @@ export default function Contact() {
                 <span className="text-xs text-slate-600 transition-colors group-hover:text-cyan-400">→</span>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Teléfono
               </p>
               <p className="mt-2 text-xl font-bold text-white">915 210 525</p>
@@ -218,7 +218,7 @@ export default function Contact() {
                 </span>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Correo electrónico
               </p>
 
@@ -259,7 +259,7 @@ export default function Contact() {
                 </svg>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Ubicación
               </p>
 
@@ -294,7 +294,7 @@ export default function Contact() {
                 </svg>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Atención
               </p>
 
