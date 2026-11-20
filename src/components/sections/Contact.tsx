@@ -38,7 +38,7 @@ export default function Contact() {
         </div>
 
         {/* Contenido principal */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Tarjeta principal */}
           <div
             className="
@@ -150,7 +150,7 @@ export default function Contact() {
           </div>
 
           {/* Información de contacto */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
             {/* Llamada telefónica */}
             <a
               href="tel:+51915210525"
