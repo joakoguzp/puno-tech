@@ -20,7 +20,7 @@ const services = [
     type: "printer",
     image: "/images/services/impresoras.png",
     imageAlt:
-      "Limpieza y mantenimiento de impresoras.",
+      "Impresora Epson de sistema continuo abierta para mantenimiento y limpieza de cabezales.",
     title: "Impresoras",
     description: "Limpieza de cabezales, mantenimiento y configuración.",
     tags: [],
@@ -241,8 +241,6 @@ export default function Services() {
                 ${isHighlighted ? "border-cyan-300/40 bg-white/[0.055] shadow-[0_20px_65px_rgba(34,211,238,0.13)]" : ""}
               `}
               >
-                {/* Línea superior */}
-
                 <div
                   className="
                   absolute
@@ -264,8 +262,6 @@ export default function Services() {
                 "
                 />
 
-                {/* Resplandor */}
-
                 <div
                   className="
                   pointer-events-none
@@ -282,10 +278,6 @@ export default function Services() {
                   group-hover:bg-cyan-400/[0.10]
                 "
                 />
-
-                {/* ====================================
-                  CABECERA TARJETA
-              ==================================== */}
 
                 <div className="relative flex items-center justify-between">
                   <span
@@ -314,10 +306,6 @@ export default function Services() {
                   </span>
                 </div>
 
-                {/* ====================================
-                  ICONO ANIMADO
-              ==================================== */}
-
                 <button
                   type="button"
                   aria-label={`${isHighlighted ? "Ocultar" : "Mostrar"} imagen de ${service.title}`}
@@ -325,7 +313,7 @@ export default function Services() {
                   onClick={() =>
                     setHighlightedService(isHighlighted ? null : service.type)
                   }
-                  className={`group/image relative mt-8 block w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${isHighlighted ? "h-72 border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)] sm:h-80" : "h-60 border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)] sm:h-64"}`}
+                  className={`group/image relative mt-8 block h-60 w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-cyan-400/[0.07] via-sky-400/[0.025] to-fuchsia-400/[0.06] text-left transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:h-64 ${isHighlighted ? "border-cyan-300/50 shadow-[0_0_35px_rgba(34,211,238,0.18)]" : "border-white/[0.07] hover:border-cyan-400/35 hover:shadow-[0_18px_45px_rgba(34,211,238,0.12)]"}`}
                 >
                   {isHighlighted ? (
                     <Image
@@ -380,10 +368,6 @@ export default function Services() {
                   <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 transition-transform duration-700 group-hover/image:scale-x-100" />
                 </button>
 
-                {/* ====================================
-                  CONTENIDO
-              ==================================== */}
-
                 <h3
                   className="
                   relative
@@ -416,10 +400,6 @@ export default function Services() {
                 >
                   {service.description}
                 </p>
-
-                {/* ====================================
-                  ETIQUETAS
-              ==================================== */}
 
                 <div
                   className="
