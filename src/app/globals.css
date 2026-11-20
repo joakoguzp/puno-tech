@@ -6,9 +6,29 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Sistema cromático de PUNO TECH: extraído de la paleta del logotipo. */
 :root {
-  --background: #06152d;
+  --background: #01123e;
   --foreground: #f8fafc;
+  --brand-cyan: #01dafd;
+  --brand-sky: #0095fd;
+  --brand-electric-blue: #0108ff;
+  --brand-indigo: #0019fd;
+  --brand-violet: #9808f8;
+  --brand-lilac: #c465fe;
+  --brand-magenta: #f808f8;
+  --brand-fuchsia: #fd00ae;
+  --brand-screen: #01123e;
+  --brand-night: #081838;
+  --brand-silver: #beccfe;
+  --brand-gradient: linear-gradient(
+    90deg,
+    var(--brand-cyan) 0%,
+    var(--brand-electric-blue) 30%,
+    var(--brand-violet) 58%,
+    var(--brand-magenta) 80%,
+    var(--brand-fuchsia) 100%
+  );
 }
 
 * {
@@ -18,7 +38,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 /* Evita que la barra fija tape los títulos al navegar por anclas. */
 main > section[id] {
@@ -50,6 +69,7 @@ a {
 img {
   max-width: 100%;
 }
+
 /* =========================================================
    PUNO TECH
    RITMO VERTICAL DE SECCIONES
@@ -83,12 +103,12 @@ main > section:not(#inicio) [class*="min-h-screen"] {
    ========================================================= */
 
 ::selection {
-  color: #06152d;
-  background: rgba(103, 232, 249, 0.8);
+  color: #01123e;
+  background: rgba(1, 218, 253, 0.8);
 }
 
 :focus-visible {
-  outline: 2px solid #67e8f9;
+  outline: 2px solid var(--brand-cyan);
   outline-offset: 4px;
 }
 
@@ -113,7 +133,6 @@ main > section:not(#inicio) [class*="min-h-screen"] {
   }
 }
 
-
 @keyframes service-reveal {
   from {
     opacity: 0;
@@ -124,7 +143,6 @@ main > section:not(#inicio) [class*="min-h-screen"] {
     transform: translateY(0) scale(1);
   }
 }
-
 
 /* Botón flotante de WhatsApp: rebote suave, visible mientras se desplaza la página. */
 .whatsapp-ball {
