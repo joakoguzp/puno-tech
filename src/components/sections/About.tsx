@@ -261,7 +261,7 @@ export default function About() {
                     Atención directa, con criterio técnico,
                     <span className="text-cyan-300">
                       {" "}
-                      sin intervenciones innecesarias.
+                      con transparencia en cada etapa.
                     </span>
                   </p>
 
