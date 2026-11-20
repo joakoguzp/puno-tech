@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const whatsappUrl =
   "https://wa.me/51915210525?text=Hola%20PUNO%20TECH%2C%20necesito%20ayuda%20con%20mi%20equipo.";
 
 export default function WhatsAppFloat() {
   const [showMessage, setShowMessage] = useState(true);
+
+  useEffect(() => {
+    const hideMessageOnScroll = () => {
+      if (window.scrollY > 120) setShowMessage(false);
+    };
+
+    window.addEventListener("scroll", hideMessageOnScroll, { passive: true });
+    hideMessageOnScroll();
+
+    return () => window.removeEventListener("scroll", hideMessageOnScroll);
+  }, []);
 
   return (
     <div className="fixed bottom-5 right-4 z-[60] flex max-w-[calc(100vw-2rem)] flex-col items-end gap-3 sm:bottom-7 sm:right-7">
