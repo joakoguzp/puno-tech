@@ -184,6 +184,7 @@ export default function HowItWorks() {
   return (
     <section
       id="como-trabajamos"
+      aria-labelledby="how-it-works-heading"
       className="relative overflow-hidden bg-[#06152d] py-20 sm:py-24 lg:py-28"
     >
       {/* Fondos decorativos */}
@@ -208,7 +209,7 @@ export default function HowItWorks() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 id="how-it-works-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Una atención clara,
             <span className="block bg-gradient-to-r from-cyan-300 via-sky-300 to-fuchsia-400 bg-clip-text text-transparent">
               de principio a fin.
