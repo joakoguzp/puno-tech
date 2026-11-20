@@ -62,7 +62,7 @@ export default function Footer() {
             {/* Línea decorativa */}
             <div className="mt-7 h-px w-24 bg-gradient-to-r from-cyan-400/60 to-transparent" />
 
-            <p className="mt-5 text-xs uppercase tracking-[0.16em] text-slate-600">
+            <p className="mt-5 text-xs uppercase tracking-[0.16em] text-slate-400">
               Atención tecnológica en Puno, Perú
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function Footer() {
 
             {/* Contacto rápido */}
             <div className="mt-7 border-t border-white/[0.07] pt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Contacto
               </p>
 
@@ -199,7 +199,7 @@ export default function Footer() {
         <div className="border-t border-white/[0.07] py-7">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                 Atención en Puno
               </p>
 
@@ -226,14 +226,14 @@ export default function Footer() {
         {/* =========================================================
             LÍNEA INFERIOR
         ========================================================= */}
-        <div className="flex flex-col gap-3 border-t border-white/[0.07] py-6 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-t border-white/[0.07] py-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} PUNO TECH. Todos los derechos
             reservados.
           </p>
           <a
             href="/privacidad"
-            className="w-fit text-slate-500 underline decoration-slate-700 underline-offset-4 transition hover:text-cyan-300"
+            className="w-fit text-slate-400 underline decoration-slate-700 underline-offset-4 transition hover:text-cyan-300"
           >
             Política de privacidad
           </a>
