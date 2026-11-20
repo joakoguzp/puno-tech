@@ -330,8 +330,9 @@ export default function Services() {
                       className="object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] scale-[1.04]"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 transition-transform duration-500 group-hover/image:scale-[1.04]" style={{ color: service.accent }}>
-                      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-20 w-20 drop-shadow-[0_0_20px_rgba(1,218,253,0.24)] transition-all duration-500 group-hover/image:scale-110" style={{ color: service.accent, filter: `drop-shadow(0 0 16px ${service.glow})` }} aria-hidden="true">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
+                      <span aria-hidden="true" className="pointer-events-none absolute h-36 w-36 rounded-full opacity-70 blur-2xl transition-all duration-500 group-hover/image:opacity-100" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
+                      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="relative h-24 w-24 transition-all duration-500 group-hover/image:scale-110 sm:h-28 sm:w-28" style={{ color: service.accent, filter: `drop-shadow(0 0 5px ${service.accent}) drop-shadow(0 0 13px ${service.accent}) drop-shadow(0 0 28px ${service.glow})` }} aria-hidden="true">
                         {service.type === "computer" && (
                           <>
                             <rect x="6" y="8" width="36" height="25" rx="3" />
@@ -358,7 +359,7 @@ export default function Services() {
                           </>
                         )}
                       </svg>
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-slate-200">Ver imagen del servicio</span>
+                      <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 14px ${service.glow}, inset 0 0 12px ${service.glow}`, textShadow: `0 0 10px ${service.accent}` }}>Ver imagen del servicio</span>
                     </div>
                   )}
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/95 via-[#06152d]/15 to-[#06152d]/10 transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
