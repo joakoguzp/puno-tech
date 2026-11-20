@@ -208,8 +208,7 @@ export default function Services() {
             gap-5
             sm:grid-cols-2
             lg:mt-14
-            xl:grid-cols-2
-            2xl:grid-cols-4
+            xl:grid-cols-4
           "
         >
           {services.map((service, index) => {
