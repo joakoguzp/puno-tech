@@ -30,7 +30,7 @@ export default function Hero() {
             <h1 className="text-[clamp(2.35rem,8.5vw,3.25rem)] font-black leading-[0.98] tracking-[-0.05em] sm:text-[3.75rem] md:text-[4rem] lg:text-[clamp(2.85rem,3.6vw,3.7rem)] xl:text-[4rem]">
               Soporte técnico
               <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
-                que sí resuelve.
+                con atención confiable.
               </span>
             </h1>
 
