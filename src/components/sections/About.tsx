@@ -126,7 +126,7 @@ export default function About() {
                       Soluciones tecnológicas
                     </h3>
 
-                    <p className="mt-1 text-xs text-slate-500">
+                    <p className="mt-1 text-xs text-slate-400">
                       Atención profesional en Puno
                     </p>
                   </div>
@@ -174,7 +174,7 @@ export default function About() {
                         Atención técnica
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-slate-400">
                         Primero evaluamos; después recomendamos.
                       </p>
                     </div>
@@ -205,7 +205,7 @@ export default function About() {
                         Trabajo responsable
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-slate-400">
                         Evitamos intervenciones innecesarias.
                       </p>
                     </div>
@@ -242,7 +242,7 @@ export default function About() {
                         Servicio local
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-slate-400">
                         Atención cercana y directa.
                       </p>
                     </div>
@@ -265,7 +265,7 @@ export default function About() {
                     </span>
                   </p>
 
-                  <p className="mt-2 pl-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                  <p className="mt-2 pl-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
                     PUNO TECH · PUNO, PERÚ
                   </p>
                 </div>
