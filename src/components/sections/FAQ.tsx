@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "¿Pueden recuperar archivos borrados?",
     answer:
-      "Depende del estado del dispositivo y del almacenamiento. No podemos garantizarla. Si los archivos son importantes, deja de usar esa unidad y consúltanos.",
+      "Depende del estado del dispositivo y del almacenamiento. La recuperación no está garantizada. Si los archivos son importantes, deja de usar esa unidad y consúltanos.",
   },
   {
     question: "¿Conoceré el costo antes del trabajo?",
