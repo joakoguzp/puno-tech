@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#06152d]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-[100px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-8 lg:h-[112px] lg:px-10">
+      <div className="mx-auto flex h-[112px] max-w-7xl items-center justify-between gap-3 px-3 sm:h-[120px] sm:gap-4 sm:px-8 lg:h-[132px] lg:px-10">
         <a href="#inicio" aria-label="PUNO TECH - Inicio" className="group shrink-0">
           <Image
             src="/images/logo.png"
@@ -40,7 +40,7 @@ export default function Navbar() {
             width={250}
             height={90}
             priority
-            className="h-[64px] w-auto max-w-[168px] object-contain transition-transform duration-300 group-hover:scale-[1.04] sm:h-[82px] sm:max-w-[230px] lg:h-[90px] lg:max-w-[260px]"
+            className="h-auto w-[190px] max-w-none object-contain drop-shadow-[0_0_14px_rgba(1,218,253,0.22)] transition-transform duration-300 group-hover:scale-[1.04] sm:w-[250px] lg:w-[290px]"
           />
         </a>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contactar a PUNO TECH por WhatsApp"
-            className="inline-flex h-11 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 px-3 text-sm font-bold text-white shadow-[0_8px_30px_rgba(6,182,212,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(6,182,212,0.30)] sm:px-6"
+            className="inline-flex h-10 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 px-2 text-xs font-bold text-white shadow-[0_8px_30px_rgba(6,182,212,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(6,182,212,0.30)] sm:h-11 sm:px-6 sm:text-sm"
           >
             WhatsApp
           </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
               aria-expanded={isMenuOpen}
               aria-controls="navegacion-movil"
               onClick={() => setIsMenuOpen((open) => !open)}
-              className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/30 hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-200 transition hover:border-cyan-400/30 hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:h-11 sm:w-11"
             >
               <span className="flex flex-col gap-1.5" aria-hidden="true">
                 <span
