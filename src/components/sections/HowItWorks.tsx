@@ -22,9 +22,9 @@ const steps = [
   },
   {
     number: "04",
-    title: "Solucionamos y verificamos",
+    title: "Realizamos y verificamos",
     description:
-      "Trabajamos en el equipo y comprobamos su funcionamiento.",
+      "Ejecutamos el trabajo autorizado y comprobamos su funcionamiento.",
     type: "check",
   },
 ];
