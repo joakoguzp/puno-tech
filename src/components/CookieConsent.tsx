@@ -139,7 +139,7 @@ export default function CookieConsent() {
 
       {(consent === null || settingsOpen) && (
         <div
-          className="fixed inset-x-4 bottom-4 z-[100] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-cyan-300/20 bg-[#081a33]/[.98] p-5 text-white shadow-[0_20px_70px_rgba(0,0,0,.5)] backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:p-6"
+          className="fixed inset-x-4 bottom-4 z-[100] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-cyan-300/20 bg-[#081a33]/[.98] p-5 text-white shadow-[0_20px_70px_rgba(0,0,0,.5)] backdrop-blur-xl sm:bottom-6 sm:left-6 sm:right-24 sm:p-6"
           role="dialog"
           aria-modal="false"
           aria-labelledby="cookie-consent-title"
