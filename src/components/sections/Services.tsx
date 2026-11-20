@@ -69,7 +69,7 @@ function ServiceNeonIcon({ type }: { type: string }) {
       <svg viewBox="0 0 48 48" className="h-8 w-8" aria-hidden="true">
         <path d="M15 17V8h18v9M15 34H9V20a3 3 0 0 1 3-3h24a3 3 0 0 1 3 3v14h-6" stroke="#e879f9" {...common} />
         <path d="M15 29h18v11H15zM19 34h10M19 37h7" stroke="#a78bfa" {...common} />
-        <path d="M34 23h.01" stroke="#f0abfc" strokeWidth="3.5" {...common} />
+        <path d="M34 23h.01" {...common} stroke="#f0abfc" strokeWidth="3.5" />
       </svg>
     );
   }
