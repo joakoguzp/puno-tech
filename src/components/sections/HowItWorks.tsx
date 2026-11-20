@@ -5,6 +5,8 @@ const steps = [
     description:
       "Cuéntanos qué equipo falla y qué sucede.",
     type: "message",
+    accent: "#01DAFD",
+    glow: "rgba(1,218,253,0.24)",
   },
   {
     number: "02",
@@ -12,6 +14,8 @@ const steps = [
     description:
       "Identificamos la posible causa de la falla.",
     type: "search",
+    accent: "#0095FD",
+    glow: "rgba(0,149,253,0.24)",
   },
   {
     number: "03",
@@ -19,6 +23,8 @@ const steps = [
     description:
       "Te presentamos el trabajo recomendado y su costo antes de iniciar.",
     type: "solution",
+    accent: "#9808F8",
+    glow: "rgba(152,8,248,0.24)",
   },
   {
     number: "04",
@@ -26,6 +32,8 @@ const steps = [
     description:
       "Ejecutamos el trabajo autorizado y comprobamos su funcionamiento.",
     type: "check",
+    accent: "#FD00AE",
+    glow: "rgba(253,0,174,0.24)",
   },
 ];
 
@@ -39,7 +47,7 @@ function StepIcon({ type }: { type: string }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-8 w-8"
+        className="h-10 w-10 drop-shadow-[0_0_12px_currentColor]"
         aria-hidden="true"
       >
         <path
@@ -224,7 +232,7 @@ export default function HowItWorks() {
         {/* Proceso */}
         <div className="relative mt-14 lg:mt-16">
           {/* Línea horizontal desktop */}
-          <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[55px] hidden h-px bg-gradient-to-r from-cyan-400/10 via-cyan-400/25 to-fuchsia-400/10 lg:block" />
+          <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[63px] hidden h-px bg-[linear-gradient(90deg,#01DAFD_0%,#0108FF_30%,#9808F8_58%,#F808F8_80%,#FD00AE_100%)] opacity-35 lg:block" />
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {steps.map((step, index) => (
@@ -253,7 +261,7 @@ export default function HowItWorks() {
 
                 {/* Icono */}
                 <div className="mt-7 flex justify-center">
-                  <div className="relative flex h-[72px] w-[72px] items-center justify-center rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/[0.10] via-sky-400/[0.06] to-fuchsia-400/[0.06] text-cyan-300 shadow-[0_10px_35px_rgba(34,211,238,0.06)] transition-all duration-500 group-hover:scale-105 group-hover:border-cyan-400/40 group-hover:text-cyan-200 group-hover:shadow-[0_12px_40px_rgba(34,211,238,0.16)]">
+                  <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-2xl border bg-gradient-to-br from-cyan-400/[0.10] via-sky-400/[0.06] to-fuchsia-400/[0.06] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_14px_42px_rgba(1,218,253,0.18)]" style={{ color: step.accent, borderColor: `${step.accent}55`, boxShadow: `0 10px 35px ${step.glow}` }}>
                     <span className="pointer-events-none absolute inset-[-6px] rounded-[21px] border border-cyan-400/0 transition-all duration-700 group-hover:scale-110 group-hover:border-cyan-400/20" />
 
                     <StepIcon type={step.type} />
