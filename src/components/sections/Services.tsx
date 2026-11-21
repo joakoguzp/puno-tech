@@ -8,6 +8,7 @@ const services = [
     number: "01",
     type: "computer",
     accent: "#01DAFD",
+    secondary: "#0095FD",
     glow: "rgba(1,218,253,0.28)",
     image: "/images/services/computadoras-laptops.png",
     imageAlt:
@@ -21,6 +22,7 @@ const services = [
     number: "02",
     type: "printer",
     accent: "#F808F8",
+    secondary: "#9808F8",
     glow: "rgba(248,8,248,0.25)",
     image: "/images/services/impresoras.png",
     imageAlt:
@@ -33,6 +35,7 @@ const services = [
     number: "03",
     type: "wifi",
     accent: "#0095FD",
+    secondary: "#01DAFD",
     glow: "rgba(0,149,253,0.28)",
     image: "/images/services/redes-wifi.png",
     imageAlt:
@@ -45,6 +48,7 @@ const services = [
     number: "04",
     type: "support",
     accent: "#9808F8",
+    secondary: "#01DAFD",
     glow: "rgba(152,8,248,0.28)",
     image: "/images/services/soporte-tecnico.png",
     imageAlt:
@@ -332,7 +336,14 @@ export default function Services() {
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
                       <span aria-hidden="true" className="pointer-events-none absolute h-36 w-36 rounded-full opacity-70 blur-2xl transition-all duration-500 group-hover/image:opacity-100" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
-                      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="relative h-24 w-24 transition-all duration-500 group-hover/image:scale-110 sm:h-28 sm:w-28" style={{ color: service.accent, filter: `drop-shadow(0 0 5px ${service.accent}) drop-shadow(0 0 13px ${service.accent}) drop-shadow(0 0 28px ${service.glow})` }} aria-hidden="true">
+                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.15" strokeLinecap="round" strokeLinejoin="round" className="relative h-28 w-28 transition-all duration-500 group-hover/image:scale-110 sm:h-32 sm:w-32" style={{ color: service.accent, filter: `drop-shadow(0 0 3px ${service.accent}) drop-shadow(0 0 8px ${service.accent}) drop-shadow(0 0 16px ${service.glow})` }} aria-hidden="true">
+                        <defs>
+                          <linearGradient id={`service-icon-gradient-${service.type}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor={service.accent} />
+                            <stop offset="55%" stopColor={service.secondary} />
+                            <stop offset="100%" stopColor="#E8FCFF" />
+                          </linearGradient>
+                        </defs>
                         {service.type === "computer" && (
                           <>
                             <rect x="6" y="8" width="36" height="25" rx="3" />
