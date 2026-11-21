@@ -335,8 +335,8 @@ export default function Services() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
-                      <span aria-hidden="true" className="pointer-events-none absolute h-28 w-28 rounded-full opacity-45 blur-xl transition-all duration-500 group-hover/image:opacity-70" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
-                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" className="relative h-32 w-32 transition-all duration-500 group-hover/image:scale-110 sm:h-36 sm:w-36" style={{ color: service.accent, filter: `drop-shadow(0 0 1.5px #ffffff) drop-shadow(0 0 4px ${service.accent}) drop-shadow(0 0 9px ${service.glow})` }} aria-hidden="true">
+                      <span aria-hidden="true" className="pointer-events-none absolute h-36 w-36 rounded-full opacity-65 blur-2xl transition-all duration-500 group-hover/image:opacity-90" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
+                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" className="relative h-40 w-40 transition-all duration-500 group-hover/image:scale-110 sm:h-44 sm:w-44" style={{ color: service.accent, filter: `drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 7px ${service.accent}) drop-shadow(0 0 16px ${service.accent}) drop-shadow(0 0 30px ${service.glow})` }} aria-hidden="true">
                         <defs>
                           <linearGradient id={`service-icon-gradient-${service.type}`} x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor={service.accent} />
@@ -373,7 +373,7 @@ export default function Services() {
                       <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 14px ${service.glow}, inset 0 0 12px ${service.glow}`, textShadow: `0 0 10px ${service.accent}` }}>Ver imagen del servicio</span>
                     </div>
                   )}
-                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/95 via-[#06152d]/15 to-[#06152d]/10 transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
+                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/55 via-[#06152d]/5 to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
                   <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
                   <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
                     <span aria-hidden="true">{isHighlighted ? "−" : "+"}</span>
