@@ -51,12 +51,12 @@ function ServiceNeonIcon({ type }: { type: string }) {
     fill: "none",
     strokeLinecap: "round" as const,
     strokeLinejoin: "round" as const,
-    strokeWidth: 2.2,
+    strokeWidth: 2.5,
   };
 
   if (type === "computer") {
     return (
-      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+      <svg viewBox="0 0 48 48" className="h-10 w-10 drop-shadow-[0_0_6px_rgba(34,211,238,0.8)]" aria-hidden="true">
         <rect x="7" y="9" width="34" height="24" rx="3" stroke="#22d3ee" {...common} />
         <path d="M18 39h12M24 33v6M13 28h22" stroke="#38bdf8" {...common} />
         <path d="M15 15h18v12H15z" stroke="#60a5fa" strokeOpacity=".75" {...common} />
@@ -66,7 +66,7 @@ function ServiceNeonIcon({ type }: { type: string }) {
 
   if (type === "printer") {
     return (
-      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+      <svg viewBox="0 0 48 48" className="h-10 w-10 drop-shadow-[0_0_6px_rgba(232,121,249,0.85)]" aria-hidden="true">
         <path d="M15 17V8h18v9M15 34H9V20a3 3 0 0 1 3-3h24a3 3 0 0 1 3 3v14h-6" stroke="#e879f9" {...common} />
         <path d="M15 29h18v11H15zM19 34h10M19 37h7" stroke="#a78bfa" {...common} />
         <path d="M34 23h.01" {...common} stroke="#f0abfc" strokeWidth="3.5" />
@@ -76,7 +76,7 @@ function ServiceNeonIcon({ type }: { type: string }) {
 
   if (type === "wifi") {
     return (
-      <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+      <svg viewBox="0 0 48 48" className="h-10 w-10 drop-shadow-[0_0_6px_rgba(34,211,238,0.85)]" aria-hidden="true">
         <path d="M6 17a27 27 0 0 1 36 0M12 23a18 18 0 0 1 24 0M18 29a9 9 0 0 1 12 0" stroke="#22d3ee" {...common} />
         <circle cx="24" cy="35" r="2.5" fill="#38bdf8" stroke="#38bdf8" />
         <path d="M9 39h30" stroke="#3b82f6" strokeOpacity=".9" {...common} />
@@ -85,7 +85,7 @@ function ServiceNeonIcon({ type }: { type: string }) {
   }
 
   return (
-    <svg viewBox="0 0 48 48" className="h-9 w-9" aria-hidden="true">
+    <svg viewBox="0 0 48 48" className="h-10 w-10 drop-shadow-[0_0_6px_rgba(167,139,250,0.85)]" aria-hidden="true">
       <path d="M8 25v-4a16 16 0 0 1 32 0v4M8 24h5a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3zM40 24h-5a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3z" stroke="#a78bfa" {...common} />
       <path d="M32 38c-2 3-5 4-10 4h-3M18 42h-3" stroke="#67e8f9" {...common} />
       <path d="m20 25 3-4 3 7 3-4" stroke="#c4b5fd" {...common} />
@@ -367,15 +367,15 @@ en Puno.
                   alt={service.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className={`object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] ${isHighlighted ? "scale-[1.04]" : "group-hover/image:scale-[1.02]"}`}
+                  className={`z-0 object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.2,0.75,0.25,1)] ${isHighlighted ? "scale-[1.04]" : "group-hover/image:scale-[1.02]"}`}
                 />
-                <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/20 via-transparent to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/10" />
-                <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
-                <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
+                <span className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#06152d]/[0.08] via-transparent to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/10" />
+                <span className="pointer-events-none absolute inset-0 z-10 ring-1 ring-inset ring-white/10" />
+                <span className="absolute right-3 top-3 z-20 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-[#06152d]/75 px-3 py-1.5 text-[10px] font-semibold text-white/90 shadow-lg backdrop-blur-md transition-colors group-hover/image:border-cyan-200/40 group-hover/image:text-cyan-100">
                   <span aria-hidden="true">{isHighlighted ? "−" : "+"}</span>
                   {isHighlighted ? "Reducir imagen" : "Ver imagen"}
                 </span>
-                <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/80 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
+                <span className="absolute bottom-3 left-3 z-20 inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-[#06152d]/80 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-cyan-100 shadow-lg backdrop-blur-md">
                   <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
                   {isHighlighted ? "Vista destacada" : "PUNO TECH"}
                 </span>
