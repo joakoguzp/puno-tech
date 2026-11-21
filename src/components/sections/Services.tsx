@@ -364,7 +364,7 @@ export default function Services() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
-                      <span aria-hidden="true" className="pointer-events-none absolute h-32 w-32 rounded-full opacity-35 blur-xl transition-all duration-500 group-hover/image:opacity-50" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 72%)` }} />
+                      <span aria-hidden="true" className="pointer-events-none absolute h-28 w-28 rounded-full opacity-20 blur-2xl transition-all duration-500 group-hover/image:opacity-30" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 72%)` }} />
                       <svg viewBox="0 0 48 48" fill="none" strokeLinecap="round" strokeLinejoin="round" className="relative h-36 w-36 transition-transform duration-300 group-hover/image:scale-105 sm:h-40 sm:w-40" style={{ color: service.accent }} aria-hidden="true">
                         <defs>
                           <linearGradient id={`service-icon-gradient-${service.type}`} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -373,20 +373,20 @@ export default function Services() {
                             <stop offset="100%" stopColor="#E8FCFF" />
                           </linearGradient>
                           <filter id={`service-icon-glow-${service.type}`} x="-40%" y="-40%" width="180%" height="180%">
-                            <feGaussianBlur stdDeviation="1.6" />
+                            <feGaussianBlur stdDeviation="0.75" />
                           </filter>
                         </defs>
-                        <g stroke={service.accent} strokeWidth="5.2" opacity="0.42" filter={`url(#service-icon-glow-${service.type})`}>
+                        <g stroke={service.accent} strokeWidth="3.2" opacity="0.28" filter={`url(#service-icon-glow-${service.type})`}>
                           {iconShape}
                         </g>
-                        <g stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.7">
+                        <g stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.25">
                           {iconShape}
                         </g>
-                        <g stroke="#EAFBFF" strokeWidth="0.75" opacity="0.9">
+                        <g stroke="#FFFFFF" strokeWidth="1.05" opacity="1">
                           {iconShape}
                         </g>
                       </svg>
-                      <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 6px ${service.glow}, inset 0 0 4px ${service.glow}`, textShadow: "0 0 3px rgba(255,255,255,0.35)" }}>Ver imagen del servicio</span>
+                      <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 8px ${service.glow}, inset 0 0 3px ${service.glow}` }}>Ver imagen del servicio</span>
                     </div>
                   )}
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/55 via-[#06152d]/5 to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
