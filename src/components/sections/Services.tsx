@@ -335,8 +335,8 @@ export default function Services() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
-                      <span aria-hidden="true" className="pointer-events-none absolute h-36 w-36 rounded-full opacity-70 blur-2xl transition-all duration-500 group-hover/image:opacity-100" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
-                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.15" strokeLinecap="round" strokeLinejoin="round" className="relative h-28 w-28 transition-all duration-500 group-hover/image:scale-110 sm:h-32 sm:w-32" style={{ color: service.accent, filter: `drop-shadow(0 0 3px ${service.accent}) drop-shadow(0 0 8px ${service.accent}) drop-shadow(0 0 16px ${service.glow})` }} aria-hidden="true">
+                      <span aria-hidden="true" className="pointer-events-none absolute h-28 w-28 rounded-full opacity-45 blur-xl transition-all duration-500 group-hover/image:opacity-70" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
+                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" className="relative h-32 w-32 transition-all duration-500 group-hover/image:scale-110 sm:h-36 sm:w-36" style={{ color: service.accent, filter: `drop-shadow(0 0 1.5px #ffffff) drop-shadow(0 0 4px ${service.accent}) drop-shadow(0 0 9px ${service.glow})` }} aria-hidden="true">
                         <defs>
                           <linearGradient id={`service-icon-gradient-${service.type}`} x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor={service.accent} />
