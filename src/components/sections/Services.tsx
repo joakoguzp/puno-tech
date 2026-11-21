@@ -224,6 +224,35 @@ export default function Services() {
         >
           {services.map((service, index) => {
             const isHighlighted = highlightedService === service.type;
+            const iconShape = (
+              <>
+                {service.type === "computer" && (
+                  <>
+                    <rect x="6" y="8" width="36" height="25" rx="3" />
+                    <path d="M18 40h12M24 33v7M12 40h24" />
+                    <path d="m18 20 4 4 8-9" />
+                  </>
+                )}
+                {service.type === "printer" && (
+                  <>
+                    <path d="M14 17V7h20v10M14 34H9a3 3 0 0 1-3-3V21a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v10a3 3 0 0 1-3 3h-5" />
+                    <path d="M14 28h20v13H14zM34 23h.01" />
+                  </>
+                )}
+                {service.type === "wifi" && (
+                  <>
+                    <path d="M5 18a29 29 0 0 1 38 0M11 25a20 20 0 0 1 26 0M17 32a11 11 0 0 1 14 0" />
+                    <circle cx="24" cy="39" r="2" fill="currentColor" stroke="none" />
+                  </>
+                )}
+                {service.type === "support" && (
+                  <>
+                    <path d="M8 25v-4a16 16 0 0 1 32 0v4M8 25H6a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h5V25H8ZM40 25h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-5V25h3Z" />
+                    <path d="M35 36c-2 4-6 6-11 6h-3" />
+                  </>
+                )}
+              </>
+            );
 
             return (
               <article
@@ -335,42 +364,29 @@ export default function Services() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover/image:scale-[1.06]" style={{ color: service.accent }}>
-                      <span aria-hidden="true" className="pointer-events-none absolute h-36 w-36 rounded-full opacity-65 blur-2xl transition-all duration-500 group-hover/image:opacity-90" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 68%)`, boxShadow: `0 0 42px ${service.glow}` }} />
-                      <svg viewBox="0 0 48 48" fill="none" stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" className="relative h-40 w-40 transition-all duration-500 group-hover/image:scale-110 sm:h-44 sm:w-44" style={{ color: service.accent, filter: `drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 7px ${service.accent}) drop-shadow(0 0 16px ${service.accent}) drop-shadow(0 0 30px ${service.glow})` }} aria-hidden="true">
+                      <span aria-hidden="true" className="pointer-events-none absolute h-32 w-32 rounded-full opacity-35 blur-xl transition-all duration-500 group-hover/image:opacity-50" style={{ background: `radial-gradient(circle, ${service.glow} 0%, transparent 72%)` }} />
+                      <svg viewBox="0 0 48 48" fill="none" strokeLinecap="round" strokeLinejoin="round" className="relative h-36 w-36 transition-transform duration-300 group-hover/image:scale-105 sm:h-40 sm:w-40" style={{ color: service.accent }} aria-hidden="true">
                         <defs>
                           <linearGradient id={`service-icon-gradient-${service.type}`} x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor={service.accent} />
                             <stop offset="55%" stopColor={service.secondary} />
                             <stop offset="100%" stopColor="#E8FCFF" />
                           </linearGradient>
+                          <filter id={`service-icon-glow-${service.type}`} x="-40%" y="-40%" width="180%" height="180%">
+                            <feGaussianBlur stdDeviation="1.6" />
+                          </filter>
                         </defs>
-                        {service.type === "computer" && (
-                          <>
-                            <rect x="6" y="8" width="36" height="25" rx="3" />
-                            <path d="M18 40h12M24 33v7M12 40h24" />
-                            <path d="m18 20 4 4 8-9" />
-                          </>
-                        )}
-                        {service.type === "printer" && (
-                          <>
-                            <path d="M14 17V7h20v10M14 34H9a3 3 0 0 1-3-3V21a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v10a3 3 0 0 1-3 3h-5" />
-                            <path d="M14 28h20v13H14zM34 23h.01" />
-                          </>
-                        )}
-                        {service.type === "wifi" && (
-                          <>
-                            <path d="M5 18a29 29 0 0 1 38 0M11 25a20 20 0 0 1 26 0M17 32a11 11 0 0 1 14 0" />
-                            <circle cx="24" cy="39" r="2" fill="currentColor" stroke="none" />
-                          </>
-                        )}
-                        {service.type === "support" && (
-                          <>
-                            <path d="M8 25v-4a16 16 0 0 1 32 0v4M8 25H6a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3h5V25H8ZM40 25h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-5V25h3Z" />
-                            <path d="M35 36c-2 4-6 6-11 6h-3" />
-                          </>
-                        )}
+                        <g stroke={service.accent} strokeWidth="5.2" opacity="0.42" filter={`url(#service-icon-glow-${service.type})`}>
+                          {iconShape}
+                        </g>
+                        <g stroke={`url(#service-icon-gradient-${service.type})`} strokeWidth="2.7">
+                          {iconShape}
+                        </g>
+                        <g stroke="#EAFBFF" strokeWidth="0.75" opacity="0.9">
+                          {iconShape}
+                        </g>
                       </svg>
-                      <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 14px ${service.glow}, inset 0 0 12px ${service.glow}`, textShadow: `0 0 10px ${service.accent}` }}>Ver imagen del servicio</span>
+                      <span className="relative rounded-full border px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-500 group-hover/image:scale-105" style={{ borderColor: `${service.accent}70`, backgroundColor: `${service.accent}16`, boxShadow: `0 0 6px ${service.glow}, inset 0 0 4px ${service.glow}`, textShadow: "0 0 3px rgba(255,255,255,0.35)" }}>Ver imagen del servicio</span>
                     </div>
                   )}
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06152d]/55 via-[#06152d]/5 to-transparent transition-opacity duration-500 group-hover/image:from-[#06152d]/80" />
